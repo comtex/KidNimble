@@ -11,8 +11,8 @@ gem 'capistrano'
 gem 'haml'
 gem 'haml-rails'
 gem 'thin', "1.3.1"
-#gem 'eventmachine', "~> 0.12.10"
-gem 'eventmachine', "~> 1.0.0.beta.4.1"
+gem 'eventmachine', "~> 0.12.10"
+#gem 'eventmachine', "~> 1.0.0.beta.4.1"
 gem 'geocoder'
 gem "kaminari"
 gem "devise"
