@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  order_id: 1
+  success: false
+  message: MyText
+  authorization: MyString
+  response: MyText
+
+two:
+  user_id: 1
+  order_id: 1
+  success: false
+  message: MyText
+  authorization: MyString
+  response: MyText

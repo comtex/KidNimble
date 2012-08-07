@@ -1,0 +1,7 @@
+- if @errors && @errors.any?
+  $('#create_event_dialog').html('#{escape_javascript(render('form'))}');
+- else
+  $('#calendar').fullCalendar('refetchEvents');
+  $('#create_event_dialog').dialog('destroy');
+  showEventSavedMsg();
+$('#loading').hide();

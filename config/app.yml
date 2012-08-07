@@ -1,0 +1,45 @@
+defaults: &DEFAULTS
+  domain: 'localhost:3000'
+  mail:
+    address              : 'smtp.sendgrid.net'
+    port                 : 587
+    domain               : 'kidnimble.com'
+    user_name            : 'campgurus'
+    password             : '654321cg'
+    authenication        : 'plain'
+    enable_starttls_auto : true
+development:
+  <<: *DEFAULTS
+  domain:                  'staging.kidnimble.com'
+  braintree:
+    public_key           : '8tn5q7fhg9rbzhzq'
+    private_key          : 'vgdxgzmybnds2vqh'
+    merchant_id          : 'h9svxz6v9hn73kg7'
+    environment          : 'sandbox'
+  satisfaction:
+    consumer_key         : 'ahz77k5oq9lf'
+    consumer_secret      : 's8sptqhe8x5ghlgj045eec7m3ylpcfp9'
+production:
+  <<: *DEFAULTS
+  domain:                  'www.kidnimble.com'
+  braintree:
+    public_key           : 'j6v3vdj67yfbp8m3'
+    private_key          : '4ydfp7mvf24scdmh'
+    merchant_id          : 'gw68ty7h94zdw5ym'
+    environment          : 'production'
+  mail:
+    address              : 'smtp.sendgrid.net'
+    port                 : 587
+    domain               : 'kidnimble.com'
+    user_name            : 'campgurus'
+    password             : '654321cg'
+    authenication        : 'plain'
+    enable_starttls_auto : true
+  satisfaction:
+    consumer_key         : 'ahz77k5oq9lf'
+    consumer_secret      : 's8sptqhe8x5ghlgj045eec7m3ylpcfp9'
+staging:
+  <<: *DEFAULTS
+  domain: 'staging.kidnimble.com'
+test: &TEST
+  <<: *DEFAULTS

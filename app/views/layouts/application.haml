@@ -1,0 +1,126 @@
+/paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+/[if lt IE 7]<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en">
+/[if IE 7]<html class="no-js lt-ie9 lt-ie8" lang="en">
+/[if IE 8]<html class="no-js lt-ie9" lang="en">
+/[if gt IE 8]<html lang="en">
+%head
+  %meta{:charset => "utf-8"}/
+  / Set the viewport width to device width for mobile
+  %meta{:content => "width=device-width", :name => "viewport"}/
+  %title KidNimble.com
+  :javascript
+    var _sf_startpt=(new Date()).getTime();
+  = stylesheet_link_tag "application"
+  = javascript_include_tag "application"
+  = csrf_meta_tags
+  /[if IE] 
+    = stylesheet_link_tag "ie.css"
+  / IE Fix for HTML5 Tags
+  /[if lt IE 9] 
+    = javascript_include_tag "http://html5shiv.googlecode.com/svn/trunk/html5.js"
+  :javascript
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32848364-1']);
+    _gaq.push(['_setDomainName', 'KidNimble.com']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  :javascript
+    (function(c,a){var b,d,h,e;b=c.createElement("script");
+    b.type="text/javascript";b.async=!0;b.src=("https:"===c.location.protocol?"https:":"http:")+'//api.mixpanel.com/site_media/js/api/mixpanel.2.js';
+    d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d);a._i=[];a.init=function(b,c,f){function d(a,b){var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]);a[b]=function(){a.push([b].concat(Array.prototype.slice.call(arguments,0)))}}
+    var g=a;"undefined"!==typeof f?g=a[f]=[]:f="mixpanel";
+    g.people=g.people||[];h="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config people.set people.increment".split(" ");
+    for(e=0;e<h.length;e++)d(g,h[e]);a._i.push([b,c,f])};a.__SV=1.1;window.mixpanel=a})(document,window.mixpanel||[]);
+    mixpanel.init("dfd55326e97ce82c6c88f2005ff11e16");
+   
+
+%body
+  %script{:type => "text/javascript", :src => "http://j.maxmind.com/app/geoip.js"}
+  / Header
+  .container.header
+    .row
+      .four.columns
+        %a{:href => "/home"}= image_tag('template/logo.png', :alt => "KidNimble", :title => "KidNimble")
+        
+      .columns
+        = render :partial => 'shared/login_header'
+  
+  -if !flash[:reviewnotice].blank?
+    %span.notice{:style => 'text-align:center;display:block;'}
+      = flash[:reviewnotice] 
+  //%p.notice
+  //  = flash[:notice]
+  //%p.alert
+  //  = flash[:alert]
+  %span
+    #loading{:style => "display:none"}
+      Loading ...
+  /Contents
+  = yield
+
+  / container
+  .container.footer
+    .row
+      .three.logo_footer
+        %a{:href => "#"}
+          = image_tag('template/logo_Footer.png', :alt => "KidNimble", :title => "KidNimble")
+      .two.social
+        %ul
+          %li.active
+            %a{:href => "#"} Follow Us
+          %li
+            <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FKidNimble%2F310422462304572&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:22px; margin-top:2px;" allowTransparency="true"></iframe>
+          %li
+            <iframe show_screen_name="KidNimble" src="//platform.twitter.com/widgets/follow_button.html?screen_name=KidNimble&show_count=false&show_screen_name=KidNimble" allowtransparency="true" frameborder="0" scrolling="no" style="width:110px; height:22px;"></iframe>
+      .two.company
+        %ul
+          %li.active
+            %a{:href => "#"} Company
+          %li
+            = link_to "About Us", home_about_path
+          %li
+            = link_to "Blog", "http://www.campgurusblog.com"
+          %li
+            = link_to "Jobs", home_comingsoon_path
+          %li
+            = link_to "Partners", home_comingsoon_path
+      .two.customer
+        %ul
+          %li.active
+            %a{:href => "#"} Customer Service
+          %li
+            = link_to "Advertise", home_comingsoon_path
+          %li
+            = link_to "API", home_comingsoon_path
+          %li
+            = link_to "Tour", home_comingsoon_path
+          %li
+            = link_to "Terms", home_comingsoon_path
+          %li
+            = link_to "Privacy", home_comingsoon_path
+      .copyright
+        %p 2012 Copyright KidNimble, Inc. All rights reserved.
+  / container
+  = yield :scripts
+  :javascript
+    document.write(unescape("%3Cscript src='" + (("https:" == document.location.protocol) ? "https" : "http") + "://cdn.mouseflow.com/projects/ba138fb7-ec91-4033-a702-37ed7056968e.js' type='text/javascript'%3E%3C/script%3E"));
+    var _sf_async_config={uid:38576,domain:"KidNimble.com"};
+    (function(){
+      function loadChartbeat() {
+        window._sf_endpt=(new Date()).getTime();
+        var e = document.createElement('script');
+        e.setAttribute('language', 'javascript');
+        e.setAttribute('type', 'text/javascript');
+        e.setAttribute('src',
+           (("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://static.chartbeat.com/") +
+           "js/chartbeat.js");
+        document.body.appendChild(e);
+      }
+      var oldonload = window.onload;
+      window.onload = (typeof window.onload != 'function') ?
+         loadChartbeat : function() { oldonload(); loadChartbeat(); };
+    })();

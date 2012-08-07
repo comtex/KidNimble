@@ -1,0 +1,126 @@
+<%= stylesheet_link_tag "surveys" %>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div align="center">
+  <%= form_for(@survey) do |f| %>
+  <% if @survey.errors.any? %>
+    <div id="error_explanation">
+      <h2>Please check your survey for errors and try again.</h2>
+      <b><i> Fields highlighted in yellow received invalid input. </i></b>
+      <!-- <h2><%= pluralize(@survey.errors.count, "error") %> prohibited this survey from being saved:</h2> -->
+      <ul>
+      <div class="field">
+    <br />
+    <%= f.hidden_field :camp_id %>
+  </div>
+      <div class="field">
+    <br />
+    <% if @survey.errors[:email].size > 0 %>
+      <font color = yellow><%= f.label :email, "Please confirm your e-mail address below." %></font><br />
+      <small><%= f.label :email, "(You have entered an invalid e-mail address.  Please try again.)" %></small><br />
+      <%= f.text_field :email, :value => nil %>
+    <% end %>
+    <% if @survey.errors[:email].size == 0 %>
+      <%= f.label :email, "Please confirm your e-mail address below." %><br />
+      <%= f.text_field :email %>
+    <% end %>
+  </div>
+  <div class="field">
+    <br />
+    <% if @survey.errors[:like].size > 0 %>
+      <font color = yellow><%= f.label :like, "Please describe what you liked about our program." %></font><br />
+      <small><%= f.label :like, "(We would appreciate a little more input here.)" %></small><br />
+    <% end %>
+    <% if @survey.errors[:like].size == 0 %>
+      <%= f.label :like, "Please describe what you liked about our program (2-4 sentences)." %><br />
+    <% end %>
+    <%= f.text_area :like %>
+  </div>
+  <div class="field">
+    <br />
+    <% if @survey.errors[:improve].size > 0 %>
+      <font color = yellow><%= f.label :improve, "What could we do better?" %></font><br />
+      <small><%= f.label :like, "(It would be great if you could tell us a bit more!)" %></small><br />
+    <% end %>
+    <% if @survey.errors[:improve].size == 0 %>
+      <%= f.label :improve, "What could we do better (2-4 sentences)?" %><br />
+    <% end %>
+    <%= f.text_area :improve %>
+  </div>
+  <div class="field">
+    <br />
+  <% if @survey.errors[:rating].size > 0 %>
+    <font color = yellow><%= f.label :rating, "Rate us on a 1-5 scale. 1 is the worst and 5 is the best:" %></font><br />
+    <small><%= f.label :rating, "(Rating cannot be left blank.)" %></small><br />
+  <% end %>
+  <% if @survey.errors[:rating].size == 0 %>
+    <%= f.label :rating, "Rate us on a 1-5 scale. 1 is the worst and 5 is the best:" %><br />
+  <% end %>
+  <div class="form_row">
+    <%= f.radio_button :rating, 1 %>
+    <%= label :rating_1, '1' %>
+    <%= f.radio_button :rating, 2 %>
+    <%= label :rating_2, '2' %>
+    <%= f.radio_button :rating, 3 %>
+    <%= label :rating_3, '3' %>
+    <%= f.radio_button :rating, 4 %>
+    <%= label :rating_4, '4' %>
+    <%= f.radio_button :rating, 5 %>
+    <%= label :rating_5, '5' %>
+  </div>
+  <div class="actions">
+    <br />
+    <%= f.submit(" Submit ") %>
+  </div>
+      </ul>
+    </div>
+  <% end %>
+
+  
+
+  <% if !@survey.errors.any? %>
+  <h2 align="center">Thank you for taking the time to take our survey!</h2>
+  <%= f.hidden_field :camp_id %>
+  <div class="field">
+    <br />
+    <%= f.label :email, "Please confirm your e-mail address below." %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <br />
+    <%= f.label :like, "Please describe what you liked about our program." %><br />
+    <%= f.text_area :like %>
+  </div>
+  <div class="field">
+    <br />
+    <%= f.label :improve, "What could we do better?" %><br />
+    <%= f.text_area :improve%>
+  </div>
+  <div class="field">
+    <br />
+    <%= f.label :rating, "Rate us on a 1-5 scale. 1 is the worst and 5 is the best:" %><br />
+  <div class="form_row">
+    <%= f.radio_button :rating, 1 %>
+    <%= label :rating_1, '1' %>
+    <%= f.radio_button :rating, 2 %>
+    <%= label :rating_2, '2' %>
+    <%= f.radio_button :rating, 3, :checked => true  %>
+    <%= label :rating_3, '3' %>
+    <%= f.radio_button :rating, 4 %>
+    <%= label :rating_4, '4' %>
+    <%= f.radio_button :rating, 5 %>
+    <%= label :rating_5, '5' %>
+  </div>
+  <div class="actions">
+    <br />
+    <%= f.submit(" Submit ") %>
+  </div>
+  <% end %>
+<% end %>
+</div>

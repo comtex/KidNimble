@@ -1,0 +1,7 @@
+.container.mainHome
+  .row
+    = form_tag '/reviews/addreviewfromcsv', :method => 'POST', :multipart => true do
+      = file_field_tag :file
+      = submit_tag '', :value => '', :class => 'submit'
+.clear
+

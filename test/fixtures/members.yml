@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  group_id: 
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  sent: 2012-07-10 14:08:18
+  joined: 2012-07-10 14:08:18
+  status: 1
+
+two:
+  group_id: 
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  sent: 2012-07-10 14:08:18
+  joined: 2012-07-10 14:08:18
+  status: 1

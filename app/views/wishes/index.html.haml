@@ -1,0 +1,15 @@
+%h1 Listing wishes
+
+%table
+  %tr
+    %th Camp Title
+    %th Event
+    %th
+
+  - @wishes.each do |wish|
+    %tr
+      %td= Camp.find(Event.find(wish.buyable_id).camp_id).title
+      %td= Event.find(wish.buyable_id).name
+      %td= link_to 'Remove', wish, :confirm => 'Are you sure?', :method => :delete
+
+%br

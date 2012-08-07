@@ -1,0 +1,206 @@
+// Place all the styles related to the counselors controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* -----------------------------------------
+   Page Director
+----------------------------------------- */
+.clear{clear:both}
+.Director{
+	border-top:solid 1px #f9f9f9;
+	background:#f4f4f4;
+	min-height:200px
+}
+.direc_Manage{
+	border-bottom:solid 1px #e0e0e0;
+	height:120px;
+	padding-top:30px
+}
+.direc_details{
+	background:url('/assets/template/bg_direc_details.png') bottom center no-repeat;
+	border-bottom:1px solid #f2f2f2;
+	margin-top:20px;
+	padding-bottom:30px;
+}
+.account{
+	font-size:16px;
+	color:#818181;
+	text-align:left
+}
+.account h3 span{
+	font-weight:normal
+}
+.cmp_view{
+	text-align:right
+}
+.authorize{
+	color:#39b2d1;
+	font-size:20px;
+	margin-top:35px
+}
+.authorize h2{
+	color:#39b2d1;
+	height:30px;
+	width:600px;
+	float:left;
+	font-size:20px;
+}
+.authorize h2 b{
+	color:#484e4e
+}
+.authorize img{
+	margin-top:5px;
+	float:left
+}
+/*---  description  ---*/
+.desc h4{
+	font-size:18px;
+	color:#484e4e;
+	float:left;
+	width:125px
+}
+.desc img{
+	margin-top:3px;
+	float:left
+}
+.desc p{
+	margin:20px 0 0 0;
+	line-height:20px;
+	font-size:14px;
+	color:#36b7d1
+}
+/*---  billing  ---*/
+.billing h4{
+	font-size:18px;
+	color:#484e4e;
+	float:left;
+	width:190px
+}
+.billing img{
+	margin-top:3px;
+	float:left
+}
+.billing p{
+	margin:20px 0 0 0;
+	line-height:20px;
+	font-size:14px;
+	color:#272727
+}
+/*---  Registration  ---*/
+.regist h4{
+	font-size:18px;
+	color:#484e4e;
+	float:left;
+	width:350px
+}
+.regist img{
+	margin-top:3px;
+	float:left
+}
+.regist p{
+	margin:20px 0 0 0;
+	line-height:20px;
+	font-size:14px;
+	color:#272727
+}
+/*--------------------- ACTIVITY ----------------------------*/
+.activityTab{
+	background:#FFF url('/assets/template/bg_activity.png') top left repeat-x;
+	border-bottom:1px solid #f0f0f0;
+	padding-top:32px;
+	height:380px;
+}
+.activityTab h3{
+	font-size:18px;
+	width:94%;
+	margin:0 0 23px 0;
+	float:left;
+	color:#484e4e
+}
+.activityTab img{
+	float:left
+}
+dl.location{border:none}
+dl.location dd.SimpleTab a{
+	border:none;
+	font-size:13px;
+	border-radius:4px 4px 0 0;
+	-webkit-border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	background:#d5d5d5;
+	margin:0 4px 0 0;
+	color:#FFF
+}
+.tabs-content{background:#FFF;}
+dl.location dd a.active{
+	border-radius:4px 4px 0 0;
+	-webkit-border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	color:#35b7d1;
+	font-size:13px;
+	background-color:#f4f4f4
+}
+dl.Lactivity{
+	margin:-16px 0 0 0;
+	background:#f4f4f4;
+	border:none;
+	height:41px
+}
+dl.Lactivity dd.SimpleTab a{
+	border:none;
+	background:url('/assets/template/bg_activityInc.png') right center no-repeat;
+	font-size:13px;
+	padding:0px 20px 0 10px;
+	margin:0 5px 0 0;
+	background-color:#f4f4f4;
+	color:#a5a3a3
+} 
+dl.Lactivity dd a.active{
+	background:url('/assets/template/bg_activityact.png') right center no-repeat;
+	padding:0px 20px 0 10px;
+	margin:0 5px 0 0;
+	color:#484e4e;
+	font-size:13px;
+	background-color:#f4f4f4
+}
+ul#Session{}
+ul#Session li{
+	height:35px;
+	font-size:14px;
+	color:#484e4e;
+	padding-left:20px;
+	line-height:35px;
+	border-bottom:1px solid #d6d9dc;
+}	
+ul#Session li b{
+	color:#42bcd4;
+	margin:0 5px 0 5px;
+	font-size:14px
+}
+ul#Session li stong{
+	color:#42bcd4
+}
+
+ul#Session li.TOtReg,ul#Session li.TOtLast{
+	border-bottom:solid 1px #35b7d1;
+}
+ul#Session li h3{
+	width:250px;
+	height:20px;
+	line-height:20px;
+	font-size:14px
+}
+.perfomance{
+	background:#f4f4f4;
+	min-height:300px;
+	border-top:1px solid #ebebeb;
+}
+.perfomanceTit{border:1px solid #f9f9f9}
+.perfomanceTit h2{
+	margin:20px 0 0 0;
+	font-size:20px;
+	height:40px;
+	line-height:40px;
+	border-bottom:1px solid #e0e0e0;
+	color:#484e4e
+}

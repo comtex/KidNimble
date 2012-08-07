@@ -1,0 +1,21 @@
+sports:
+  id: 1
+  name: "Sports"
+arts:
+  id: 2
+  name: "Art/Music/Drama"
+special:
+  id: 3
+  name: "Special Needs"
+science:
+  id: 4
+  name: "Educational"
+religious:
+  id: 5
+  name: "Religious"
+outdoors:
+  id: 6
+  name: "Outdoors"
+travel:
+  id: 7
+  name: "Teen Travel"

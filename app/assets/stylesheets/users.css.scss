@@ -1,0 +1,146 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* -----------------------------------------
+   Page User Edit
+----------------------------------------- */
+.userEdit{
+	border-top:solid 1px #f9f9f9;
+	background:#f3f2f2;
+	min-height:620px;
+}
+.formUserEdit{
+	width:60%;
+	float:left}
+.formUser{
+	width:625px;
+	float:right;
+}
+.manageUserCont{
+	background:url(/assets/template/bg_user.png) left top repeat;
+	width:40%;
+	float:right;
+	min-height:620px;
+}
+.manageUser{
+	padding-top:95px;
+	float:left;
+	width:380px;
+}
+input.submitUser{
+	background:url(/assets/template/comfirm.png) no-repeat;
+	width:65px;
+	height:25px;
+	border:none
+}
+.side{
+	background:url(/assets/template/bg-side.png) no-repeat;
+	position:relative;
+	margin-bottom:10px;
+	width:300px;
+	height:79px;
+}
+.cancelAcount b{
+	font-size:13px;
+	color:#272727;
+	margin-right:10px
+}
+.cancelAcount a{
+	font-size:13px;
+	color:#35b7d1
+}
+.cancelAcount,.AddChild{
+	float:right;
+	margin:10px 20px 0 0;
+	width:210px}
+.AddChild h4,.cancelAcount h4{ 
+	font-size:16px;
+	color:#272727;
+	margin:0px;
+	padding:0 0 5px 0;
+}
+.formUser img{margin:20px 0 10px 0}	
+.form1{
+	height:45px
+}
+.form1 h5{
+	font-size:13px;
+	color:#272727;
+	font-weight:bold;
+	padding-top:5px;
+}
+.form1 input{
+	background:url(/assets/template/bgInput_user.png) no-repeat;
+	width:202px;
+	height:26px;
+	padding:0 5px;
+	border:none
+}
+.form1 p{
+	font-size:13px;
+	color:#afafaf;
+	margin:0 0 0 10px;
+	padding-top:5px;
+}
+.addacount,.cancelacoount{
+	position:absolute;
+	top:20px;
+	left:20px;
+}
+input#confirm{
+	background:url(/assets/template/comfirm.png) no-repeat;
+	margin:0px 0 0 25px;
+	width:65px;
+	border:none;
+	height:24px;
+	cursor:pointer;
+}
+input#confirm.adduser{
+  background:url(/assets/template/comfirm.png) no-repeat;
+  margin:0px 0 0 369px;
+  border:none;
+  height:25px;
+  cursor:pointer;
+}
+
+input#confirmpopup{
+  background:url(/assets/template/comfirm.png) no-repeat;
+  margin:5px 0 0 296px;
+  width:65px;
+  border:none;
+  height:24px;
+  cursor:pointer;
+}
+
+h4.back{
+	background:url(/assets/template/back.png) left center no-repeat;
+	height:21px;
+	line-height:21px;
+	margin:20px 0 0 10px;
+	padding:0 0 0 20px;
+	font-size:18px;
+	color:#666666
+}
+fieldset.inputs {
+	border: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#error_explanation{
+  width:100%;
+  color:#FF0000;
+}
+#error_explanation h2{
+  font-size:2.0rem;
+}
+
+a.changepassword{
+  background:url(/assets/template/changePassword.png) no-repeat;
+  margin:0px 0 0 147px;
+  padding:9px 0 0 110px;
+  height:24px;
+  float:left;
+  border:none;
+}

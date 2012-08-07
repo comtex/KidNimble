@@ -1,0 +1,195 @@
+<div class='container wonderLAnd_camp'>
+  <div class='row'>
+      <div id="categoryname" class="five columns">
+      	<img src="/assets/category/<%= window.get_category_imagename(category_name) %>" width="319" height="265" alt="<%= category_name %>" title="<%= category_name %>">
+      </div>
+
+
+      <div class="seven columns">
+        <h3><%= title %></h3>
+        <!-- <a href='#' class='menu' id='counselor'>
+    	    You are a Camp Counselor
+    	  </a> -->
+  
+        <!-- ratings need to be dynamic -->
+        <ul id="rater">
+        	<% for(i=1;i<=(rating/raters);i++){%>
+				<li><img src="/assets/template/star.png" alt="star" /></li>
+			<% }%>
+      		<li class="ViewMore">
+      		  <a href="#/<%= id %>/show" onClick='openPopup("/reviews/new.html?camp_id=<%= id %>&url="+escape(this.href));' id="write_review">
+      		    Write a Review
+      		  </a>
+      		</li>
+      	</ul>
+		<ul id="bookmark_ul">
+      		<li><a href="#/<%= id %>/show" id="bookmark_camp" onClick="bookmark()">Bookmark this camp</a></li>
+		</ul>
+      	<div class="contact">
+      		<p>
+      			<b>Director:</b> <%= director %> <br />
+      			<b>Address:</b> <%= address %> <br />
+      			<b>Phone:</b> <%= phone %> <br />
+      			<a href="<%= link %>" target="_blank">
+      			  <%= link %>
+      			</a>
+      		</p>
+      	</div>
+	
+      	<p class="info">
+      	  <%= description %>
+      	</p>
+      	
+  	  <div id="shareThidDiv" style="width:90%;float:left;">
+  	  	<p class="info" style="width:100px;">
+  	  		<a href="#" onClick="$('.wonderLAnd_camp').remove();$('#containerBottom').remove();$('.main').show();window.update_search($('.pagination li.active a').html());" style="float:left;">Back</a>
+  	  	</p>
+  	  </div>
+      	
+	
+      </div> <!-- end seven columns-->
+
+  </div>
+</div>
+
+<!-- events and reviews-->
+<div id="containerBottom" class="container events_rev">
+  <div class="row EventsReviews">
+	<dl class="tabs">
+  		<dd><a href="#" class="active" id='simple1'>Reviews</a></dd>
+		<dd><a href="#" id='simple2'>Events</a></dd>
+  	</dl>
+  	
+  	<ul class='tabs-content'>
+  	  <li class="active" id="simple1Tab">
+		<div class="row reviews">
+			<div id="reviews"></div>
+		</div>
+	</li>
+
+	<li id="simple2Tab">
+  	    <div class='row'>
+  	    	<ul class="events_Detials">
+  	    		<li>
+					<div class="row">
+					    <br><br><br><br><center> Event detail not found.</center>
+					</div>
+				</li>
+			</ul>
+  	    <!--   <ul class="events_Detials">
+				    <li class="title">
+						<div class="row">
+						    <div class="four columns date">
+							    <p>Dates</p>
+							</div>
+							<div class="three columns name">
+								<p>Name</p>
+							</div>
+							<div class="two columns price">
+								<p>Price</p>
+							</div>
+							<div class="three columns">
+							</div>
+						</div>
+					</li>
+					<li>
+					<div class="row">
+						    <div class="four columns date">
+							    <p>2012-02-01 to 2012-02-08</p>
+							</div>
+							<div class="three columns name">
+								<p>January 31 Session</p>
+							</div>
+							<div class="two columns price">
+								 <p>$2.88</p>
+							</div>
+							<div class="three columns">
+								<a href="#"><img src="/assets/template/buy.png" alt="buy" /></a>
+							</div>
+						</div>
+					</li>
+					<li>
+					<div class="row">
+						    <div class="four columns date">
+							    <p>2012-02-01 to 2012-02-08</p>
+							</div>
+							<div class="three columns name">
+								<p>January 31 Session</p>
+							</div>
+							<div class="two columns price">
+								 <p>$2.88</p>
+							</div>
+							<div class="three columns">
+								<a href="#"><img src="/assets/template/buy.png" alt="buy" /></a>
+							</div>
+						</div>
+					</li>
+					<li>
+					<div class="row">
+						    <div class="four columns date">
+							    <p>2012-02-01 to 2012-02-08</p>
+							</div>
+							<div class="three columns name">
+								<p>January 31 Session</p>
+							</div>
+							<div class="two columns price">
+								 <p>$2.88</p>
+							</div>
+							<div class="three columns">
+								<a href="#"><img src="/assets/template/buy.png" alt="buy" /></a>
+							</div>
+						</div>
+					</li>
+					<li>
+					<div class="row">
+						    <div class="four columns date">
+							    <p>2012-02-01 to 2012-02-08</p>
+							</div>
+							<div class="three columns name">
+								<p>January 31 Session</p>
+							</div>
+							<div class="two columns price">
+								 <p>$2.88</p>
+							</div>
+							<div class="three columns">
+								<a href="#"><img src="/assets/template/buy.png" alt="buy" /></a>
+							</div>
+						</div>
+					</li>
+					
+					
+			</ul> -->  
+  	    </div>
+  	    
+  	    <!-- <center><img src="/assets/template/moreEvents.png" alt="more events"  /></center> -->
+  	  </li>
+  	
+  	  
+  	</ul>
+  	
+  	
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  var camp_id = <%= id %>;
+  $(document).ready(function() {
+      getReviewData(camp_id);
+      
+      $('a.reviewsubmit').live('click', function(ev){
+      	ev.preventDefault();
+      	submitReview(camp_id);
+      });
+      
+      $.post('/camps/isbookmarked.html', {camp_id: <%= id %>}, function(data) {
+	      $("a#bookmark_camp").html(data);
+	  });
+
+  });
+	function bookmark(){
+		$.post('/camps/togglebookmark.html', {camp_id: <%= id %>}, function(data) {
+	      $("a#bookmark_camp").html(data);
+	  });
+	}
+</script>

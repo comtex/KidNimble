@@ -1,0 +1,137 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  session_title: MyString
+  session_title2: MyString
+  session_title3: MyString
+  session_title4: MyString
+  session_title5: MyString
+  session_title6: MyString
+  subcategory: MyString
+  subcategory2: MyString
+  subcategory3: MyString
+  subcategory4: MyString
+  subcategory5: MyString
+  subcategory6: MyString
+  residency: MyString
+  residency2: MyString
+  residency3: MyString
+  residency4: MyString
+  residency5: MyString
+  residency6: MyString
+  date_start: 2012-07-26
+  date_start2: 2012-07-26
+  date_start3: 2012-07-26
+  date_start4: 2012-07-26
+  date_start5: 2012-07-26
+  date_start6: 2012-07-26
+  date_end: 2012-07-26
+  date_end2: 2012-07-26
+  date_end3: 2012-07-26
+  date_end4: 2012-07-26
+  date_end5: 2012-07-26
+  date_end6: 2012-07-26
+  time_start: 2012-07-26 17:21:37
+  time_start2: 2012-07-26 17:21:37
+  time_start3: 2012-07-26 17:21:37
+  time_start4: 2012-07-26 17:21:37
+  time_start5: 2012-07-26 17:21:37
+  time_start6: 2012-07-26 17:21:37
+  time_end: 2012-07-26 17:21:37
+  time_end2: 2012-07-26 17:21:37
+  time_end3: 2012-07-26 17:21:37
+  time_end4: 2012-07-26 17:21:37
+  time_end5: 2012-07-26 17:21:37
+  time_end6: 2012-07-26 17:21:37
+  youngest: 1
+  youngest2: 1
+  youngest3: 1
+  youngest4: 1
+  youngest5: 1
+  youngest6: 1
+  oldest: 1
+  oldest2: 1
+  oldest3: 1
+  oldest4: 1
+  oldest5: 1
+  oldest6: 1
+  location_address: MyString
+  location_address2: MyString
+  location_address3: MyString
+  location_address4: MyString
+  location_address5: MyString
+  location_address6: MyString
+  session_description: MyText
+  session_description2: MyText
+  session_description3: MyText
+  session_description4: MyText
+  session_description5: MyText
+  session_description6: MyText
+
+two:
+  session_title: MyString
+  session_title2: MyString
+  session_title3: MyString
+  session_title4: MyString
+  session_title5: MyString
+  session_title6: MyString
+  subcategory: MyString
+  subcategory2: MyString
+  subcategory3: MyString
+  subcategory4: MyString
+  subcategory5: MyString
+  subcategory6: MyString
+  residency: MyString
+  residency2: MyString
+  residency3: MyString
+  residency4: MyString
+  residency5: MyString
+  residency6: MyString
+  date_start: 2012-07-26
+  date_start2: 2012-07-26
+  date_start3: 2012-07-26
+  date_start4: 2012-07-26
+  date_start5: 2012-07-26
+  date_start6: 2012-07-26
+  date_end: 2012-07-26
+  date_end2: 2012-07-26
+  date_end3: 2012-07-26
+  date_end4: 2012-07-26
+  date_end5: 2012-07-26
+  date_end6: 2012-07-26
+  time_start: 2012-07-26 17:21:37
+  time_start2: 2012-07-26 17:21:37
+  time_start3: 2012-07-26 17:21:37
+  time_start4: 2012-07-26 17:21:37
+  time_start5: 2012-07-26 17:21:37
+  time_start6: 2012-07-26 17:21:37
+  time_end: 2012-07-26 17:21:37
+  time_end2: 2012-07-26 17:21:37
+  time_end3: 2012-07-26 17:21:37
+  time_end4: 2012-07-26 17:21:37
+  time_end5: 2012-07-26 17:21:37
+  time_end6: 2012-07-26 17:21:37
+  youngest: 1
+  youngest2: 1
+  youngest3: 1
+  youngest4: 1
+  youngest5: 1
+  youngest6: 1
+  oldest: 1
+  oldest2: 1
+  oldest3: 1
+  oldest4: 1
+  oldest5: 1
+  oldest6: 1
+  location_address: MyString
+  location_address2: MyString
+  location_address3: MyString
+  location_address4: MyString
+  location_address5: MyString
+  location_address6: MyString
+  session_description: MyText
+  session_description2: MyText
+  session_description3: MyText
+  session_description4: MyText
+  session_description5: MyText
+  session_description6: MyText

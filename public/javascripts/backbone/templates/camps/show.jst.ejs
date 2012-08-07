@@ -1,0 +1,316 @@
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+      	  	
+<div class='container wonderLAnd_camp'>
+  <div class='row'>
+      <div id="categoryname" class="five columns">
+      	<% if(category_name == null){ %>
+			<img src="/assets/category/outdoors.jpg" width="319" height="265" alt="Outdoors" title="Outdoors">
+		<% }else{ %>
+			<% switch(category_name){
+			  case "Art/Music/Drama": %>
+			  	<img src="/assets/category/arts-music-ent.jpg" width="319" height="265" alt="<%= category_name %>" title="<%= category_name %>">
+			  <% break;case "Sports": %>
+			  	<img src="/assets/category/sports.jpg" width="319" height="265" alt="<%= category_name %>" title="<%= category_name %>">
+			  <% break;case "Special Needs": %>
+			  	<img src="/assets/category/special-needs.jpg" width="319" height="265" alt="<%= category_name %>" title="<%= category_name %>">
+			  <% break;case "Educational": %>
+			  	<img src="/assets/category/educational.jpg" width="319" height="265" alt="<%= category_name %>" title="<%= category_name %>">
+			  <% break;case "Religious": %>
+			  	<img src="/assets/category/religions.jpg" width="319" height="265" alt="<%= category_name %>" title="<%= category_name %>">
+			  <% break;case "Outdoors": %>
+			  	<img src="/assets/category/outdoors.jpg" width="319" height="265" alt="<%= category_name %>" title="<%= category_name %>">
+			  <% break;case "Traditional": %>
+			  	<img src="/assets/category/outdoors.jpg" width="319" height="265" alt="<%= category_name %>" title="<%= category_name %>">
+			  <% break;case "Community Service": %>
+			  	<img src="/assets/category/outdoors.jpg" width="319" height="265" alt="<%= category_name %>" title="<%= category_name %>">
+			  <% break;case "Teen Travel": %>
+			  	<img src="/assets/category/teen-travel.jpg" width="319" height="265" alt="<%= category_name %>" title="<%= category_name %>">
+			<% break;} %>
+		<% } %>
+      </div>
+
+
+      <div class="seven columns">
+        <h3><%= title %></h3>
+        <!-- <a href='#' class='menu' id='counselor'>
+    	    You are a Camp Counselor
+    	  </a> -->
+  
+        <!-- ratings need to be dynamic -->
+        <ul id="rater">
+        	<% for(i=1;i<=(rating/raters);i++){%>
+				<li><img src="/assets/template/star.png" alt="star" /></li>
+			<% }%>
+      		<li class="ViewMore">
+      		  <a href="#/<%= id %>/show" onClick='openPopup("/reviews/new.html?camp_id=<%= id %>");' id="write_review">
+      		    Write a Review
+      		  </a>
+      		</li>
+      	</ul>
+		<ul id="bookmark_ul">
+      		<li><a href="#/<%= id %>/show" id="bookmark_camp" onClick="bookmark()">Bookmark this camp</a></li>
+		</ul>
+      	<div class="contact">
+      		<p>
+      			<b>Director:</b> <%= director %> <br />
+      			<b>Address:</b> <%= address %> <br />
+      			<b>Phone:</b> <%= phone %> <br />
+      			<a href="<%= link %>" target="_blank">
+      			  <%= link %>
+      			</a>
+      		</p>
+      	</div>
+	
+      	<p class="info">
+      	  <%= description %>
+      	</p>
+      	
+  	  <div id="shareThidDiv" style="width:90%;float:left;">
+  	  	<p class="info" style="width:100px;">
+  	  		<a href="#" onClick="$('.wonderLAnd_camp').remove();$('#containerBottom').remove();$('.main').show();window.update_search($('.pagination li.active a').html());" style="float:left;">Back</a>
+  	  	</p>
+  	  	<div id="shareThidDivContent" style="float:right;margin-top:-5px;">
+  	  		<span class='st_email_hcount' displayText='Email'/>
+			<span class='st_twitter_hcount' displayText='Tweet'/>
+			<span class='st_facebook_hcount' displayText='Facebook'/>
+		</div>
+  	  </div>
+      	
+	
+      </div> <!-- end seven columns-->
+
+  </div>
+</div>
+
+<!-- events and reviews-->
+<div id="containerBottom" class="container events_rev">
+  <div class="row EventsReviews">
+	<dl class="tabs">
+  		<dd><a href="#" class="active" id='simple1'>Reviews</a></dd>
+		<dd><a href="#" id='simple2'>Events</a></dd>
+  	</dl>
+  	
+  	<ul class='tabs-content'>
+  	  <li class="active" id="simple1Tab">
+		<div class="row reviews">
+				<div id="reviews"></div>
+				
+				<div class="twelve">
+					<div class="one columns"></div>
+					<div class="eleven columns">
+						<a href="#"><h5 class="morecomment">More Comments</h5></a>
+					</div>	
+				</div>
+				<div class="twelve formPost">
+					<a href="javascript:;" onClick="$('.formPost .form').slideToggle('slow');">
+					<h2><b>Leave us your comment</b></h2>
+					</a>
+					<div class="form" style="display:none;">
+						<ul>
+							<!-- <li><b>Title</b></li>
+							<li><input type="text" id="title" name="title" value=""></li> -->
+							<li><b>Comment</b></li>
+							<li><textarea id="note" name="note"></textarea></li>
+						</ul>
+						<div class="reviewsStar">
+								<b>Star reviews </b>
+								<b>1<input type="checkbox" id="rating1" name="rating" value="" class="checkboxrev"></b>
+								<b>2<input type="checkbox" id="rating2" name="rating" value="" class="checkboxrev"></b>
+								<b>3<input type="checkbox" id="rating3" name="rating" value="" class="checkboxrev"></b>
+								<b>4<input type="checkbox" id="rating4" name="rating" value="" class="checkboxrev"></b>
+								<b>5<input type="checkbox" id="rating5" name="rating" value="" class="checkboxrev"></b>
+						</div>
+						<a href="#" class="reviewsubmit"></a>
+					</div>
+				</div>
+		</div>
+	</li>
+
+	<li id="simple2Tab">
+  	    <div class='row'>
+  	    	<ul class="events_Detials">
+  	    		<li>
+					<div class="row">
+					    <br><br><br><br><center> Event detail not found.</center>
+					</div>
+				</li>
+			</ul>
+  	    <!--   <ul class="events_Detials">
+				    <li class="title">
+						<div class="row">
+						    <div class="four columns date">
+							    <p>Dates</p>
+							</div>
+							<div class="three columns name">
+								<p>Name</p>
+							</div>
+							<div class="two columns price">
+								<p>Price</p>
+							</div>
+							<div class="three columns">
+							</div>
+						</div>
+					</li>
+					<li>
+					<div class="row">
+						    <div class="four columns date">
+							    <p>2012-02-01 to 2012-02-08</p>
+							</div>
+							<div class="three columns name">
+								<p>January 31 Session</p>
+							</div>
+							<div class="two columns price">
+								 <p>$2.88</p>
+							</div>
+							<div class="three columns">
+								<a href="#"><img src="/assets/template/buy.png" alt="buy" /></a>
+							</div>
+						</div>
+					</li>
+					<li>
+					<div class="row">
+						    <div class="four columns date">
+							    <p>2012-02-01 to 2012-02-08</p>
+							</div>
+							<div class="three columns name">
+								<p>January 31 Session</p>
+							</div>
+							<div class="two columns price">
+								 <p>$2.88</p>
+							</div>
+							<div class="three columns">
+								<a href="#"><img src="/assets/template/buy.png" alt="buy" /></a>
+							</div>
+						</div>
+					</li>
+					<li>
+					<div class="row">
+						    <div class="four columns date">
+							    <p>2012-02-01 to 2012-02-08</p>
+							</div>
+							<div class="three columns name">
+								<p>January 31 Session</p>
+							</div>
+							<div class="two columns price">
+								 <p>$2.88</p>
+							</div>
+							<div class="three columns">
+								<a href="#"><img src="/assets/template/buy.png" alt="buy" /></a>
+							</div>
+						</div>
+					</li>
+					<li>
+					<div class="row">
+						    <div class="four columns date">
+							    <p>2012-02-01 to 2012-02-08</p>
+							</div>
+							<div class="three columns name">
+								<p>January 31 Session</p>
+							</div>
+							<div class="two columns price">
+								 <p>$2.88</p>
+							</div>
+							<div class="three columns">
+								<a href="#"><img src="/assets/template/buy.png" alt="buy" /></a>
+							</div>
+						</div>
+					</li>
+					
+					
+			</ul> -->  
+  	    </div>
+  	    
+  	    <!-- <center><img src="/assets/template/moreEvents.png" alt="more events"  /></center> -->
+  	  </li>
+  	
+  	  
+  	</ul>
+  	
+  	
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  var camp_id = <%= id %>;
+  $(document).ready(function() {
+    
+     //var counselor_obj;
+     
+     // find the associated counselor object if it exists
+     //$.get("/counselors/for_camp/"+camp_id, null, function(counselor){
+     //  console.log('INSIDE GET COUNSELORS');
+     //  console.log(counselor);
+     //  counselor_obj = counselor;
+     //  
+     //  if(counselor){
+     //    $('a#counselor').text('Edit your camp director profile');
+     //    $('a#counselor').attr('href','/counselors#/' + counselor.id);
+     //   }else{
+     //     $('a#counselor').attr('href', '/counselors?camp_id=<%= id %>');
+     //     $('a#counselor').attr('data-remote', 'true');
+     //     $('a#counselor').attr('data-method', 'post');
+     //  }
+     //});
+     
+      //$('a#counselor').live('ajax:success', function(event, xhr, status){
+      //  //return if counselor_obj;
+      //  
+      //    if(status == 'success'){
+      //      alert('Your request has been processed');
+      //      $(this).removeAttr('data-remote');
+      //      $(this).removeAttr('data-method');
+      //      $(this).text('Edit your camp director profile')
+      //      var counselor = xhr;
+      //      $(this).attr('href','/counselors#/' + counselor.id);
+      //   }
+      //  });
+
+      //$('a#counselor').live('ajax:error', function(event, xhr, status){
+      //  //return if counselor_obj;
+      //   if(xhr.status=='401'){
+      //     alert('You need to login first to be a camp counselor');
+      //   }else{
+      //     alert('An error occurred with adding you as a camp counselor');
+      //   }
+      //});
+	  
+      //$.get("/events/json/"+camp_id, null, function(data) {
+      //  //console.log("Events: ", data);
+      //  $('#events').html(data);
+      //}, 'html');
+      
+      //$.get("/activities/json/"+camp_id, '', function(data) {
+      //  $('#activities').html(data);
+      //}, 'html');
+	  
+	  //$.getJSON("/deals/"+camp_id, function(data) {
+	  //		var html = '<h3>Deals</h3><br />No Deals';
+	  //		if (data.length > 0) {
+	  //			html = '<h3>Deals</h3><br />';
+	  //			$.each(data, function(i,e) { 
+	  //				html += '<p>'+e.title+'</p>';
+	  //				html += '<p>'+e.description+'</p>';
+	  //			});
+	  //		}
+      //  $('#deals').html(html);
+      //});
+      
+      getReviewData(camp_id);
+      
+      $('a.reviewsubmit').live('click', function(ev){
+      	ev.preventDefault();
+      	submitReview(camp_id);
+      });
+      
+      $.post('/camps/isbookmarked.html', {camp_id: <%= id %>}, function(data) {
+	      $("a#bookmark_camp").html(data);
+	  });
+
+  });
+	function bookmark(){
+		$.post('/camps/togglebookmark.html', {camp_id: <%= id %>}, function(data) {
+	      $("a#bookmark_camp").html(data);
+	  });
+	}
+</script>

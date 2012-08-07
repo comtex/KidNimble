@@ -1,0 +1,336 @@
+sports:
+  category_id: 1
+  name: "Sports"
+archery:
+  category_id: 1
+  name: "Archery"
+badminton:
+  category_id: 1
+  name: "Badminton"
+ballooning:
+  category_id: 1
+  name: "Ballooning"
+baseball:
+  category_id: 1
+  name: "Baseball"
+basketball:
+  category_id: 1
+  name: "Basketball"
+bicycling:
+  category_id: 1
+  name: "Bicycling/BMX"
+bowling:
+  category_id: 1
+  name: "Bowling"
+cheerleading:
+  category_id: 1
+  name: "Cheerleading"
+chess:
+  category_id: 1
+  name: "Chess"
+competative:
+  category_id: 1
+  name: "Competitive Biking"
+running:
+  category_id: 1
+  name: "Cross Country Running"
+skiing:
+  category_id: 1
+  name: "Cross Country Skiing"
+curling:
+  category_id: 1
+  name: "Curling"
+diving:
+  category_id: 1
+  name: "Diving"
+horses:
+  category_id: 1
+  name: "Equestrian"
+fencing:
+  category_id: 1
+  name: "Fencing"
+field:
+  category_id: 1
+  name: "Field Hockey"
+fishing:
+  category_id: 1
+  name: "Fishing"
+fitness:
+  category_id: 1
+  name: "Fitness"
+football:
+  category_id: 1
+  name: "Football"
+golf:
+  category_id: 1
+  name: "Golf"
+gym:
+  category_id: 1
+  name: "Gymnastics"
+hockey:
+  category_id: 1
+  name: "Hockey"
+ice:
+  category_id: 1
+  name: "Ice Skating"
+inline:
+  category_id: 1
+  name: "Inline Skating"
+kayak:
+  category_id: 1
+  name: "Kayaking/Canoeing"
+lacrosse:
+  category_id: 1
+  name: "Lacrosse"
+karate:
+  category_id: 1
+  name: "Martial Arts"
+multi:
+  category_id: 1
+  name: "MultiSport"
+pool:
+  category_id: 1
+  name: "Pool/Billiards"
+rock:
+  category_id: 1
+  name: "Rock Climbing"
+roller:
+  category_id: 1
+  name: "Roller Skating"
+rowing:
+  category_id: 1
+  name: "Rowing"
+rugby:
+  category_id: 1
+  name: "Rugby"
+sailing:
+  category_id: 1
+  name: "Sailing/Boating"
+boarding:
+  category_id: 1
+  name: "Skateboarding"
+skying:
+  category_id: 1
+  name: "Skiing"
+snows:
+  category_id: 1
+  name: "Snowboarding"
+foots:
+  category_id: 1
+  name: "Soccer"
+speeds:
+  category_id: 1
+  name: "Speed Skating"
+surfs:
+  category_id: 1
+  name: "Surfing"
+swims:
+  category_id: 1
+  name: "Swimming"
+pingpong:
+  category_id: 1
+  name: "Table Tennis"
+tennis:
+  category_id: 1
+  name: "Tennis"
+track:
+  category_id: 1
+  name: "Track and Field"
+volley:
+  category_id: 1
+  name: "Volleyball"
+water:
+  category_id: 1
+  name: "Water Polo"
+greek:
+  category_id: 1
+  name: "Wrestling"
+yoda:
+  category_id: 1
+  name: "Yoga/Meditation"
+two:
+  category_id: 2
+  name: "Acting"
+crafts:
+  category_id: 2
+  name: "Arts and Crafts"
+models:
+  category_id: 2
+  name: "Modeling"
+films:
+  category_id: 2
+  name: "Filmmaking"
+dances:
+  category_id: 2
+  name: "Dancing"
+musics:
+  category_id: 2
+  name: "Music"
+bands:
+  category_id: 2
+  name: "Band"
+stage:
+  category_id: 2
+  name: "Stage Crew"
+magics:
+  category_id: 2
+  name: "Magic"
+photos:
+  category_id: 2
+  name: "Photography"
+tards:
+  category_id: 3
+  name: "AD/HD"
+wards:
+  category_id: 3
+  name: "Autism"
+deaf:
+  category_id: 3
+  name: "Hearing Impaired"
+emo:
+  category_id: 3
+  name: "Emotional Disability"
+learning:
+  category_id: 3
+  name: "Learning Disability"
+visual:
+  category_id: 3
+  name: "Visually Impaired"
+speech:
+  category_id: 3
+  name: "Speech/Language"
+phys:
+  category_id: 3
+  name: "Physical Disability"
+sensor:
+  category_id: 3
+  name: "Sensory Motor Integration"
+social:
+  category_id: 3
+  name: "Social Skills"
+math:
+  category_id: 4
+  name: "Math"
+reading:
+  category_id: 4
+  name: "Reading"
+lang:
+  category_id: 4
+  name: "Language"
+hands:
+  category_id: 4
+  name: "Handwriting"
+writes:
+  category_id: 4
+  name: "Writing"
+scientia:
+  category_id: 4
+  name: "Science"
+happens:
+  category_id: 4
+  name: "History"
+cooks:
+  category_id: 4
+  name: "Cooking"
+lifes:
+  category_id: 4
+  name: "Life Guard Camp"
+comps:
+  category_id: 4
+  name: "Computer Camp"
+anglican:
+  category_id: 5
+  name: "Anglican"
+bahai:
+  category_id: 5
+  name: "Bahai"
+baptist:
+  category_id: 5
+  name: "Baptist"
+catholic:
+  category_id: 5
+  name: "Catholic"
+christ:
+  category_id: 5
+  name: "Christian"
+episcopal:
+  category_id: 5
+  name: "Episcopal"
+jews:
+  category_id: 5
+  name: "Jewish"
+lds:
+  category_id: 5
+  name: "Latter Day Saints"
+luths:
+  category_id: 5
+  name: "Lutheran"
+mennon:
+  category_id: 5
+  name: "Mennonite"
+method:
+  category_id: 5
+  name: "Methodist"
+musl:
+  category_id: 5
+  name: "Muslim"
+pres:
+  category_id: 5
+  name: "Presbyterian"
+ott:
+  category_id: 5
+  name: "Other"
+recycle:
+  category_id: 6
+  name: "Recycling/Composting"
+conserve:
+  category_id: 6
+  name: "Conservation"
+habitat:
+  category_id: 6
+  name: "Habitats"
+env:
+  category_id: 6
+  name: "Environmental Issues"
+fire:
+  category_id: 6
+  name: "Fire Building"
+orient:
+  category_id: 6
+  name: "Orienteering"
+weather:
+  category_id: 6
+  name: "Weather"
+wildlife:
+  category_id: 6
+  name: "Wildlife Viewing"
+safety:
+  category_id: 6
+  name: "Safety/Survival"
+hikes:
+  category_id: 6
+  name: "Hiking"
+african:
+  category_id: 7
+  name: "African"
+asian:
+  category_id: 7
+  name: "Asian"
+aust:
+  category_id: 7
+  name: "Australian"
+carib:
+  category_id: 7
+  name: "Caribbean"
+euro:
+  category_id: 7
+  name: "European"
+latin:
+  category_id: 7
+  name: "Latin/South American"
+north:
+  category_id: 7
+  name: "North American"
+pacific:
+  category_id: 7
+  name: "Pacific"

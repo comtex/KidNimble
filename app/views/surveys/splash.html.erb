@@ -1,0 +1,21 @@
+<h1></h1>
+
+<div align="center"><%= image_tag "/images/camp_gurus_logo.jpg" %> </div>
+
+ <% @surveys.each do |survey| %>
+  <!-- <tr> -->
+    <!-- <td><%= survey.camp_id %><td> -->
+    <!-- <td><%= survey.camp %><td> -->
+    <!-- <td><%= survey.email %></td> -->
+    <!-- <td><%= survey.like %></td> -->
+    <!-- <td><%= survey.improve %></td> -->
+    <!-- <td><%= survey.rating %></td> -->
+    <!-- <td><%= link_to 'Show', survey %></td> -->
+    <!-- <td><%= link_to 'Edit', edit_survey_path(survey) %></td> -->
+    <!-- <td><%= link_to 'Destroy', survey, confirm: 'Are you sure?', method: :delete %></td> -->
+  </tr>
+<% end %>
+</table>
+
+<br />
+<h1 align="center"><%= link_to 'Start your survey', new_survey_path(:camp_id => 999) %></h1>

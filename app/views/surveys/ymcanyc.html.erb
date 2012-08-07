@@ -1,0 +1,25 @@
+<%= stylesheet_link_tag "splash_page" %>
+
+<h1></h1>
+
+<div align="center"><%= image_tag "/images/YMCA-Logo.jpg" %></div>
+
+ <% @surveys.each do |survey| %>
+  <!-- <tr> -->
+    <!-- <td><%= survey.camp_id%></td> -->
+    <!-- <td><%= survey.email %></td> -->
+    <!-- <td><%= survey.like %></td> -->
+    <!-- <td><%= survey.improve %></td> -->
+    <!-- <td><%= survey.rating %></td> -->
+    <!-- <td><%= link_to 'Show', survey %></td> -->
+    <!-- <td><%= link_to 'Edit', edit_survey_path(survey) %></td> -->
+    <!-- <td><%= link_to 'Destroy', survey, confirm: 'Are you sure?', method: :delete %></td> -->
+  </tr>
+<% end %>
+</table>
+
+<br />
+<div id="content">
+<h1 align="center"><span class="fade-in one"><%= link_to 'Start your survey!', new_survey_path(:camp_id => 7) %></span></h1>
+</div>
+

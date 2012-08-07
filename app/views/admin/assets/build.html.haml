@@ -1,0 +1,18 @@
+%table
+  %thead
+    %tr
+      %th Assets
+  %tbody
+    - @assets.each do |e|
+      %tr
+        %td #{image_tag(e.asset.url(:large))}
+%br
+%br
+= semantic_form_for(@asset, :as => :asset, :url => "/admin/assets", :html => {:multipart => true }) do |f|
+  = f.hidden_field :camp_id
+  = f.input :asset, :as => :file, :label => "Add Asset"
+  = f.input :_destroy, :as=>:boolean, :required => false, :label => 'Remove Asset'
+      
+
+  %br
+  = submit_tag

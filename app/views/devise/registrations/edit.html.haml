@@ -1,0 +1,100 @@
+.container.userEdit
+  .formUserEdit
+    .formUser
+      = image_tag('template/editUSer.png', :alt => "Edit User", :title => "Edit User")
+      %hr
+      = semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+        .twelve
+          = devise_error_messages!
+          = f.semantic_errors
+          = f.inputs do
+            .row.form1
+              .three.columns{:style => "text-align:right"}
+                %h5= f.label :first_name, "First Name*"
+              .columns
+                = f.text_field :first_name
+              .form_field_help.columns
+                %p Please enter your first name
+            .row.form1
+              .three.columns{:style => "text-align:right"}
+                %h5= f.label :last_name, "Last Name*"
+              .columns
+                = f.text_field :last_name
+              .form_field_help.columns
+                %p Please enter your last name
+            .row.form1
+              .three.columns{:style => "text-align:right"}
+                %h5= f.label :address1
+              .columns
+                =f.text_field :address1
+              .form_field_help.columns
+                %p Your Address
+            .row.form1
+              .three.columns{:style => "text-align:right"}
+                %h5= f.label :address2
+              .columns
+                =f.text_field :address2
+              .form_field_help.columns
+                %p Your extended address
+            .row.form1
+              .three.columns{:style => "text-align:right"}
+                %h5= f.label :city
+              .columns
+                =f.text_field :city
+              .form_field_help.columns
+                %p Your city
+            .row.form1
+              .three.columns{:style => "text-align:right"}
+                %h5= f.label :state
+              .columns
+                =f.text_field :state
+              .form_field_help.columns
+                %p Your state
+            .row.form1
+              .three.columns{:style => "text-align:right"}
+                %h5= f.label :zip
+              .columns
+                =f.text_field :zip
+              .form_field_help.columns
+                %p Your zip
+            .row.form1
+              .three.columns{:style => "text-align:right"}
+                %h5= f.label :email, "Email*"
+              .columns
+                =f.email_field :email
+              .form_field_help.columns
+                %p Enter your email address
+            //.row.form1
+            //  .three.columns{:style => "text-align:right"}
+            //    %h5= f.label :current_password
+            //  .columns
+            //    =f.password_field :current_password
+            //  .form_field_help.columns
+            //    %p Enter current password (we need your<br/>current password to confirm your changes)
+            //.row.form1
+            //  .three.columns{:style => "text-align:right"}
+            //    %h5= f.label :password
+            //  .columns
+            //    =f.password_field :password
+            //  .form_field_help.columns
+            //    %p Enter new password
+            //.row.form1
+            //  .three.columns{:style => "text-align:right"}
+            //    %h5= f.label :password_confirmation
+            //  .columns
+            //    =f.password_field :password_confirmation
+            //  .form_field_help.columns
+            //    %p Confirm new password
+            %a.changepassword{:href => "javascript:void(0);", :onClick =>'openPopup("/users/changepassword.html", 700);'}
+            = f.submit "", :id => :confirm
+      .clear
+      %a{:href => "/users/index"}
+        %h4.back Back
+  .manageUserCont
+    .manageUser
+      .side
+        = image_tag('template/addacount.png', :alt => "add acount", :title => "add acount", :class => 'addacount')
+        .AddChild
+          %h4 Add Children
+          %a{:href => "/kids"}
+            = image_tag('template/manageAccount.png', :alt => "Manage Your Children", :title => "Manage Your Children")

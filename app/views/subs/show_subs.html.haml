@@ -1,0 +1,3 @@
+<!-- show_subs.html.erb -->
+
+= select_tag :subs, options_for_select(@sub.map { |k| ["#{k.name}",k.id] }), :class => 'subcategoryOption', :prompt => 'Select Subactivity...'

@@ -1,0 +1,8 @@
+#kids
+:javascript
+  $(function() {
+    $.getJSON('/groups', '', function (data) {
+      window.router = new Guru.Routers.GroupsRouter({groups: data});
+      Backbone.history.start();
+    });
+  });

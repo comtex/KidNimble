@@ -1,0 +1,8 @@
+= @res = {}                            |
+  if @city                             |
+    @res[:latitude]  = @city.latitude  |
+    @res[:longitude] = @city.longitude |
+    @res[:state]     = @city.state     |
+    @res[:city]      = @city.city      |
+  end                                  |
+  raw @res.to_json                     |

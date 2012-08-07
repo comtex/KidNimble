@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Group:
+  = @member.group_id
+%p
+  %b First name:
+  = @member.first_name
+%p
+  %b Last name:
+  = @member.last_name
+%p
+  %b Email:
+  = @member.email
+%p
+  %b Sent:
+  = @member.sent
+%p
+  %b Joined:
+  = @member.joined
+%p
+  %b Status:
+  = @member.status
+
+= link_to 'Edit', edit_member_path(@member)
+\|
+= link_to 'Back', members_path

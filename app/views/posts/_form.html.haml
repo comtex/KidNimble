@@ -1,0 +1,19 @@
+#reviewContainer.logbox.aboutCamp 
+  %h2 Post to the group
+  = form_for(@post, :format => :js, :remote => true, :html => {:onSubmit => "$('#loading').show();"}) do |f|
+    -if !@post.errors.blank?
+      #error_explanation
+        - @post.errors.full_messages.each do |msg|
+          %span.help-inline= msg
+          %br
+      #sucess.message
+    = f.hidden_field :user_id
+    = f.hidden_field :group_id
+    .field
+      = f.label :"Name"
+      = f.text_field :title
+    .field
+      = f.label :'Content'
+      = f.text_area :content, :class => 'reviewtext'
+    .actions.field
+      = f.button 'Submit'

@@ -1,0 +1,406 @@
+// Place all the styles related to the Camps controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* ----------Page search Resutlts---------- */
+
+.main{
+	background:#f4f4f4;
+	border-top:1px solid #f9f9f9
+}
+.refinesearch{
+  background:#fafafa;
+  padding:7% 0 0 5%;
+  border-radius:2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  width:240px;
+  border:1px solid #dae3e5;
+  margin:10% 0 20% 0;
+}
+.refinesearch h2,.camp h2{
+  font-size:15px;
+  margin-left:10px;
+  color:#272727
+}
+.refinesearch ul{margin-left:10px}
+.refinesearch ul li input{
+  background:url(/assets/template/bg_inputSearch.png) no-repeat;
+  border:none;
+  font-size:13px;
+  font-weight:bold;
+  color:#afafaf;
+  padding:2px 0 0 10px;
+  width:192px;
+  height:24px
+}
+.refinesearch ul li select.search{
+  background:url(/assets/template/bg_inputSearch.png) no-repeat;
+  border:solid 1px #afafaf;
+  padding:4px 0;
+  width:202px;
+  border:none;
+  font-size:13px;
+  color:#afafaf;
+  margin:3px 0;
+  height:26px
+}
+.refinesearch ul li .Btn_search{
+  background:url(/assets/template/Btn_search.png) no-repeat;
+  padding:0px;
+  margin:0px;
+  width:97px;
+  height:29px;
+  cursor:pointer
+}
+.refinesearch ul li span{
+  font-size:12px;
+  font-weight:200;
+  color:#b7b7b7;
+  margin:2px 0 0 20px;
+}
+.refinesearch {
+    color: #A6A6A6;
+    font-size: 13px;
+}
+.results{
+	margin:3% 0 5% 0;
+}
+.results h3{
+	color:#4793aa;
+	font-size:16px;
+	font-weight:bold
+}
+.results ul li{
+	border-bottom:1px solid #d6d9dc;
+	padding:15px 0 5px 5px;
+	margin:0px;
+}
+.results ul li.heading{
+  background:none !important;
+}
+.rating ul li{ background:none !important;}
+.results .pagination > ul > li{ background:none !important;}
+.results ul li:nth-child(odd){
+  background:white;
+}
+.results ul li div.title h5{
+	font-size:15px;
+	color:#666666;
+	margin-left:2%;
+	padding-bottom:2%;
+	font-weight:700
+}
+.results ul li div.rating h5,.results ul li div.distance h5{
+	font-size:16px;
+	font-weight:700;
+	color:#666666;
+	padding-bottom:2%;
+	text-align:center
+}
+
+
+.second{background:#FFF}
+.title p {
+	font-size:13px;
+	color:#a6a6a6
+}
+.title p b{
+	color:#36b7d1
+}
+.title p a{
+	color:#7f7f7f;
+	font-weight:bold;
+	text-transform:capitalize;
+}
+.distance h4{
+	font-size:16px;
+	font-weight:normal;
+	color:#8e8e8e;
+	text-align:center
+}
+div.rating ul{
+	width:100px;
+	margin:0 auto;
+	text-align:center;
+	height:20px;
+}
+div.rating ul li{
+	display:inline;
+	padding:0px;
+	margin:0px;
+	border:none;
+}
+.wonderLAnd_camp{
+	background:#f4f4f4 url('/assets/template/bg_direc_details.png') bottom center no-repeat;
+	border-top:solid 1px #f9f9f9;
+	min-height:450px
+}
+.wonderLAnd_camp img{
+	border:1px solid #dedada;
+	margin:80px 0 0 0;
+}
+.wonderLAnd_camp h3{
+	margin:90px 0 0 0;
+	font-size:20px;
+	color:#484e4e
+}
+ul#rater{
+	height:20px;
+	margin:0px;
+	padding:0px
+}
+ul#rater li{
+	float:left;
+	display:inline;
+	border:none;
+	margin:10px 3px 0 0;
+}
+ul#rater li img{
+	border:none;
+	margin:0px;
+}
+ul#rater li.ViewMore{
+	font-size:12px;
+	color:#c9c9c9;
+	padding:4px 0 0 0px;
+	text-transform:Uppercase
+}
+p.info{
+	margin-top:15px;
+	font-size:14px;
+	color:#36b7d1;
+	width:525px;
+}
+/*---  Conatact  ---*/
+.contact h4{
+	font-size:18px;
+	color:#484e4e;
+	float:left;
+	width:200px
+}
+.contact img{
+	margin-top:5px;
+	float:left
+}
+.contact p{
+	margin:20px 0 0 0;
+	line-height:20px;
+	font-size:14px;
+	color:#272727;
+}
+.contact p a{
+  color:#272727;
+}
+/*------------   Enevts and reviews   ----------------------*/
+.events_rev{
+	margin-top:-30px;
+	min-height:200px;
+}
+.EventsReviews dl.tabs{
+	border:none
+}
+.EventsReviews dl.tabs dd{
+	margin-right:5px;
+	border:none;
+}
+.EventsReviews dl.tabs dd a{
+	background:#d6d6d6;
+	color:#FFF;
+	border-radius:2px 2px 0 0;
+	-webkit-border-radius: 2px 2px 0 0;
+	-moz-border-radius: 2px 2px 0 0;
+	font-size:13px;
+	border:none}
+.EventsReviews dl.tabs dd a.active{
+	background:#FFF;
+	color:#6e6e6e;
+}
+ul.events_Detials  li.title{
+	background:#f3f3f3;
+	height:35px;
+	border:none;
+	line-height:35px
+}
+ul.events_Detials li{
+	border-bottom:1px solid #d6d9dc;
+	margin:0px;
+	padding:0px
+}
+ul.events_Detials li img{margin-top:6px}
+div.date p,div.name p,div.price p{
+	line-height:35px;
+	margin:0px;
+	padding:0px;
+	height:35px;
+	font-size:14px;
+	color:#484e4e
+}
+div.date p{padding-left:100px}
+div.name p{text-align:center}
+
+/*---------   Reviews  --------------------------*/
+.review{
+  float:left;
+}
+.reviews{
+	padding:20px 0 0 0;
+}
+.formPost{
+	border-bottom:solid 1px #d6d9dc;
+	margin-left:75px;
+	padding-bottom:20px;
+	max-width:900px;
+	float:left;}
+.reviews h2{
+	border-bottom:solid 1px #d6d9dc;
+	width:905px;
+	padding-bottom:15px;
+	font-size:19px;
+	color:#484e4e
+}
+.reviews h2 b{color:#39b2d1}
+
+.form ul{margin-top:20px}
+.form ul li{
+	margin:5px 0; 
+	padding:0px;
+}
+.form ul li b{
+	font-weight:normal;
+	padding-left:10px;
+	font-size:14px;
+	color:#272727
+}	
+.form ul li input{
+	background:url('/assets/template/bg_input_reviews.png');
+	font-size:14px;
+	width:307px;
+	height:36px;
+	border:none
+}
+.form ul li textarea{
+	background:url('/assets/template/bg_comment.png') repeat-x;
+	border-radius:4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border:none;
+	width:100%;
+	height:138px;
+}
+
+.form .reviewsubmit{
+  background:url('/assets/template/submit.png') no-repeat;
+  border:none;
+  float:left;
+  margin:5px 8px 0 0;
+  width:70px;
+  height:27px;
+  cursor:pointer
+}
+
+.reviewsStar{padding-bottom:10px;}
+.reviewsStar b{
+	display:inline;
+	font-weight:normal;
+	font-size:14px;
+	color:#272727;
+	height:15px;
+	line-height:15px;
+	margin-left:5px
+}
+.startCommets{
+	float:right;
+	margin:30px -40px 0 0;}
+.reviews_comment{
+	margin:10px 0 0 0;
+	padding:20px 0 2px 0;
+}	
+.comments{
+	background:url('/assets/template/points.png') bottom left repeat-x;
+	padding-bottom:10px;
+}
+.reviews_comment p{
+	background:url('/assets/template/endComments.png') bottom right no-repeat;
+	font-size:13px;
+	margin:20px 0 10px 0;
+	padding:0 0 15px 0;
+	margin:0px;
+	color:#484e4e;
+	font-style:italic
+}	
+.reviews_comment h4{
+	font-size:12px;
+	margin:10px 0 0 0;
+	padding:0px;
+	color:#484e4e
+}
+h5.morecomment {
+	background:url('/assets/template/moreComment.png') right center no-repeat;
+	padding:2px 0px 4px 0;
+	width:100px;
+	margin:15px 0;
+	font-size:14px;
+	color:#b9b9b9
+}
+
+a.listReview{
+  color:#39B2D1 !important;
+}
+
+/* --- User Account And Calender Pages --- */
+ 
+.refineAccount{
+  padding:7% 0 0 5%;
+  border-radius:2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  width:240px;
+  margin:10% 0 20% 0;
+}
+
+#kidsdesc{
+  float:left;
+  margin-left: 10px;
+  width:85%;
+}
+.kidsrow{
+  float:left;
+  height:25px;
+  width:100%;
+}
+.kidsrow img{margin-top:5px; height:20px;width:21px;}
+.kidsrow span{vertical-align:super;}
+
+.bookmarkedactivityview{margin-top:15px;}
+.feedsview span, .bookmarkedactivityview span{vertical-align:top;}
+.bookmarkedactivityview .row{border-bottom:1px solid #BBBBBB; margin-bottom:15px;width:100%;}
+.feedsview img, .bookmarkedactivityview img{margin-right:5px;}
+
+.feedsview .row{margin-bottom:5px;}
+.feedsview .desc{float:left !important;clear:left;}
+
+.create_group{
+  background:url('/assets/template/btn_bl_bg.png') right center no-repeat;
+  padding:2px 17px 4px 17px;
+  float:left;
+  margin:15px 0;
+  font-size:14px;
+  color:#b9b9b9
+}
+
+.create_post{
+  background:url('/assets/template/btn_bl_bg.png') right center no-repeat;
+  padding:2px 12px 4px 12px;
+  margin:15px 0;
+  font-size:14px;
+  color:#b9b9b9
+}
+
+.feedsview .title{width:100%;}
+.create_post_left{float:left;clear:left;}
+#bookmark_ul{margin:0px;}
+#bookmark_ul li{
+  margin:15px 0 0 0;
+  text-transform:uppercase;
+}

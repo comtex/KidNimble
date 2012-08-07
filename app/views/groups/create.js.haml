@@ -1,0 +1,6 @@
+- if @group.errors.any?
+  $('#dialog-form').html('#{escape_javascript(render('form'))}');
+- else
+  alert("#{flash[:notice]}");
+  window.location.href="/groups/#{@group.id}"
+$('#loading').hide();

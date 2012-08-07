@@ -1,0 +1,31 @@
+<div class="row">
+	<div class="ten columns title">
+		<div class="row">
+			<img class="camp_avatar" src="/assets/category/<%= window.get_category_imagename(category_name) %>" width="25" height="25" alt="<%= category_name %>" title="<%= category_name %>">
+			<h3><a href="#/<%= id %>/show"><b><%= title %></b></a></h3>
+		</div>
+		<div class="row">
+			<p>
+			<% if(description != null){ %>
+				<%= description.slice(0,200)+'...' %>
+			<% } %>
+			<a href="#/<%= id %>/show">MORE</a>&nbsp;&nbsp;
+			<a class="listReview" href="#" onClick='openPopup("/reviews/new.html?camp_id=<%= id %>&url="+escape(this.href)+"/<%= id %>/show");' id="write_review">REVIEW</a>
+			</p>
+		</div>
+	</div>
+	<div class="two columns rating distance">
+		<ul>
+			<% for(i=1;i<=(rating/raters);i++){%>
+				<li><img src="/assets/template/star.png" alt="star" title="" /></li>
+			<% }%>
+		</ul>
+		<h4>
+		<% if(distance != null && !isNaN(distance)){ %>
+			<%= parseInt(distance) %>
+		<% }else{ %>
+			<%= 0 %>
+		<%} %>
+		 miles</h4>
+	</div>
+</div>

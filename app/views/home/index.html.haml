@@ -1,0 +1,61 @@
+.container.mainHome
+  .row
+    .six.columns.categories
+      %ul.tabs-content.tabs-categorie
+        %li.active
+          %img{:alt => "#", :src => "/assets/template/findKids.png"}/
+          /%h5 Search by:
+          = form_tag '/camps', :method => 'GET' do
+            /%h5 Near (city, zip code or address)
+            = text_field_tag :cityzipadd, '', :class => 'categ', :placeholder => 'city, zip code or address'
+            /%h5{:style => "margin-left:57px;"} Or:
+            /.styleSelect.categshort
+            /  = select_tag :state, options_for_select(Carmen::states('US'), 'NY'), :id => "homeStateOption", :class => 'stateOption'
+            /= text_field_tag :city, '', :class => 'categ categshort', :placeholder => 'City'
+            
+            = text_field_tag :name, '', :class => 'categ', :placeholder => 'Name'
+            #categorySelect.styleSelect
+              = select_tag :category, options_for_select(@categories.map { |k| ["#{k.name}",k.id] }.sort), :class => 'categoryOption', :prompt => 'Select Activity...'
+            #subCategorySelect.styleSelect
+              = select_tag :subs, options_for_select(@subcategory.map { |k| ["#{k.name}",k.id] }.sort), :class => 'subcategoryOption', :prompt => 'Select Subactivity...'
+            = hidden_field_tag :longitude, params[:longitude] || 0.0
+            = hidden_field_tag :latitude, params[:latitude] || 0.0
+            %a{:href => "/home/about"}
+              /= image_tag('template/help.png', :alt => "Help", :title => "Help", :class => "searchlogo")
+            = submit_tag '', :value => '', :class => 'search'
+            /%a.logo{:href => "/home"}
+            /  = image_tag('template/logo_Footer.png', :alt => "KidNimble", :title => "KidNimble", :class => "searchlogo")
+            /%h3
+            /  Discover. Plan. Coordinate
+    /.seven.columns.homeloginrow
+    /  .row
+    /    %a{:href => "/users/sign_in"}
+    /      = image_tag('template/login.png', :alt => "Login", :title => "Login", :class => "searchlogo")
+    /    %h5 Sign in with
+    /    %a{:href => "/users/auth/facebook"}
+    /      %img{:alt => "facebook", :src => "/assets/template/facebook.png", :title => "facebook"}
+    /  .row
+    /    %h5 New here?
+    /    %a.createaccount{:href => "/users/sign_up"} 
+    /      %h5 Create an account
+            
+.container.programs
+  .progr
+    .progrLeft
+      .Place
+        %p
+          %strong HomeRun Baseball
+          Washington, DC
+
+.clear
+
+:javascript
+  window.latitude  = geoip_latitude();
+  window.longitude = geoip_longitude();
+  $(function() {
+    if(window.latitude != '' && window.longitude != ''){
+      $('input[name^="latitude"]').val(window.latitude);
+      $('input[name^="longitude"]').val(window.longitude);
+    }
+    window.page   = 0;
+  });

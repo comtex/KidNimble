@@ -1,0 +1,5218 @@
+*
+  margin: 0
+  padding: 0
+
+body
+  background: #5aa5bc url(/assets/body-bg.png) top center repeat-x
+  font: 11px / 1.55 "HelveticaLTStdRoman", arial, helvetica, sans-serif
+  color: #444
+  text-align: center
+
+img
+  border: 0
+  vertical-align: top
+
+a
+  color: #2ba2bd
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+
+\:focus
+  outline: 0
+
+/* Headings
+
+h1
+  font-size: 2.1em
+  font-weight: normal
+  line-height: 1.15
+  font-family: 'Museo500'
+  span
+
+h2
+  font-size: 1.5em
+  line-height: 1.25
+  margin-bottom: .45em
+  font-family: 'Museo500'
+
+h3
+  font-size: 1.35em
+  line-height: 1.25
+  margin-bottom: .45em
+  font-family: 'Museo300'
+
+h4
+  font-size: 1.22em
+  line-height: 1.25
+  font-family: 'Museo300'
+  display: inline-block
+  border-bottom: 1px dotted #ccc
+  padding: 3px 0
+  margin: 0 0 5px 0
+
+h5
+  font-size: 1.05em
+  line-height: 1.35
+  margin-bottom: .45em
+
+h6
+  font-size: 1em
+  line-height: 1.35
+  margin-bottom: 1em
+
+.museo300
+  font-family: 'Museo300'
+
+.reviewdate
+  float: right
+  text-align: right
+  height: 15px
+  width: 300px
+  font-family: 'Museo700'
+  font-size: 1.2em
+  line-height: 1em
+  color: #ddd
+  em
+    font-family: 'Museo300'
+    font-size: 0.8em
+    color: #bbb
+
+.reviewbox
+  padding: 10px 20px 0 20px
+  background-color: #f8f8f8
+  border: 1px solid #eee
+  margin: 10px 0
+
+/* Forms
+
+form
+  display: inline
+
+fieldset
+  border: 0
+
+legend
+  display: none
+
+/* Table
+
+table
+  border: 0
+  /*border-collapse:collapse;
+  border-spacing: 0
+  empty-cells: show
+  font-size: 100%
+
+caption, th, td
+  vertical-align: top
+  text-align: left
+  font-weight: normal
+
+/* Content
+
+p
+  margin: 0 0 1em
+
+strong
+  font-weight: bold
+
+address
+  font-style: normal
+  line-height: 1.35
+  font-size: 1.1em
+
+cite
+  font-style: normal
+
+q, blockquote
+  quotes: none
+
+q
+  &:before, &:after
+    content: ''
+
+small
+  font-size: 1em
+
+big
+  font-size: 1.15em
+
+/*sup           { font-size:1em; vertical-align:top; }
+
+/* Lists
+
+ul, ol
+  list-style: none
+
+/* Tools
+
+.hidden
+  display: block !important
+  border: 0 !important
+  margin: 0 !important
+  padding: 0 !important
+  font-size: 0 !important
+  line-height: 0 !important
+  width: 0 !important
+  height: 0 !important
+  overflow: hidden !important
+
+.nobr
+  white-space: nowrap !important
+
+.wrap
+  white-space: normal !important
+
+.a-left
+  text-align: left !important
+
+.a-center
+  text-align: center !important
+
+.a-right
+  text-align: right !important
+
+.v-top
+  vertical-align: top
+
+.v-middle
+  vertical-align: middle
+
+.f-left, .left
+  float: left !important
+
+.f-right, .right
+  float: right !important
+
+.f-none
+  float: none !important
+
+.f-fix
+  float: left
+  width: 100%
+
+.no-display
+  display: none
+
+.no-margin
+  margin: 0 !important
+
+.no-padding
+  padding: 0 !important
+
+.no-bg
+  background: none !important
+
+/* =======================================================================================
+
+ul.nav li
+  display: inline-block
+  float: left
+  font-family: 'Museo300'
+  font-size: 14px
+  line-height: 14px
+  padding: 10px 30px 0 0
+  a
+    color: #7baab5
+
+.breadcrumbs
+  padding: 10px
+  margin: 10px 0 0 0
+  background-color: #fff
+  border-radius: 10px
+
+/* Layout ================================================================================
+
+.wrapper
+
+.page
+  width: 1000px
+  margin: 0 auto
+  text-align: left
+
+.page-print
+  background: #fff
+  padding: 25px 30px
+  text-align: left
+
+.page-empty
+  background: #fff
+  padding: 20px
+  text-align: left
+
+.page-popup
+  background: #fff
+  padding: 25px 30px
+  text-align: left
+
+.main-container
+
+.main
+  min-height: 600px
+  background-color: #f3f7f8
+  padding: 30px 20px
+  border-radius: 10px 10px 0 0
+  -moz-border-radius: 10px 10px 0 0
+  -webkit-border-radius: 10px 10px 0 0
+  margin: 10px 0 0 0
+
+.home-container
+  padding-top: 39px
+  background: transparent url(/assets/homebg1.jpg) top center no-repeat
+  margin-top: 1px
+
+.home-intro
+  float: right
+  width: 275px
+  display: inline-block
+  height: 300px
+  h1
+    color: #fff
+    font-size: 1.8em
+    margin-bottom: 10px
+  p
+    color: #cfdee2
+    font-size: 1.15em
+    line-height: 1.175em
+    padding-left: 35px
+
+.home-container h2, .homepage h2, #home-bar h2
+  color: #2a343a
+  font-family: 'Museo500'
+  font-weight: normal
+  font-size: 1.55em
+  text-shadow: 1px 0px 2px #4a93a8
+  margin: 0
+
+.home-container h2 img
+  padding-right: 7px
+
+#home-search
+  width: 264px
+  height: 237px
+  margin: 0px
+  padding: 10px 10px 10px 70px
+  float: left
+  display: inline-block
+  background-image: url(/assets/bgsearch.png)
+  overflow: hidden
+  font-family: 'Museo300'
+  font-weight: normal
+  color: #777
+  text-shadow: 0 1px 0 #fff
+  font-size: 12px
+  line-height: 12px
+  input
+    font-family: 'Museo300'
+    font-weight: normal
+    color: #777
+    text-shadow: 0 1px 0 #fff
+    font-size: 12px
+    line-height: 12px
+  select
+    font-family: 'Museo300'
+    font-weight: normal
+    color: #777
+    text-shadow: 0 1px 0 #fff
+    font-size: 12px
+    line-height: 12px
+    option
+      color: #fff
+      text-shadow: none
+      padding: 3px
+
+/*#home-search:hover { background-image:url(/assets/placeholder-searchO.jpg)}
+
+#home-img
+  width: 355px
+  height: 257px
+  margin: 0
+  padding: 0
+  float: left
+  display: inline-block
+
+#home-bar
+  width: 100%
+  height: auto
+  margin: 0 auto 30px auto
+  padding: 10px 0
+  background-image: url(/assets/whitetrans.png)
+  clear: both
+  h2
+    text-shadow: 1px 0px 2px #8fc3d3
+    padding: 1px 30px 10px
+    font-size: 1.7em
+
+#home-ft1 h2, #home-ft2 h2
+  text-shadow: 1px 0px 2px #8fc3d3
+  padding: 1px 30px 10px
+  font-size: 1.7em
+
+#home-featured
+  display: inline-block
+  float: left
+  width: 345px
+  height: 275px
+  background: transparent url(/assets/ic-feat.png) top left no-repeat
+  overflow: hidden
+
+.home-featured
+  background-color: #f3f7f8
+  padding: 10px 15px
+  font-size: 1.1em
+  line-height: 1.4em
+
+#home-popular
+  display: inline-block
+  float: left
+  width: 345px
+  height: 275px
+  margin-left: 13px
+  background: transparent url(/assets/ic-pop.png) top left no-repeat
+  overflow: hidden
+
+.home-popular
+  overflow: hidden
+  margin-bottom: 50px
+
+.home-more
+  background-color: #19404b
+  height: 22px
+  padding: 1px 15px
+  color: #FFF
+  font-family: 'Museo300'
+  border-radius: 0 0 5px 5px
+  -moz-border-radius: 0 0 5px 5px
+  -webkit-border-radius: 0 0 5px 5px
+  .home-info
+    float: right
+    display: inline-block
+    text-align: right
+    color: #FFF !important
+    line-height: 1.7em
+    font-size: 1.1em
+  .ratings
+    margin: 1px 0 0
+    line-height: 1
+
+.home-sug .ratings
+  margin: 1px 0 0
+  line-height: 1
+
+.home-more .ratings .amount, .home-sug .ratings .amount
+  display: none
+
+.home-more .ratings .rating-box, .home-sug .ratings .rating-box
+  width: 70px
+  height: 13px
+  font-size: 0
+  line-height: 0
+  background: url(/assets/bkg_rating_big.png) 0 0 repeat-x
+  text-indent: -999em
+  overflow: hidden
+
+.home-more .ratings .rating-box .rating, .home-sug .ratings .rating-box .rating
+  float: left
+  height: 13px
+  background: url(/assets/bkg_rating_big.png) 0 100% repeat-x
+
+#home-midright
+  width: 275px
+  float: right
+  display: inline-block
+  text-align: right
+
+#home-quote
+  display: block
+  width: 270px
+  margin-top: 32px
+  padding-top: 10px
+  margin-bottom: 15px
+  text-align: right
+  color: #222e34
+  font-family: 'Museo300'
+  font-size: 1.275em
+  line-height: 1.25em
+  background: transparent url(/assets/ic-quote.png) top left no-repeat
+  text-indent: 15px
+  span
+    font-size: 0.8em
+    line-height: 0.8em !important
+  #quotes
+    width: 270px
+    .slide
+      list-style-type: none
+
+/*Banner Rotator
+
+#banners
+  margin: 0
+  padding: 0
+  float: left
+  .banners_container
+    width: 355px
+    height: 257px
+    display: none
+    div
+      width: 355px
+      height: 257px
+      display: block
+
+/*Quotes Rotator
+
+#slides .slides_container
+  width: 270px
+  height: auto
+  display: none
+  div
+    width: 270px
+    height: auto
+    display: block
+    span
+      display: block
+      height: 20px
+      padding: 5px 0 10px 0
+
+#home-suggestions
+  display: block
+  width: 280px
+  height: 100px
+  background: transparent url(/assets/ic-balloon.png) top right no-repeat
+
+.home-sug
+  display: inline-block
+  float: right
+  background-color: #f3f7f8
+  width: 120px
+  height: auto
+  margin-left: 8px
+  line-height: 0.9em
+  border-radius: 0 5px 0 0
+  -moz-border-radius: 0 5px 0 0
+  -webkit-border-radius: 0 5px 0 0
+  padding: 10px 0 5px 10px
+  position: relative
+  text-align: left
+  a
+    color: #1f2c31
+    font-weight: bold
+    font-size: 1.05em
+    &.go
+      float: right
+      display: inline-block
+      outline: none
+      background-image: url(/assets/tiny-go.png)
+      width: 31px
+      height: 16px
+      margin-top: 3px
+  .clearer
+    height: 4px
+  .ratings .rating-box
+    position: absolute
+    z-index: 1
+    background: url(/assets/bkg_rating_bsug.png) 0 0 repeat-x
+    .rating
+      position: absolute
+      z-index: 1
+      background: url(/assets/bkg_rating_bsug.png) 0 100% repeat-x
+  .reviewbg
+    background: transparent url(/assets/noreviews.png)
+    width: 71px
+    height: 15px
+    position: absolute
+    z-index: 0
+    bottom: 7px
+    left: 9px
+
+#home-ft1
+  display: inline-block
+  float: left
+  width: 320px
+  height: auto
+  background: transparent url(/assets/ic-rss.png) top left no-repeat
+  overflow: hidden
+  position: relative
+  p
+    display: inline-block
+    float: left
+    width: 260px
+    margin: 0
+
+a.rightvisit
+  float: left
+  display: inline-block
+  position: absolute
+  bottom: 2px
+  right: 0
+
+#home-ft1 h5
+  font-family: 'Museo500'
+  margin-bottom: 0
+  a
+    color: #2a343a
+
+#home-ft2
+  display: inline-block
+  float: left
+  width: 345px
+  height: 100px
+  margin-left: 38px
+  background: transparent url(/assets/ic-light.png) top left no-repeat
+  overflow: hidden
+  margin-top: 37px
+
+/* Base Columns
+
+.col-left
+  float: left
+  width: 220px
+  padding: 0 0 1px
+
+.col-main
+  float: left
+  width: 686px
+  padding: 0 0 1px
+
+.col-right
+  float: right
+  width: 220px
+  padding: 0 0 1px
+
+/* 1 Column Layout
+
+.col1-layout
+  .main
+    padding: 16px 30px 40px
+  .col-main
+    float: none
+    width: auto
+
+/* 2 Columns Layout
+
+.col2-left-layout .col-main
+  float: right
+
+.col2-right-layout .col-main
+
+/* 3 Columns Layout
+
+.col3-layout
+  .col-main
+    width: 452px
+  .col-wrapper
+    float: left
+    width: 689px
+    .col-main
+      float: right
+
+/* Content Columns
+
+.col2-set
+  .col-1
+    float: left
+    width: 48.5%
+  .col-2
+    float: right
+    width: 48.5%
+  .col-narrow
+    width: 32%
+  .col-wide
+    width: 65%
+
+.col3-set
+  .col-1
+    float: left
+    width: 32%
+  .col-2
+    float: left
+    width: 32%
+    margin-left: 2%
+  .col-3
+    float: right
+    width: 32%
+
+.col4-set
+  .col-1
+    float: left
+    width: 23.5%
+  .col-2
+    float: left
+    width: 23.5%
+    margin: 0 2%
+  .col-3
+    float: left
+    width: 23.5%
+  .col-4
+    float: right
+    width: 23.5%
+
+/* =======================================================================================
+
+.footer
+  .col3-set
+    h3
+      color: #909699
+      font-weight: normal
+      font-size: 1.2em
+    color: #e2e3e4
+    font-size: 1.05em
+    line-height: 1.4em
+    margin-bottom: 5px
+    a
+      color: #e2e3e4
+    div
+    .col-1
+      width: 12%
+      padding: 0 10px 20px 0
+      height: 60px
+      border-right: 1px solid #323c42
+    .col-2
+      width: 15%
+      padding: 0 10px 20px 26px
+      height: 60px
+      border-right: 1px solid #323c42
+    .col-3
+      width: 60%
+      padding: 0 10px 20px 26px
+      height: 60px
+      border: none
+      .f-left
+        width: 30%
+  p
+    padding: 0
+    margin: 0
+
+/* Global Styles =========================================================================
+/* Form Elements
+
+input, select, textarea, button
+  font: 12px / 15px Arial, Helvetica, sans-serif
+  vertical-align: middle
+  color: #2f2f2f
+
+input.input-text, select, textarea
+  background: #fff
+  border: 1px solid #b6b6b6
+
+input.input-text, textarea
+  padding: 2px
+
+select
+  padding: 1px
+  option
+    padding-right: 10px
+  &.multiselect option
+    border-bottom: 1px solid #b6b6b6
+    padding: 1px 5px
+    &:last-child
+      border-bottom: 0
+
+textarea
+  overflow: auto
+
+input
+  &.radio, &.checkbox
+    margin-right: 3px
+  &.qty
+    width: 2.5em !important
+
+button
+  &.button
+    &::-moz-focus-inner
+      padding: 0
+      border: 0
+    -webkit-border-fit: lines
+    overflow: visible
+    width: auto
+    border: 0
+    padding: 0
+    margin: 0
+    background: transparent
+    cursor: pointer
+    span
+      float: left
+      height: 28px
+      line-height: 28px
+      background: transparent url(/assets/bkg_btn.png) 0 0 no-repeat
+      padding: 0 0 0 6px
+      text-transform: uppercase
+      text-align: center
+      white-space: nowrap
+      color: #eee
+      font-family: 'Museo300'
+      letter-spacing: 0.05em
+      span
+        background-position: 100% 0
+        padding: 0 15px 0 9px
+  &.disabled span
+    color: #bbb !important
+  &.btn-checkout
+    span
+      height: 28px
+      border: 0
+      background-image: url(/assets/btn_checkout.gif)
+      padding: 0 0 0 6px
+      font: bold 12px / 26px Arial, Helvetica, sans-serif
+      color: #fff
+      span
+        padding: 0 40px 0 34px
+    &.no-checkout span
+      background-position: 0 100%
+      color: #cfcfcf
+      span
+        background-position: 100% 100%
+
+/* FF Fix
+/* <- Safari & Google Chrome Fix
+
+/*button.btn-cart span {}
+
+p.control input
+  &.checkbox, &.radio
+    margin-right: 6px
+
+/* Form Highlight
+/*input.input-text:focus,select:focus,textarea:focus { background-color:#edf7fd; }
+/*.highlight { background:#efefef; }
+
+/* Form lists
+/* Grouped fields
+/*.form-list { width:535px; margin:0 auto; overflow:hidden; }
+
+.form-list
+  li
+    margin: 0 0 6px
+  label
+    float: left
+    color: #555
+    font-weight: bold
+    position: relative
+    z-index: 0
+    &.required em
+      float: right
+      font-style: normal
+      color: #eb340a
+      position: absolute
+      top: 0
+      right: -7px
+  li.control
+    label
+      float: none
+    input
+      &.radio, &.checkbox
+        margin-top: -1px
+        margin-right: 4px
+    .input-box
+      clear: none
+      display: inline
+      width: auto
+  .input-box
+    display: block
+    clear: both
+    width: 260px
+  .field
+    float: left
+    width: 275px
+  input.input-text
+    width: 254px
+  textarea
+    width: 254px
+    height: 10em
+  select
+    width: 260px
+  li
+    &.wide
+      .input-box
+        width: 535px
+      input.input-text, textarea
+        width: 529px
+      select
+        width: 535px
+    &.additional-row
+      border-top: 1px solid #ccc
+      margin-top: 10px
+      padding-top: 7px
+      .btn-remove
+        float: right
+        margin: 5px 0 0
+  .input-range input.input-text
+    width: 74px
+  .customer-name-prefix .input-box, .customer-name-suffix .input-box, .customer-name-prefix-suffix .input-box, .customer-name-prefix-middlename .input-box, .customer-name-middlename-suffix .input-box, .customer-name-prefix-middlename-suffix .input-box
+    width: auto
+  .name-prefix, .name-suffix
+    width: 65px
+    select
+      width: 55px
+    input.input-text
+      width: 49px
+  .name-middlename
+    width: 70px
+    input.input-text
+      width: 49px
+  .customer-name-prefix-middlename-suffix .name-firstname, .customer-name-prefix-middlename .name-firstname
+    width: 140px
+  .customer-name-prefix-middlename-suffix .name-firstname input.input-text, .customer-name-prefix-middlename .name-firstname input.input-text
+    width: 124px
+  .customer-name-prefix-middlename-suffix .name-lastname
+    width: 205px
+    input.input-text
+      width: 189px
+  .customer-name-prefix-suffix
+    .name-firstname
+      width: 210px
+    .name-lastname
+      width: 205px
+    .name-firstname input.input-text, .name-lastname input.input-text
+      width: 189px
+    .name-firstname
+      width: 210px
+    .name-lastname
+      width: 205px
+    .name-firstname input.input-text, .name-lastname input.input-text
+      width: 189px
+  .customer-name-prefix .name-firstname, .customer-name-middlename .name-firstname
+    width: 210px
+  .customer-name-suffix .name-lastname, .customer-name-middlename .name-firstname
+    width: 205px
+  .customer-name-middlename-suffix
+    .name-firstname, .name-lastname
+      width: 205px
+  .customer-name-prefix .name-firstname input.input-text, .customer-name-suffix .name-lastname input.input-text, .customer-name-middlename .name-firstname input.input-text
+    width: 189px
+  .customer-name-middlename-suffix
+    .name-firstname input.input-text, .name-lastname input.input-text
+      width: 189px
+  .customer-dob
+    .dob-month, .dob-day, .dob-year
+      float: left
+      width: 85px
+    input.input-text
+      display: block
+      width: 74px
+    label
+      font-size: 10px
+      font-weight: normal
+      color: #888
+    .dob-day, .dob-month
+      width: 60px
+    .dob-day input.input-text, .dob-month input.input-text
+      width: 46px
+    .dob-year
+      width: 140px
+      input.input-text
+        width: 134px
+
+/*.form-list li.fields { margin-right:-15px; }
+
+/* Customer
+
+.buttons-set
+  clear: both
+  margin: 1em 0 0
+  padding: 0
+  /*border-top:1px solid #e4e4e4;
+  text-align: right
+  p.required
+    margin: 0 0 10px
+  a.back-link
+    float: left
+    margin: 0 0 10px 0
+    width: 100%
+    border: 1px solid #e4e4e4
+    text-align: center
+    font-weight: bold
+    text-transform: uppercase
+    padding: 5px 0
+    background-color: #fff
+  button.button
+    float: right
+    margin-left: 5px
+
+.buttons-set-order
+  margin: 10px 0 0
+  .please-wait
+    padding: 5px 7px 0 0
+
+.fieldset
+  margin: 0 10px 25px
+  .legend
+    margin: 0 -10px 12px
+    border-bottom: 1px dotted #7BAAB5
+    padding: 2px 10px
+    font-size: 13px
+    line-height: 1.25
+    color: #7BAAB5
+
+/* Form Validation
+
+.validation-advice
+  clear: both
+  min-height: 13px
+  margin: 3px 0 0
+  padding-left: 13px
+  font-size: 11px
+  line-height: 13px
+  background: url(/assets/validation_advice_bg.gif) 2px 3px no-repeat
+  color: #eb340a
+
+.validation-failed
+  border: 1px solid #eb340a !important
+  background: #faebe7 !important
+
+.validation-passed
+
+p.required
+  font-size: 11px
+  text-align: right
+  color: #EB340A
+
+/* Expiration date and CVV number validation fix
+
+.v-fix
+  float: left
+  .validation-advice
+    display: block
+    width: 12em
+    margin-right: -12em
+    position: relative
+
+/* Global Messages
+
+.success
+  color: #3d6611
+  font-weight: bold
+
+.error
+  color: #df280a
+  font-weight: bold
+
+.notice
+  color: #e26703
+
+.messages
+  list-style: none !important
+  margin: 0 !important
+  padding: 0 !important
+  ul
+    list-style: none !important
+    margin: 0 !important
+    padding: 0 !important
+  width: 100%
+  overflow: hidden
+  li
+    margin: 0 0 10px !important
+    li
+      margin: 0 0 3px !important
+
+.error-msg, .success-msg, .note-msg, .notice-msg
+  border-style: solid !important
+  border-width: 1px !important
+  padding: 4px 12px !important
+  font-size: 11px !important
+  font-weight: bold !important
+
+.error-msg
+  border-color: #f16048
+  background-color: #faebe7
+  color: #df280a
+
+.success-msg
+  border-color: #446423
+  background-color: #eff5ea
+  color: #3d6611
+
+.note-msg, .notice-msg
+  border-color: #fcd344
+  background-color: #fafaec
+  color: #3d6611
+
+/* BreadCrumbs
+
+.breadcrumbs
+  a
+    color: #7f7f7f
+  li
+    display: inline
+    strong
+      font-weight: bold
+
+/* Page Heading
+
+.page-title
+  width: 100%
+  overflow: hidden
+  margin: 15px 0
+  h1, h2
+    font-size: 23px
+    font-weight: normal
+  .separator
+    margin: 0 3px
+  .link-rss
+    float: right
+    margin: 7px 0 0
+
+.title-buttons
+  text-align: right
+  h1, h2, h3, h4, h5, h6
+    float: left
+
+.subtitle, .sub-title
+  clear: both
+  padding: 12px 0 0
+  font-size: 16px
+  font-weight: bold
+  margin: 0 0 6px
+
+/* Pager
+
+.pager
+  font-size: 11px
+  padding: 5px 8px 3px
+  text-align: center
+  .amount
+    float: left
+    margin: 0
+  .limiter
+    float: right
+    label
+      vertical-align: middle
+    select
+      padding: 0
+      margin: 0 0 1px
+      vertical-align: middle
+  .pages
+    margin: 0 140px
+    ol
+      display: inline
+    li
+      display: inline
+      margin: 0 2px
+    .current
+
+/* Sorter
+
+.sorter
+  font-size: 11px
+  padding: 0 0 3px 0
+  border-bottom: 1px solid #ddd
+  margin-bottom: 10px
+  .view-mode
+    float: left
+    margin: 0
+  .sort-by
+    float: right
+    padding-right: 36px
+    label
+      vertical-align: middle
+    select
+      padding: 0
+      margin: 0 0 1px
+      vertical-align: middle
+  .link-feed
+
+/* Toolbar
+
+.toolbar
+  .pager
+    padding: 3px 0
+  .sorter
+
+.toolbar-bottom
+  margin-top: 10px
+
+/* Data Table
+
+.data-table
+  width: 100%
+  tr
+    &.odd
+      background: #fff
+    &.even
+      background: #fcfcfc
+    &.last
+      th, td
+        border-bottom: 0 !important
+  th
+    padding: 2px 8px
+    font-size: 10px
+    text-transform: uppercase
+    white-space: nowrap
+    font-weight: bold
+    &.wrap
+      white-space: normal
+    a
+      color: #fff
+  td
+    padding: 3px 8px
+  thead
+    background: #e9e9e9
+    tr
+      background: #e9e9e9
+  tfoot
+    border-bottom: 1px solid #d9dde3
+    tr
+      background-color: #f3f3f3 !important
+  tbody
+    th
+      padding: 3px 8px
+      font-size: 11px
+      font-weight: bold
+      text-transform: none
+      white-space: normal
+      /*border-bottom:1px solid #d9dde3;
+    td
+      /*border-bottom:1px solid #d9dde3;
+  tfoot strong
+    font-size: 14px
+  tbody
+    &.odd tr
+      background: #fff
+    &.even tr
+      background: #fcfcfc
+    &.odd tr td, &.even tr td
+      border-bottom: 0
+    &.odd tr.border td, &.even tr.border td
+      border-bottom: 1px solid #d9dde3
+    td
+      .option-label
+        font-weight: bold
+        font-style: italic
+      .option-value
+        padding-left: 10px
+
+/* Bundle products tables
+
+/* Generic Info Box
+
+.info-box
+  margin: 0 0 15px
+  h2
+    font-size: 13px
+    font-weight: bold
+    border-bottom: 1px solid #ddd
+    margin: 0 0 8px
+
+.info-table
+  th
+    font-weight: bold
+    padding: 2px 15px 2px 0
+  td
+    padding: 2px 0
+
+/* Shopping cart total summary row expandable to details
+
+tr
+  &.summary-total
+    cursor: pointer
+    td
+    .summary-collapse
+      float: right
+      text-align: right
+      padding-left: 20px
+      background: url(/assets/bkg_collapse.gif) 0 4px no-repeat
+      cursor: pointer
+  &.show-details
+    .summary-collapse
+      background-position: 0 -53px
+    td
+  &.summary-details td
+    background-color: #dae1e4
+    color: #626465
+  &.summary-details-first td
+    border-top: 1px solid #d2d8db
+  &.summary-details-excluded
+    font-style: italic
+
+/* Shopping cart tax info
+
+.cart-tax-info
+  display: block
+  padding-right: 20px
+  .cart-price
+    padding-right: 20px
+
+.cart-tax-total
+  display: block
+  padding-right: 20px
+  background: url(/assets/bkg_collapse.gif) 100% 4px no-repeat
+  cursor: pointer
+
+.cart-tax-info .price, .cart-tax-total .price
+  display: inline !important
+  font-weight: normal !important
+
+.cart-tax-total-expanded
+  background-position: 100% -53px
+
+/* Class: std - styles for admin-controlled content
+
+.std
+  .subtitle
+    padding: 0
+  ol.ol
+    list-style: decimal outside
+    padding-left: 1.5em
+  ul.disc
+    list-style: disc outside
+    padding-left: 18px
+    margin: 0 0 10px
+  dl
+    dt
+      font-weight: bold
+    dd
+      margin: 0 0 10px
+
+/*.std ul,
+ *.std ol,
+ *.std dl,
+ *.std p,
+ *.std address,
+ *.std blockquote { margin:0 0 1em; padding:0; }
+ *.std ul { list-style:disc outside; padding-left:1.5em; }
+ *.std ol { list-style:decimal outside; padding-left:1.5em; }
+ *.std ul ul { list-style-type:circle; }
+ *.std ul ul,
+ *.std ol ol,
+ *.std ul ol,
+ *.std ol ul { margin:.5em 0; }
+ *.std dt { font-weight:bold; }
+ *.std dd { padding:0 0 0 1.5em; }
+ *.std blockquote { font-style:italic; padding:0 0 0 1.5em; }
+ *.std address { font-style:normal; }
+ *.std b,
+ *.std strong { font-weight:bold; }
+ *.std i,
+ *.std em { font-style:italic; }
+
+/* Misc
+
+.links li
+  display: inline
+  &.first
+    padding-left: 0 !important
+  &.last
+    background: none !important
+    padding-right: 0 !important
+
+.link-cart
+  font-weight: bold
+  color: #d62502
+
+.link-wishlist
+  color: #444
+
+.link-reorder, .link-compare
+
+.link-print
+  /*background:url(/assets/i_print.gif) 0 2px no-repeat; padding:3px 0 3px 25px;
+
+.link-rss
+  background: url(/assets/i_rss.gif) 0 1px no-repeat
+  padding-left: 18px
+  line-height: 14px
+  white-space: nowrap
+
+.btn-remove
+  display: block
+  width: 12px
+  height: 12px
+  font-size: 0
+  line-height: 0
+  background: url(/assets/btn_remove.gif) 0 0 no-repeat
+  text-indent: -999em
+  overflow: hidden
+
+.btn-remove2
+  display: block
+  width: 16px
+  height: 16px
+  font-size: 0
+  line-height: 0
+  background: url(/assets/btn_trash.gif) 0 0 no-repeat
+  text-indent: -999em
+  overflow: hidden
+
+.btn-edit
+  display: block
+  width: 12px
+  height: 12px
+  font-size: 0
+  line-height: 0
+  background: url(/assets/btn_edit.gif) 0 0 no-repeat
+  text-indent: -999em
+  overflow: hidden
+
+.cards-list
+  dt
+    margin: 5px 0 0
+  .offset
+    padding: 2px 0 2px 20px
+
+.separator
+  margin: 0 3px
+
+.divider
+  clear: both
+  display: block
+  font-size: 0
+  line-height: 0
+  height: 1px
+  background: #ccc
+  margin: 10px 0
+  text-indent: -999em
+  overflow: hidden
+
+/* Noscript Notice
+
+.noscript
+  border: 1px solid #ddd
+  border-width: 0 0 1px
+  background: #ffff90
+  font-size: 12px
+  line-height: 1.25
+  text-align: center
+  color: #2f2f2f
+  .noscript-inner
+    width: 950px
+    margin: 0 auto
+    padding: 12px 0 12px
+    background: url(/assets/i_notice.gif) 20px 50% no-repeat
+  p
+    margin: 0
+
+/* Demo Notice
+
+.demo-notice
+  margin: 0
+  padding: 6px 10px
+  background: #d75f07
+  font-size: 11px
+  line-height: 1.15
+  text-align: center
+  color: #fff
+
+/* =======================================================================================
+
+/* Header ================================================================================
+
+.logo
+  float: left
+
+.header-container
+
+.floatlogo
+  float: right
+  display: inline-block
+  margin: 0 0 10px 20px
+  border-radius: 5px
+  -moz-border-radius: 5px
+  -webkit-border-radius: 5px
+
+.header
+  height: 86px
+  margin: 0
+  background: url(/assets/headerbg.png)
+  a.logo
+    float: left
+    text-decoration: none !important
+    padding-top: 15px
+  .logo strong
+    position: absolute
+    top: -999em
+    left: -999em
+    width: 0
+    height: 0
+    font-size: 0
+    line-height: 0
+    text-indent: -999em
+    overflow: hidden
+
+.quick-access
+  color: #cfdee2
+  padding: 16px 0 0 0
+  text-align: right
+  float: right
+  font-size: 1.15em
+  text-shadow: #000 1px 1px 2px
+  .welcome-msg
+    display: inline
+    margin: 0
+    color: #cfdee2
+  .form-language
+    float: left
+    label
+      font-weight: bold
+      padding-right: 5px
+      color: #cfdee2
+      vertical-align: middle
+    select
+      padding: 0
+      &.flags option
+        background-position: 4px 50%
+        background-repeat: no-repeat
+        padding-left: 25px
+  .links
+    padding-left: 8px
+    display: inline-block
+    li
+      display: inline-block
+      padding: 0 14px 0 1px
+    a
+      color: #cfdee2
+    li.last a
+      padding: 0
+      background: none
+  .header-social
+    font-size: 0.92em
+    text-shadow: #000 1px 1px 2px
+    padding: 3px 15px 0 0
+    a.social-goo
+      color: #fff
+      background: url(/assets/head-goog.png) left no-repeat
+      padding: 0 5px 0 15px
+
+/*.quick-access .links a { padding:0 7px 0 0; background:url(/assets/bkg_pipe1.gif) no-repeat 100% 50%; }
+
+#plusone-div
+  float: left
+  width: 24px
+
+.quick-access .header-social a
+  &.social-fb
+    color: #fff
+    background: url(/assets/head-fb.png) left no-repeat
+    padding: 0 15px
+    margin-left: 10px
+  &.social-twit
+    color: #fff
+    background: url(/assets/head-twit.png) left no-repeat
+    padding: 0 0 0 15px
+
+#contain-google
+  display: inline-block
+  float: left
+  height: 30px
+  width: 75px
+
+#contain-facebook
+  display: inline-block
+  float: left
+  height: 30px
+  width: 75px
+  width: 85px
+
+#contain-google span
+  visibility: hidden
+
+.loggedout
+  background: transparent url(/assets/loggedout.png) top right no-repeat
+  display: inline-block
+  width: 184px
+  height: 31px
+  padding-top: 10px
+  margin-top: 4px
+  a
+    &.linkwhite
+      margin-right: 25px
+    &.linkgray
+      margin-right: 14px
+
+.linkwhite
+  color: #fff
+
+.linkgray
+  color: #7c8a8e
+
+.loggedin
+  display: inline-block
+  width: auto
+  height: 31px
+  padding-top: 10px
+  margin-top: 4px
+  font-size: 0.9em
+  .linkwhite
+    margin-right: 25px
+  .linkgray
+    margin-right: 0px
+
+.top-bar
+  padding: 0 0 6px 0
+  line-height: 21px
+  color: #fff
+  padding-top: 6px
+  .breadcrumbs
+    float: left
+    width: 580px
+    overflow: hidden
+    margin-top: 6px
+
+.form-search
+  float: right
+  label
+    float: left
+    font-size: 12px
+    font-weight: bold
+    padding: 0 5px 0 0
+    display: none
+  input.input-text
+    float: left
+    background: url(/assets/searchbg.png) no-repeat
+    width: 200px
+    height: 38px
+    border: 0 !important
+    margin: 0px
+    padding: 0 0 0 10px
+    color: #2b353b
+    font-size: 1.2em
+  button.button
+    float: left
+    background: url(/assets/searchgo.png) no-repeat
+    width: 65px
+    height: 38px
+    overflow: hidden
+    text-indent: -1000px
+    span
+      height: 23px
+      background-image: url(/assets/bkg_btn-small.png)
+      line-height: 21px
+  .search-autocomplete
+    z-index: 999
+    ul
+      border: 1px solid #999
+      background-color: #f9f5f0
+    li
+      text-align: left
+      border-bottom: 1px solid #f4eee7
+      padding: 2px 8px 1px 8px
+      cursor: pointer
+      .amount
+        float: right
+        font-weight: bold
+      &.odd
+        background-color: #f6f6f6
+      &.selected
+        background-color: #ecf9ea
+
+.header-container .top-container
+  padding: 5px 12px
+  background: #fff
+  border: 1px solid #bbb
+  border-width: 0 1px 1px
+  text-align: right
+
+/********** < Navigation
+
+.nav-container
+
+#nav
+  float: left
+  margin: 15px 0 0 15px
+  font-size: 12px
+  li
+    position: relative
+    text-transform: uppercase
+    text-align: left
+    &.over
+      z-index: 998
+  a
+    display: block
+    line-height: 1.3em
+    text-decoration: none
+    &:hover
+      display: block
+      line-height: 1.3em
+      text-decoration: none
+  span
+    display: block
+    cursor: pointer
+    white-space: nowrap
+  li
+    ul span
+      white-space: normal
+    float: left
+    margin: 1px 8px 11px 1px
+    padding: 3px 8px
+    &.active a
+      color: #444
+  a
+    float: left
+    background: url(/assets/bkg_nav_top.gif) no-repeat 100% 50%
+    padding-right: 11px
+    color: #444
+    font-weight: bold
+  li.over a, a:hover
+    color: #444
+  li
+    &.over, &.active
+      margin: 0 7px 10px 0
+      border: 1px solid #bbb
+      background: #ececec
+  ul
+    li
+      float: none
+      border: none
+      background: none
+      margin: 0
+      padding: 0
+      padding-bottom: 1px
+      text-transform: none
+      &.active, &.over
+        float: none
+        border: none
+        background: none
+        margin: 0
+        padding: 0
+        padding-bottom: 1px
+        text-transform: none
+      &.parent
+        background: url(/assets/bkg_nav_parent.gif) no-repeat 100% 50%
+      &.last
+        padding-bottom: 0
+      &.active
+        margin: 0
+        border: 0
+        background: none
+    a
+      float: none
+      padding: 0
+      background: none
+      &:hover
+        float: none
+        padding: 0
+        background: none
+    li a
+      font-weight: normal !important
+    position: absolute
+    width: 15em
+    top: 22px
+    left: -10000px
+    border: 1px solid #bbb
+    border-bottom: 2px solid #999
+    padding: 3px 8px
+    background: #fcfcfc
+    font-size: 11px
+  div
+    position: absolute
+    width: 15em
+    top: 22px
+    left: -10000px
+    border: 1px solid #bbb
+    border-bottom: 2px solid #999
+    padding: 3px 8px
+    background: #fcfcfc
+    font-size: 11px
+    ul
+      position: static
+      width: auto
+      border: none
+      padding: 0
+  ul
+    ul, div
+      top: 5px
+    li a
+      padding: 3px 0
+      color: #444 !important
+      &:hover
+        padding: 3px 0
+        color: #5a7f00 !important
+  li
+    ul.shown-sub, div.shown-sub
+      left: -1px
+      z-index: 999
+    .shown-sub
+      ul.shown-sub, li div.shown-sub
+        left: 100px
+
+/* All Levels
+
+/* Style consistent throughout all nav levels
+
+/* 0 Level
+
+/* 1st Level
+
+/* 2nd Level
+
+/* 3rd+ Level
+
+/* Show menu
+
+/********** Navigation >
+/* =======================================================================================
+
+/* Sidebar ===============================================================================
+
+.block
+  margin: 0 0 20px
+  line-height: 1.35
+  .block-title
+    background: #e7e7e7
+    padding: 2px 10px
+    strong
+      display: block
+      font-size: 10px
+      text-transform: uppercase
+      color: #444
+      span
+    a
+      text-decoration: none !important
+  .block-subtitle
+    font-size: 10px
+    margin: 0
+    padding: 0 0 2px
+    text-transform: uppercase
+  .block-content
+    background: #fff
+    padding: 12px 10px
+    li.item
+      border-bottom: 1px solid #ddd
+      padding-bottom: 5px
+      margin-bottom: 5px
+      &.last
+        border-bottom: 0
+        padding-bottom: 0
+        margin-bottom: 0
+    .product-name
+      color: #1C353D
+  .btn-remove, .btn-edit
+    float: right
+    margin: 1px 0 2px 5px
+  .actions
+    border-top: 1px solid #ddd
+    padding: 5px 0 0
+    margin: 5px 0 0
+    text-align: right
+    a
+      float: left
+    button.button
+      float: right
+  .empty
+    margin: 0
+  .price-box
+    margin: 5px 0
+  button.button span
+    height: 23px
+    background-image: url(/assets/bkg_btn-small.png)
+    line-height: 20px
+
+.block-compare
+  display: none
+
+#getback
+  display: block
+  width: 578px
+  height: 30px
+  line-height: 28px
+  text-align: center
+  background: transparent url(/assets/btn-backtomainpage.png) no-repeat
+  font-size: 1.3em
+  font-family: 'Museo300'
+
+/*.block li.odd { background-color:#f4f3f3; }
+ *.block li.even { background-color:#fafafa; }
+
+/* Mini Products List
+
+.mini-products-list
+  .product-image
+    float: left
+    width: 50px
+    border: 1px solid #a9a9a9
+  .product-details
+    margin-left: 60px
+
+/* Block: Account
+
+.block-account
+  .block-title
+    background: #1c353d
+    border-radius: 5px 5px 0 0
+    -moz-border-radius: 5px 5px 0 0
+    -webkit-border-radius: 5px 5px 0 0
+    padding: 8px 10px
+    color: #fff
+    strong
+      color: #fff
+  .block-content li
+    a
+      display: block
+      border-bottom: 1px solid #ddd
+      padding: 3px 0
+      color: #5f5d5c
+      text-decoration: none !important
+      &:hover
+        color: #444
+    &.last a
+      border-bottom: 0
+    &.current
+      border-bottom: 1px solid #ddd
+      padding: 3px 0
+      &.last
+        border-bottom: 0
+
+/* Block: Currency Switcher
+
+.block-currency
+  background: #f4f4f4
+  .block-title
+    border: 0
+    background: none
+    padding: 7px 10px 2px
+    text-transform: none
+    strong
+      text-transform: none
+  .block-content
+    padding: 0 10px 12px
+    select
+      width: 100%
+      padding: 0
+
+/* Block: Layered Navigation
+
+.block-layered-nav
+  border: 0
+  .block-title
+    border: 0
+    padding: 0
+    margin: 0 0 6px
+    height: 13px
+    background: url(/assets/bkg_block-layered-title.png) 0 0 no-repeat
+    text-indent: -999em
+    overflow: hidden
+  .block-content
+    padding: 0
+  .block-subtitle
+    background: #1c353d
+    border-radius: 5px 5px 0 0
+    -moz-border-radius: 5px 5px 0 0
+    -webkit-border-radius: 5px 5px 0 0
+    padding: 8px 10px
+    color: #fff
+  dt
+    font-weight: bold
+    border-top: 1px solid #fff
+    padding: 8px 10px 0 10px
+    font-size: 12px
+  dd
+    padding: 0 10px 8px 10px
+    border-bottom: 1px solid #ddd
+    li
+      line-height: 1.35
+      margin: 0 0 3px
+    a
+      color: #444
+  .currently
+    ol
+      padding: 6px 0 0
+    li
+      padding: 2px 10px
+    .label
+      font-weight: bold
+    .btn-remove
+      margin: 2px 0 0
+  .actions
+    padding: 5px 10px
+    margin: 0
+    a
+      float: none
+
+/* Block: Cart
+
+.block-cart
+  .block-title
+    background: #1c353d
+    border-radius: 5px 5px 0 0
+    -moz-border-radius: 5px 5px 0 0
+    -webkit-border-radius: 5px 5px 0 0
+    padding: 8px 10px
+    strong
+      color: #fff
+      font-weight: normal
+  .summary
+    background: #e5eed6
+    padding: 8px
+    margin: -12px -10px 8px
+    text-align: center
+    position: relative
+    z-index: 1
+  .amount
+    margin: 0
+    a
+      font-weight: bold
+  .subtotal
+    background: url(/assets/bkg_subtotal.gif) no-repeat 50% 0
+    margin: 5px 0 0
+    line-height: 23px
+    .price
+      font-weight: bold
+  .actions
+    display: none !important
+    .paypal-logo
+      float: left
+      width: 100%
+      margin: 3px 0 0
+      text-align: right
+
+/* Block: Wishlist
+
+.block-wishlist .actions
+  text-align: right
+  a
+    float: none
+
+/* Block: Related
+
+.block-related
+  .block-subtitle
+    font-size: 11px
+    font-weight: bold
+    border: 0
+    padding: 0
+    margin: 0 0 8px
+    text-transform: none
+  input.checkbox
+    float: right
+  .product
+    margin-right: 20px
+
+/* Block: Compare Products
+
+.page-popup .link-print
+  background: url(/assets/i_print.gif) 0 2px no-repeat
+  padding: 3px 0 3px 25px
+
+.compare-table
+  border: 0
+  thead
+    background: #fff
+    tr.first
+      background: #fff
+      th, td
+        border: 0
+        background: none
+        padding: 0 0 4px
+        font-size: 0
+        line-height: 0
+  .btn-remove
+    float: right
+    background-image: url(/assets/btn_remove.gif)
+    width: 12px
+    height: 12px
+  tbody
+    th
+      background: #e9e9e9
+      padding: 10px
+      border: 0
+      border-top: 1px solid #ccc
+      border-left: 1px solid #ccc
+    td
+      padding: 10px
+      border: 0
+      border-top: 1px solid #ccc
+      border-left: 1px solid #ccc
+      &.last
+        border-right: 1px solid #ccc
+    tr.last
+      th, td
+        border-bottom: 1px solid #ccc !important
+  tr
+    &.add-to-row td
+      background: #fffada
+      text-align: center
+    &.first td
+      text-align: center
+      .product-name
+        font-size: 13px
+        font-weight: bold
+        margin: 0 0 5px
+        color: #203548
+        a
+          color: #203548
+      .ratings
+        width: 69px
+        margin: 0 auto
+      p
+        margin: 0
+    &.add-to-row td p
+      margin: 0
+  .add-to-links li
+    background: none
+    padding: 0
+
+/* Block: Recently Viewed
+
+.block-viewed, .block-compared
+
+/* Block: Recently Compared
+
+/* Block: Poll
+
+.block-poll
+  .block-subtitle
+    font-size: 12px
+  label
+    color: #777
+    font-weight: bold
+  input.radio
+    float: left
+    margin: 1px -18px 0 0
+  .label
+    display: block
+    margin-left: 18px
+  li
+    padding: 3px 9px
+  .actions
+    margin: 5px 0 0
+  .answer
+    font-weight: bold
+  .votes
+    float: right
+    margin-left: 10px
+
+/* Block: Tags
+
+.block-tags
+  .block-content
+    .tags-list
+      border: 0
+      background: none
+      padding: 0
+    li a
+      color: #444
+  .actions
+    text-align: right
+    a
+      float: none
+
+/* Block: Reorder
+
+.block-reorder
+  input.checkbox
+    float: left
+    margin: 2px -20px 0 0
+  .product-name
+    margin-left: 20px
+  .validation-advice
+    margin: 3px 9px 7px
+
+/* Block: Banner
+
+.block-banner
+  border: 0
+  .block-content
+    padding: 0
+    background: none
+    text-align: center
+
+/* Block: Login
+
+.block-login
+  .block-content
+    padding: 5px 10px
+  label
+    font-weight: bold
+    color: #555
+  input.input-text
+    display: block
+    width: 167px
+    margin: 3px 0
+  .actions
+    background: none
+    padding: 0
+    margin: 3px 0 0
+
+/* Paypal
+
+.sidebar .paypal-logo
+  display: block
+  margin: 10px 0
+  text-align: center
+  a
+    float: none
+
+/* =======================================================================================
+
+/* Category Page =========================================================================
+
+.category-title
+  margin: 0 0 7px
+  h1
+    padding: 0 0 3px 0
+    color: #324b5a
+    font-size: 1.6em
+    font-weight: bold
+    line-height: 1.25
+
+.category-image
+  width: 100%
+  overflow: hidden
+  margin: 0 0 10px
+  text-align: center
+  img
+
+.category-description
+  margin: 0 0 10px
+
+.category-products
+
+/* View Type: Grid
+
+.products-grid
+  position: relative
+  padding: 0 0 30px 0
+  &.last
+    border-bottom: 0
+  li.item
+    float: left
+    display: inline-block
+    width: 172px
+    height: 185px
+    padding: 10px
+    background-color: #fff
+    border-radius: 5px
+    -moz-border-radius: 5px
+    -webkit-border-radius: 5px
+    margin: 5px 15px 10px 0
+  .product-image
+    display: block
+    width: 170px
+    height: 85px
+    margin: 0 auto 10px
+  &.first .product-image
+    border-top: 0
+  li.last .product-image
+    border-right: 0
+  .product-name
+    font-size: 12px
+    margin: 0 0 6px
+    a
+      color: #444
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+  .price-box
+    margin: 5px 0
+  .availability
+    line-height: 21px
+  .actions
+    position: absolute
+    bottom: 20px
+
+.col2-left-layout .products-grid, .col2-right-layout .products-grid, .col1-layout .products-grid, .page-empty .products-grid
+  width: 684px
+  margin: 0 auto
+
+/* View Type: List
+
+.products-list
+  li
+    &.sorter
+      border-top: 3px solid #ddd
+      border-bottom: 1px solid #eee
+      height: 1px
+      background-color: #fff
+      padding: 0
+      margin: 0
+    &.item
+      padding: 10px
+      background-color: #fff
+      border-radius: 5px
+      -moz-border-radius: 5px
+      -webkit-border-radius: 5px
+      margin: 0 0 10px 0
+      &.last
+        border-bottom: 0
+  img
+    border-radius: 3px
+    -moz-border-radius: 3px
+    -webkit-border-radius: 3px
+  .product-shop
+    float: right
+    width: 475px
+  .product-image
+    float: left
+    width: 170px
+    height: 85px
+    margin: 0
+  .product-name
+    font-size: 17px
+    margin: 0 0 6px
+    a
+      color: #444
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+  .price-box
+    float: left
+    margin: 4px 13px 0 0
+  .availability
+    float: left
+    margin: 3px 0 0
+  .desc
+    clear: both
+    padding: 0
+    margin: 0
+    line-height: 1.35
+  .add-to-links
+    clear: both
+  .iconholder
+    clear: both
+    padding: 3px
+    margin: 10px 0
+  img
+    padding: 0
+    margin: 0
+
+/* =======================================================================================
+
+/* Product View ==========================================================================
+/* Rating
+
+.no-rating
+  margin: 0
+
+.ratings
+  line-height: 1.25
+  margin: 7px 0
+  strong
+    float: left
+    margin: 0 3px 0 0
+  .rating-links
+    margin: 0
+    .separator
+      margin: 0 2px
+  dt, dd
+
+.rating-box
+  width: 50px
+  height: 10px
+  font-size: 0
+  line-height: 0
+  background: url(/assets/bkg_rating.png) 0 0 repeat-x
+  text-indent: -999em
+  overflow: hidden
+  .rating
+    float: left
+    height: 10px
+    background: url(/assets/bkg_rating.png) 0 100% repeat-x
+
+.ratings
+  .rating-box
+    float: left
+    margin: 2px 3px 0 0
+  .amount
+
+.ratings-table
+  margin-bottom: 20px
+  th, td
+    font-size: 11px
+    line-height: 1.15
+    padding: 0
+  th
+    font-weight: bold
+    padding-right: 8px
+  td
+    padding: 4px 0 0
+
+/* Availability
+
+.availability
+  margin: 0
+  span
+    font-weight: bold
+  &.in-stock span
+  &.out-of-stock span
+    color: #d83820
+
+.availability-only
+  margin: 10px 0 7px
+  line-height: 16px
+  background: url(/assets/i_availability_only.gif) 0 50% no-repeat
+  padding-left: 15px
+  span
+    border-bottom: 1px dashed #751d02
+    color: #000
+  a
+    border-bottom: 1px dashed #751d02
+    color: #000
+    background: url(/assets/i_availability_only_arrow.gif) 100% 0 no-repeat
+    cursor: pointer
+    padding-right: 15px
+    text-decoration: none
+  .expanded
+    background-position: 100% -15px
+  strong
+    color: #be2c00
+
+.availability-only-details
+  margin: 0 0 7px
+  th
+    background: #e9e9e9
+    font-size: 10px
+    padding: 0 8px
+  td
+    border-bottom: 1px solid #d9dde3
+    font-size: 11px
+    padding: 2px 8px 1px
+  tr
+    &.odd
+      background: #fff
+    &.even
+      background: #fcfcfc
+    &.odd td.last
+      color: #324b5a
+      font-weight: bold
+    &.last td
+      border-bottom: none
+
+.product-view .product-shop .availability
+  font-size: 11px
+  span
+    font-weight: normal
+
+/* Email to a Friend
+
+.email-friend
+  margin: 0
+
+/* Alerts
+
+.alert-price, .alert-stock
+  margin: 0
+  font-size: 11px
+
+/********** < Product Prices
+
+.price
+  white-space: nowrap !important
+
+.price-box
+  margin: 5px 0 10px
+  .price
+    color: #324b5a
+
+/* Regular price
+
+.regular-price
+  color: #324b5a
+  .price
+    color: #324b5a
+
+/* Old price
+
+.old-price
+  margin: 0
+  .price-label
+    font-size: 10px
+    font-weight: normal
+    white-space: nowrap
+    font-style: italic
+    display: none
+  .price
+    font-weight: normal
+    font-style: italic
+    font-size: 10px
+    color: #324b5a
+    text-decoration: line-through
+
+/* Special price
+
+.special-price
+  margin: 0
+  .price-label
+    font-size: 10px
+    font-weight: bold
+    text-transform: uppercase
+    white-space: nowrap
+    color: #000
+    display: none
+  .price
+    font-size: 10px
+    font-weight: bold
+
+/* Minimal price (as low as)
+
+.minimal-price
+  margin: 0
+  .price-label
+    font-size: 10px
+    font-weight: bold
+    white-space: nowrap
+
+.minimal-price-link
+  display: block
+  font-size: 10px
+  text-decoration: underline
+  color: #444
+  .label
+    color: #444
+  .price
+    font-weight: normal
+    color: #444
+
+/* Including tax
+
+.price-including-tax
+  display: block
+  color: #888
+  .label
+    font-size: 10px
+    text-transform: uppercase
+    white-space: nowrap
+    color: #888
+  .price
+    font-size: 13px
+    font-weight: bold
+    color: #324b5a
+
+/* Excluding tax
+
+.price-excluding-tax
+  display: block
+  color: #888
+  .label
+    font-size: 10px
+    text-transform: uppercase
+    white-space: nowrap
+    color: #888
+  .price
+    font-size: 12px
+    font-weight: normal
+    color: #324b5a
+
+/* Configured price
+
+.configured-price
+  margin: 0
+  .price-label
+    font-weight: bold
+    white-space: nowrap
+  .price
+    font-size: 13px
+    font-weight: bold
+
+/* Incl tax (for order tables)
+
+.price-incl-tax
+  display: block
+  .label
+    display: block
+    white-space: nowrap
+  .price
+    display: block
+    font-weight: bold
+
+/* Excl tax (for order tables)
+
+.price-excl-tax
+  display: block
+  .label
+    display: block
+    white-space: nowrap
+  .price
+    display: block
+    font-weight: normal
+
+/* FPT
+
+.weee
+  display: block
+  font-size: 11px
+  color: #444
+  .price
+    font-size: 11px
+    font-weight: normal
+
+/* Price range
+
+.price-from, .price-to
+  margin: 0
+  .price-label
+    font-size: 12px
+    font-weight: bold
+    white-space: nowrap
+
+/* Price notice next to the options
+
+.price-notice
+  padding-left: 7px
+  .price
+    font-weight: bold
+
+/* Price as configured
+
+.price-as-configured
+  margin: 0
+  .price-label
+    font-weight: bold
+    white-space: nowrap
+    text-transform: uppercase
+
+.price-box-bundle
+  padding: 0 0 10px 0
+  .price-box
+    margin: 0 !important
+    padding: 0 !important
+  .price
+    color: #222
+
+f .tier-prices
+  margin: 10px 0
+  padding: 10px
+  background: #f4f9ea
+  border: 1px solid #ddd
+
+.tier-prices
+  .benefit
+    font-style: italic
+    font-weight: bold
+  .price
+    font-weight: bold
+
+.tier-prices-grouped li .price
+  font-weight: bold
+
+/* Add to Links
+
+.add-to-links
+  margin: 3px 0 0
+  li
+    background: url(/assets/bkg_add-to.gif) 2px 50% no-repeat
+    line-height: 1.25
+    padding-left: 12px
+    a
+      color: #444
+  .separator
+    display: none
+
+/* Add to Cart
+
+.add-to-cart
+  label
+    float: left
+    margin-right: 5px
+    font-weight: bold
+    line-height: 20px
+    color: #555
+  .qty
+    float: left
+    margin-right: 5px
+  button.button
+    float: right
+    margin: -2px 0 0
+  .paypal-logo
+    clear: left
+    margin: 0
+    text-align: right
+    .paypal-or
+      clear: both
+      display: block
+      margin: 5px 60px 5px 0
+
+/* Add to Links + Add to Cart
+
+.add-to-box
+  margin: 0
+  .add-to-cart
+    margin: 10px 0
+    border: 1px solid #eee
+    background-color: #f8f8f8
+    padding: 10px
+    text-align: right
+    .paypal-logo
+      float: left
+  .or
+    display: none !important
+  .add-to-links
+    margin: 10px 0
+    text-align: right
+    li .separator
+      display: none !important
+
+.product-view
+
+.std
+  line-height: 1.25em
+
+.product-essential
+  padding: 0 0 15px
+  h2
+    font: bold 12px / 1.25 Arial, Helvetica, sans-serif
+
+.product-collateral
+  h2
+    font-size: 19px
+    font-weight: normal
+    line-height: 1.15
+  .box-collateral
+
+/* Product Images
+
+.product-view .product-img-box
+  float: left
+  width: 349px
+  a img
+    border-radius: 5px
+
+.col3-layout .product-view .product-img-box
+  float: none
+  margin: 0 auto
+
+.product-view .product-img-box
+  .product-image
+    margin: 0 0 10px
+  .product-image-zoom
+    position: relative
+    width: 300px
+    height: 170px
+    overflow: hidden
+    z-index: 9
+    img
+      position: absolute
+      left: 0
+      top: 0
+  .zoom-notice
+    margin: 0 0 10px
+    text-align: center
+  .zoom
+    position: relative
+    z-index: 9
+    height: 24px
+    margin: 0 auto 13px
+    padding: 0 28px
+    background: url(/assets/slider_bg.gif) 50% 50% no-repeat
+    cursor: pointer
+    &.disabled
+      /*-moz-opacity:.3;
+      -webkit-opacity: .3
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)"
+      /*IE8
+      opacity: .3
+    #track
+      position: relative
+      height: 18px
+    #handle
+      position: absolute
+      left: 0
+      top: 3px
+      width: 9px
+      height: 18px
+      background: url(/assets/magnifier_handle.gif) 0 0 no-repeat
+    .btn-zoom-out
+      position: absolute
+      left: 10px
+      top: 7px
+    .btn-zoom-in
+      position: absolute
+      right: 10px
+      top: 7px
+  .more-views
+    padding: 10px 0 20px 0
+    h2
+      font-size: 10px
+      font-weight: normal
+      padding: 0 0 2px
+      border-bottom: 1px solid #ccc
+      margin: 0 0 8px
+      text-transform: uppercase
+    ul
+      margin-left: -10px
+    li
+      float: left
+      margin: 0 0 8px 10px
+      a
+        float: left
+        display: inline-block
+        width: 60px
+        height: 30px
+        overflow: hidden
+        background: transparent
+
+.product-image-popup
+  margin: 0 auto
+  .buttons-set
+    float: right
+    clear: none
+    border: 0
+    margin: 0
+    padding: 0
+  .nav
+    font-weight: bold
+    margin: 0 100px
+    text-align: center
+  .image
+    display: block
+    margin: 10px 0
+  .image-label
+    font-size: 12px
+    font-weight: bold
+    margin: 0 0 10px
+    color: #2f2f2f
+
+/* Product Shop
+
+.product-view .product-shop
+  float: right
+  width: 363px
+
+.col1-layout .product-view .product-shop
+  float: right
+  width: 576px
+
+.col3-layout .product-view .product-shop
+  float: none
+  width: auto
+
+.product-view .product-shop
+  .product-name
+    margin: 0 0 5px
+    h1
+      font-weight: normal
+      line-height: 1em
+      font-size: 2.2em
+      color: #21677e
+  .availability, .short-description, .price-box
+    margin: 10px 0
+  .add-to-links
+    margin: 0
+    text-align: right
+    li
+      display: inline
+      margin-left: 12px
+      .separator
+        display: none !important
+  .product-options-bottom .paypal-logo
+    float: left
+
+/* Product Options
+
+.product-options
+  margin: 20px 0 0
+  padding: 0 15px 10px
+  background-color: #f4f9ea
+  border: 1px solid #ddd
+  position: relative
+  dt
+    padding: 10px 0 0
+    font-weight: normal
+    label
+      font-weight: bold
+      &.required em
+        color: #eb340a
+        margin-left: 5px
+  dd
+    .qty-holder
+      display: block
+      padding: 10px 0 0
+      label
+        vertical-align: middle
+    .qty-disabled
+      background: none
+      border: 0
+      padding: 3px
+      color: #444
+    padding: 5px 10px 15px
+    margin: 0 0 5px
+    border-bottom: 1px solid #ddd
+  dl.last dd.last
+    border-bottom: 0
+    padding-bottom: 5px
+    margin-bottom: 0
+  dd
+    input
+      &.input-text
+        width: 98%
+      &.datetime-picker
+        width: 150px
+    .time-picker
+      display: -moz-inline-box
+      display: inline-block
+      padding: 2px 0
+      vertical-align: middle
+    textarea
+      width: 98%
+      height: 8em
+    select
+      width: 99%
+    .multiselect option
+      border-bottom: 1px dotted #d9e5ee
+      padding: 2px 4px
+  ul
+    &.options-list
+      margin-right: 5px
+      li
+        padding: 2px 0
+      input
+        &.radio
+          float: left
+          margin-top: 3px
+        &.checkbox
+          float: left
+          margin-top: 2px
+      .label
+        display: block
+        margin-left: 18px
+      label
+        font-weight: normal
+    &.validation-failed
+      padding: 0 7px
+  p.required
+    position: absolute
+    right: 15px
+    top: 10px
+
+.product-options-bottom
+  background-color: #f6f6f6
+  padding: 15px 20px
+  border: 1px solid #e4e4e4
+  border-top: 0
+  .tier-prices
+    margin: 0
+    padding: 0 0 10px
+    border: 0
+    background: 0
+  .price-box
+    float: left
+    margin: 0
+  .add-to-links
+    clear: both
+    padding: 5px 0 0
+    text-align: right
+  .price-label
+    padding-right: 5px
+  .price-tax
+    float: left
+  .add-to-cart
+    float: right
+    margin: 0
+    padding: 0
+    border: 0
+    background: 0
+  .add-to-links
+    float: right
+    display: inline
+
+.product-shop .product-options-bottom
+  .price-box
+    float: none
+    margin: 0
+  .price-label
+    float: none
+    padding-right: 0
+  .price-tax
+    float: none
+  .add-to-cart
+    clear: both
+    float: none
+    padding: 12px 0 0
+    text-align: left
+
+/* Grouped Product
+
+.product-view .grouped-items-table .price-box
+  margin: 0
+  padding: 0
+
+/* Product Tabs
+
+.product-tabs
+  margin-bottom: 15px
+  border-bottom: 1px solid #666
+  background: #f2f2f2 url(/assets/bkg_tabs.gif) 0 100% repeat-x
+  li
+    float: left
+    border-right: 1px solid #a4a4a4
+    border-left: 1px solid #fff
+    font-size: 1.1em
+    line-height: 1em
+    &.first
+      border-left: 0
+    &.last
+      border-right: 0
+  a
+    display: block
+    padding: 6px 15px
+    color: #444
+    &:hover
+      background-color: #ddd
+      text-decoration: none
+      color: #444
+  li.active a
+    background-color: #666
+    font-weight: bold
+    color: #fff
+    &:hover
+      background-color: #666
+      font-weight: bold
+      color: #fff
+
+.product-tabs-content h2
+  display: none
+  font-size: 12px
+  font-weight: bold
+
+/* Mini Products Grid
+
+.mini-products-grid
+  width: 100%
+  td
+    width: 20%
+    padding: 0 8px 8px 0
+  .product-image
+    display: block
+    border: 1px solid #cacaca
+    margin: 0 0 10px
+  .product-name
+    width: 115px
+    margin: 0 0 6px
+    overflow: hidden
+    a
+      color: #444
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+  td
+    &.empty
+    &.last
+      padding-right: 0
+  .ratings .rating-box
+    float: none
+    display: block
+    margin: 0 0 3px
+
+/* Block: Description
+
+.product-view
+  .box-description
+  .box-additional .data-table
+    th, td
+      line-height: 1.25
+  .box-up-sell h2
+    margin: 0 0 8px
+
+/* Block: Additional
+
+/* Block: Upsell
+
+#product_tabs_upsell_products_contents h2
+  display: block
+
+/* Block: Tags
+
+.product-view
+  .box-tags
+    margin: 0
+    h3
+      font-size: 12px
+    .product-tags
+      display: block
+      margin: 0 0 15px
+      li
+        display: inline
+        background: url(/assets/bkg_pipe3.gif) 100% 4px no-repeat
+        padding: 0 7px 0 4px
+        &.first
+          padding-left: 0
+        &.last
+          background: none
+          padding-right: 0
+    .form-add
+      label
+        display: block
+        font-size: 12px
+        font-weight: bold
+        margin: 0 0 3px
+      .input-box
+        float: left
+        width: 305px
+        margin: 0 5px 0 0
+      input.input-text
+        width: 299px
+      button.button span
+        height: 23px
+        background-image: url(/assets/bkg_btn-small.png)
+        line-height: 20px
+    .note
+      margin: 2px 0 0
+      font-size: 10px
+  .box-reviews
+    dl
+      margin: 15px 0
+    dt
+      a, span
+        font-weight: bold
+    dd
+      margin: 0 0 15px
+      line-height: 1.3em
+      small
+        font-style: italic
+    .form-add
+      margin: 15px 0 0
+      h3
+        font-size: 13px
+        font-weight: normal
+        span
+          font-weight: bold
+      h4
+        font-size: 12px
+      .data-table td
+        text-align: center
+      .form-list
+        margin: 15px 0 0
+        .input-box, input.input-text, textarea
+          width: 100%
+
+/* Block: Reviews
+
+/* Send a Friend
+
+.send-friend
+  .form-list
+    width: 535px
+    overflow: hidden
+    li
+      margin-right: -15px
+      p
+        margin: 0 15px 0 0
+  .buttons-set .limit
+    float: right
+    margin: 0 7px 0 0
+    font-size: 11px
+    line-height: 25px
+
+/* =======================================================================================
+
+/* Content Styles =================================================================
+
+.product-name
+  margin: 0
+  font-size: 1em
+  font-weight: normal
+  line-height: 1.55
+
+/*.product-name a { color:#444; }
+
+/* Product Tags
+
+.tags-list
+  display: block
+  font-size: 13px
+  border: 1px solid #ddd
+  background: #f6f6f6
+  padding: 10px
+  li
+    display: inline !important
+    margin: 0 4px 0 0
+    a
+      color: #1b2d3b
+
+/* Advanced Search
+
+.advanced-search .form-list
+  label
+    width: 160px
+    padding-right: 10px
+  .input-box, .input-range
+    float: left
+    clear: none
+
+.advanced-search-amount
+  margin: 0 0 10px
+
+.advanced-search-summary
+  margin: 10px 0
+  border: 1px solid #ddd
+  background: #ecf9ea
+  padding: 10px
+  ul
+    float: left
+    width: 49%
+  strong
+    color: #E17C24
+  li
+    margin: 2px 0
+  p
+    clear: both
+    font-weight: bold
+    margin: 0
+
+/* CMS Home Page
+
+.cms-home
+  .main
+    padding: 8px
+  .subtitle
+
+.cms-index-index .subtitle
+
+/* Sitemap
+
+.page-sitemap
+  .links
+    text-align: right
+    margin: 0 8px -22px 0
+    a
+      text-decoration: none
+      position: relative
+      &:hover
+        text-decoration: underline
+  .sitemap
+    margin: 12px
+    a
+      color: #444
+    li
+      margin: 3px 0
+      &.level-0
+        margin: 10px 0 0
+        font-weight: bold
+        a
+          color: #1C353D
+
+/* RSS
+
+.rss-title h1
+  background: url(/assets/i_rss-big.png) 0 3px no-repeat
+  padding-left: 27px
+
+.rss-table .link-rss
+  display: block
+  line-height: 1.55
+  background-position: 0 4px
+
+/* =======================================================================================
+
+/* Shopping Cart =========================================================================
+
+.cart
+  .page-title .checkout-types
+    display: none !important
+  .checkout-types .paypal-or
+    margin: 0 8px
+    line-height: 2.3
+  .totals .checkout-types .paypal-or
+    clear: both
+    display: block
+    padding: 8px 55px 0 0
+    line-height: 1.0
+    font-size: 11px
+
+/* Checkout Types
+
+/* Shopping Cart Table
+
+.cart-table
+  th
+    padding: 2px 10px
+  td
+    padding: 10px
+  .product-name
+    font-weight: bold
+    margin: 0 0 5px
+    color: #444
+  .item-msg
+    margin: 5px 0
+    font-size: 11px
+    font-weight: bold
+    color: #df280a
+  tfoot td
+    padding: 5px 10px
+  .btn-continue
+    float: left
+    span
+      background: none
+      padding: 0
+      font: normal 11px / 25px Arial, Helvetica, sans-serif
+      color: #1C353D
+      text-transform: none
+      text-decoration: underline
+    &:hover span
+      text-decoration: none
+  .btn-update span
+
+/* Shopping Cart Collateral boxes
+
+.cart
+  .cart-collaterals
+    padding: 25px 0 0
+    .col2-set
+      .col-1
+        width: 222px
+      .col-2
+        width: 655px
+        background: #e6f7d7
+  .crosssell
+    border: 1px solid #ddd
+    background: #f7f7f7
+    padding: 10px
+    h2
+      font-size: 12px
+      font-weight: bold
+    .product-image
+      float: left
+      width: 75px
+      height: 75px
+    .product-details
+      margin-left: 85px
+    .product-name
+      font-weight: bold
+    li
+      &.item
+        margin: 0 0 8px
+        padding-bottom: 5px
+        border-bottom: 1px solid #ddd
+      &.last
+        border-bottom: 0
+        padding-bottom: 0
+        margin: 0
+    .link-compare
+      font-weight: normal
+  .no-crosssell
+    width: 100%
+    overflow: hidden
+    img
+      display: block
+      margin: 0 0 10px
+  .discount, .shipping
+    background: #e6f7d7
+    padding: 10px 0
+    margin: 0 12px
+  .discount h2, .shipping h2
+    float: left
+    width: 225px
+    font: normal 14px / 16px Arial, Helvetica, sans-serif
+    color: #d54c01
+  .discount .discount-form, .shipping .shipping-form
+    margin-left: 240px
+  .discount .buttons-set, .shipping .buttons-set
+    margin: 10px 0 0
+    border: 0
+    padding: 0
+    text-align: left
+  .discount .buttons-set button.button, .shipping .buttons-set button.button
+    float: none
+    margin: 0
+  .discount .buttons-set button.button span, .shipping .buttons-set button.button span
+    height: 19px
+    background-image: url(/assets/bkg_btn-green.gif)
+    padding: 0 0 0 9px
+    font-size: 10px
+    line-height: 18px
+    color: #fff
+  .discount .buttons-set button.button span span, .shipping .buttons-set button.button span span
+    padding: 0 19px 0 10px
+  .discount
+    border-bottom: 1px solid #c0d2af
+    label
+      font-weight: bold
+      color: #555
+    .input-box
+      width: 270px
+    input.input-text
+      width: 264px
+  .shipping
+    p
+      margin: 0 0 3px
+    .sp-methods
+      margin: 10px 0 0
+      padding: 6px 0 0
+      border-top: 1px solid #c0d2af
+    .form-list
+      .input-box
+        width: 270px
+      input.input-text
+        width: 264px
+      select
+        width: 270px
+  .totals
+    background: white url(/assets/bkg_cart-totals.gif) 0 0 no-repeat
+    padding: 12px 0
+    table
+      float: right
+      width: 400px
+      margin: 0 0 8px
+    td
+      padding: 0 0 0 15px
+    tr.last td
+    tfoot
+      td
+      th strong, td strong
+        font-size: 14px
+        font-weight: bold
+        color: #e02f00
+    .checkout-types
+      font-size: 13px
+      padding: 4px 0
+      text-align: right
+      li
+        clear: both
+        margin: 0 0 5px
+
+/* Discount Codes & Estimate Shipping and Tax Boxes
+
+/* Shopping Cart Totals
+
+/* Options Tool Tip
+
+.item-options
+  dt
+    font-weight: bold
+    font-style: italic
+  dd
+    padding-left: 10px
+
+.truncated
+  cursor: help
+  a
+    &.dots
+      cursor: help
+      text-decoration: none !important
+    &.details
+      cursor: help
+      text-decoration: none !important
+      display: inline-block
+      border-bottom: 1px dotted #1C353D
+  .truncated_full_value
+    position: relative
+    z-index: 999
+    dl
+      position: absolute
+      top: -99999em
+      z-index: 999
+      width: 250px
+      padding: 8px
+      border: 2px solid #ddd
+      border-bottom-color: #666
+      background-color: #f6f6f6
+    dt
+      margin-top: 0
+  .show dl
+    top: -20px
+    left: 50%
+
+.col-left .truncated .show dl
+  left: 30px
+  top: 10px
+
+.col-right .truncated .show dl
+  left: -240px
+  top: 10px
+
+/* =======================================================================================
+
+/* Checkout ==============================================================================
+/********** < Common Checkout Styles
+/* Shipping and Payment methods
+
+.sp-methods
+  margin: 0 0 8px
+  dt
+    margin: 13px 0 5px
+    font-weight: bold
+  dd li
+    margin: 5px 0
+  label
+    font-weight: bold
+    color: #555
+  .price
+    font-weight: bold
+  .form-list
+    padding-left: 20px
+    li
+      margin: 0 0 8px
+  select
+    &.month
+      width: 154px
+      margin-right: 10px
+    &.year
+      width: 96px
+  input.cvv
+    width: 3em !important
+  .checkmo-list
+    li
+      margin: 0 0 5px
+    label
+      width: 135px
+      padding-right: 10px
+      text-align: right
+    address
+      float: left
+  .centinel-logos
+    a
+      margin-right: 3px
+    img
+      vertical-align: middle
+  .release-amounts
+    margin: 1.5em 0 2em
+    button
+      float: left
+      margin: 5px 10px 0 0
+
+.please-wait
+  float: right
+  img
+    vertical-align: middle
+
+.cvv-what-is-this
+  font-size: 11px
+  cursor: help
+  margin-left: 10px
+
+/* Tooltip
+
+.tool-tip
+  border: 2px solid #ddd
+  border-bottom-color: #666
+  background: #f6f6f6
+  padding: 15px 20px
+  position: absolute
+  z-index: 9999
+  .btn-close
+    margin: -9px -14px 0
+    text-align: right
+    a
+      display: block
+      margin: 0 0 0 auto
+      width: 12px
+      height: 12px
+      background: url(/assets/btn_window_close.gif) 100% 0 no-repeat
+      text-align: left
+      text-indent: -999em
+      overflow: hidden
+  .tool-tip-content
+    padding: 5px
+
+/* Gift Messages
+
+.gift-messages
+  h3
+    font-size: 12px
+    font-weight: bold
+    color: #e87403
+  p.control
+    color: #8e8d8b
+
+.gift-messages-form
+  position: relative
+  label
+    float: none !important
+    position: static !important
+  h4
+    font-size: 12px
+    font-weight: bold
+    color: #e87403
+  .whole-order
+    margin: 0 0 25px
+  .item
+    margin: 0 0 10px
+    .product-img-box
+      float: left
+      width: 75px
+    .product-image
+      margin: 0 0 7px
+    .number
+      margin: 0
+      font-weight: bold
+      text-align: center
+      color: #8a8987
+    .details
+      margin-left: 90px
+      .product-name
+        font-size: 13px
+        font-weight: bold
+        margin: 0 0 10px
+      .form-list
+        .field
+          width: 255px
+        .input-box
+          width: 240px
+        input.input-text
+          width: 234px
+        li.wide
+          .input-box
+            width: 500px
+          textarea
+            width: 494px
+
+.gift-message-link
+  font-size: 11px
+  background: url(/assets/bkg_collapse-gm.gif) 100% 6px no-repeat
+  padding-right: 7px
+  &.expanded
+    background-position: 100% -40px
+
+.gift-message-row
+  background: #f2efe9
+  .btn-close
+    float: right
+    width: 12px
+    height: 12px
+    background: url(/assets/btn_remove.gif) 0 0 no-repeat
+    font-size: 0
+    line-height: 0
+    text-indent: -999em
+    overflow: hidden
+
+/* Checkout Agreements
+
+.checkout-agreements
+  li
+    margin: 30px 0
+  .agreement-content
+    overflow: auto
+    height: 12em
+    padding: 10px
+    background: #fbfbfb
+    border: 1px solid #e4e4e4
+  .agree
+    margin: 0
+    padding: 10px 0 10px 11px
+    input.checkbox
+      margin-right: 6px
+    label
+      font-weight: bold
+      color: #555
+
+.opc .checkout-agreements
+  padding: 5px 30px
+  li
+    margin: 20px 0 0
+  .agreement-content
+    background: #fff
+    padding: 5px
+  .agree
+    padding-left: 6px
+
+/* Centinel
+
+.centinel .authentication
+  border: 1px solid #ddd
+  background: #fff
+  iframe
+    width: 99%
+    height: 400px
+    background: transparent !important
+    margin: 0 !important
+    padding: 0 !important
+    border: 0 !important
+
+.opc .centinel
+  padding: 10px 30px
+
+/* Generic Info Set
+
+.info-set
+  background: #fbfbfb
+  border: 1px solid #ddd
+  margin: 0 0 25px
+  padding: 20px
+  h2
+    font-size: 12px
+    font-weight: bold
+    margin: 0 0 10px
+  h3, h4
+    font-size: 12px
+    font-weight: bold
+  h2 a, h3 a, h4 a
+    font-weight: normal
+  h2.legend
+    margin: -20px -20px 15px
+    padding: 3px 10px
+    background: #777
+    border-bottom: 1px solid #777
+    position: relative
+    color: #fff
+    a
+      color: #fff
+  h3.legend
+    margin: 0 0 10px
+  .divider
+    margin: 0 -20px
+    padding: 25px 0
+    position: relative
+  .box
+    margin: 0 0 15px
+    h2
+      color: #e26703
+  .data-table
+    .product-name
+      font-size: 1em !important
+      font-weight: bold !important
+      color: #1C353D !important
+      a
+        font-weight: bold !important
+    .item-options
+      margin: 5px 0 0
+
+/********** Common Checkout Styles >
+
+/* One Page Checkout
+
+.block-progress
+  border: 0
+  margin: 0
+  .block-title
+    background: none
+    border: 0
+    padding: 0
+    margin: 0 0 5px
+    strong
+      font-size: 12px
+  .block-content
+    background: none
+    padding: 0
+  dt
+    font-size: 10px
+    line-height: 1.35
+    background: #eee
+    border: 1px solid #ddd
+    margin: 0 0 6px
+    padding: 2px 8px
+    color: #555
+    text-transform: uppercase
+  dd
+    border-top: 0
+    padding: 2px 10px
+    margin: 0 0 6px
+  dt.complete a
+    text-transform: none
+  dd.complete
+  p
+    margin: 0
+  .cards-list
+    dt
+      background: none
+      border: 0 none
+      color: inherit
+      font-size: 11px
+      font-weight: bold
+      margin: 5px 0
+      padding: 0
+      text-transform: none
+    dd
+      border: 0 none
+      margin: 0
+      padding: 0
+    .info-table th
+      font-weight: normal
+
+.opc
+  .buttons-set
+    margin-top: 0
+    padding-top: 2em
+    p.required
+      margin: 0
+      padding: 0 0 10px
+    &.disabled button.button
+      display: none
+    .please-wait
+      height: 28px
+      line-height: 28px
+  .ul
+    list-style: disc outside
+    padding-left: 18px
+  position: relative
+  li.section
+  .step-title
+    border: 1px solid #ddd
+    border-top-color: #fff
+    background: #eee
+    padding: 4px 8px 6px
+    text-align: right
+    .number
+      float: left
+      background: #fff
+      border: 1px solid #fff
+      padding: 0 3px
+      margin: 0 5px 0 0
+      font: normal 11px / 12px arial, helvetica, sans-serif
+      color: #444
+    h2
+      float: left
+      margin: 0
+      font: bold 12px / 14px Arial, Helvetica, sans-serif
+      color: #999
+    a
+      display: none
+      float: right
+      font-size: 11px
+      line-height: 16px
+  .allow .step-title
+    background: #999
+    border-color: #999
+    border-top-color: #fff
+    color: #fff
+    cursor: pointer
+    .number
+    h2
+      color: #fff
+    a
+      display: block
+      font-size: 10px
+      color: #fff
+      text-transform: uppercase
+  .active .step-title
+    background: #e46b00
+    border-color: #e46b00
+    border-top-color: #fff
+    padding-bottom: 5px
+    color: #fff
+    cursor: default
+    .number
+    h2
+      color: #fff
+    a
+      display: none
+  .step
+    border: 1px solid #ddd
+    border-top: 0
+    background: #fbfbfb
+    padding: 15px 30px
+    position: relative
+    .tool-tip
+      right: 30px
+
+#opc-login
+  h3
+    font-size: 13px
+    border-bottom: 1px solid #e4e4e4
+    padding-bottom: 2px
+    text-transform: uppercase
+  h4
+    font-size: 1em
+    font-weight: bold
+    margin: 0
+    color: #2f2f2f
+
+#opc-shipping_method .buttons-set
+  border-top: 0
+
+.opc .gift-messages-form
+  margin: 0 -30px
+  background: #f4f4f4
+  border: 1px solid #ddd
+  border-width: 1px 0
+  padding: 22px 24px 22px 30px
+  .inner-box
+    padding: 5px
+    height: 260px
+    overflow: auto
+
+#opc-review
+  .step
+    padding: 0
+  .product-name
+    font-weight: bold
+  .item-options
+    margin: 5px 0 0
+  .buttons-set
+    border: 0
+    padding: 15px 30px
+    p
+      margin: 0
+      line-height: 28px
+    .please-wait
+      height: 28px
+      line-height: 28px
+  .authentication
+    margin: 0 auto
+    width: 570px
+  .warning-message
+    color: #222
+    font-weight: bold
+    text-align: center
+    padding: 10px 10px 0
+
+/* Multiple Addresses Checkout
+
+.checkout-progress
+  padding: 0 90px
+  margin: 0 0 20px
+  li
+    float: left
+    width: 19%
+    margin: 0 3px 0 0
+    border-top: 6px solid #999
+    padding: 2px 0 0
+    font-weight: bold
+    text-align: center
+    color: #888
+    &.active
+      border-top-color: #e96200
+      color: #e96200
+
+.multiple-checkout
+  h2
+    font-size: 12px
+    font-weight: bold
+    margin: 0 0 10px
+  h3, h4
+    font-size: 12px
+    font-weight: bold
+  h2 a, h3 a, h4 a
+    font-weight: normal
+  .data-table
+    .product-name
+      font-size: 1em !important
+      font-weight: bold !important
+      color: #1C353D !important
+      a
+        font-weight: bold !important
+    .item-options
+      margin: 5px 0 0
+  .gift-messages
+    margin: 15px 0 0
+  .tool-tip
+    top: 50%
+    margin-top: -120px
+    right: 20px
+  .col2-set, .col3-set
+    background: #fbfbfb
+    border: 1px solid #ddd
+    margin: 0 0 25px
+    padding: 20px
+  .col2-set
+    h2.legend
+      margin: -20px -20px 15px
+      padding: 3px 10px
+      background: #777
+      border-bottom: 1px solid #777
+      position: relative
+      color: #fff
+    h3.legend
+      margin: 0 0 10px
+    .divider
+      margin: 0 -20px
+      padding: 25px 0
+      position: relative
+  .box
+    margin: 0 0 15px
+  .place-order
+    .please-wait
+      float: right
+      padding: 5px 10px 0 0
+    .grand-total
+      float: right
+      .inner
+      big
+        float: left
+        margin-right: 12px
+        font-size: 1.5em
+        font-weight: bold
+        line-height: 28px
+        color: #e26703
+      div
+        float: left
+
+/* Step 1
+
+#multiship-addresses-table
+  td
+    padding: 10px
+  tfoot td
+    padding: 5px 10px
+
+/* Step 2
+
+.multiple-checkout .gift-messages-form .item .details .form-list
+  width: 100%
+  overflow: hidden
+  li
+    margin-right: -15px
+  .field
+    width: 230px
+  .input-box
+    width: 215px
+  input.input-text
+    width: 209px
+  li.wide
+    .input-box
+      width: 445px
+    textarea
+      width: 439px
+
+.checkout-multishipping-shipping .box-sp-methods
+  border: 1px solid #ddd
+  background: #eee
+  padding: 13px
+  position: relative
+  .pointer
+    display: none
+
+/* Step 3
+
+.checkout-multishipping-billing .multiple-checkout
+  position: relative
+
+/* =======================================================================================
+
+/* Account Login/Create Pages ============================================================
+
+.account-login
+  .content
+    min-height: 200px
+    padding: 0
+    h2
+      margin: 0 0 12px 0
+      padding: 2px 10px 5px 0
+      font-size: 13px
+      line-height: 1.25
+      border-bottom: 1px dotted #fff
+  .buttons-set
+
+.new-users, .registered-users
+  padding-right: 30px
+  width: 45% !important
+  padding-top: 20px
+
+.new-users ul
+  list-style: outside disc
+  margin-left: 15px
+  margin-bottom: 10px
+
+.account-create
+
+/* Account Login/Create Pages ============================================================
+
+/* My Account =============================================================================
+
+.my-account .title-buttons .link-rss
+  float: none
+  margin: 0
+
+/********** < Dashboard
+
+.dashboard
+  .welcome-msg
+    margin: 0 8em 1.5em 0
+    p
+      margin: 0
+  .col2-set
+    margin: 0 0 15px
+
+/* General Box
+
+.box-account
+  margin: 0 0 15px
+  .box-head
+    margin: 0 0 5px
+    text-align: right
+    h2
+      float: left
+      margin: 0
+      font-size: 14px
+      font-weight: bold
+      color: #1C353D
+    a
+      font-size: 10px
+      text-transform: uppercase
+
+.dashboard
+  .box
+    .box-title
+      background: #f1f1f1
+      padding: 2px 10px
+      margin: 0 0 12px
+      text-align: right
+      h3, h4
+        float: left
+        margin: 0
+        font-size: 12px
+        font-weight: bold
+        line-height: 1.35
+      a
+        font-size: 10px
+        text-transform: uppercase
+    .box-content
+      padding: 0 10px
+  .box-recent
+  .box-info h4
+    font-size: 11px
+    font-weight: bold
+  .box-reviews
+    .box-head
+      background: #f1f1f1
+      padding: 2px 10px
+      margin: 0 0 12px
+      h2
+        font-size: 12px
+        font-weight: bold
+        line-height: 1.35
+        color: #444
+    .number
+      display: none
+      float: left
+      font-size: 10px
+      font-weight: bold
+      line-height: 1
+      color: #fff
+      margin: 3px -20px 0 0
+      padding: 2px 3px
+      background: #0a263c
+    .details
+      padding: 0 10px
+    li.item
+      margin: 0 0 7px
+      &.last
+        margin: 0
+    .ratings
+      margin: 7px 0 0
+  .box-tags
+    .box-head
+      background: #f1f1f1
+      padding: 2px 10px
+      margin: 0 0 12px
+      h2
+        font-size: 12px
+        font-weight: bold
+        line-height: 1.35
+        color: #444
+    .number
+      display: none
+      float: left
+      font-size: 10px
+      font-weight: bold
+      line-height: 1
+      color: #fff
+      margin: 3px -20px 0 0
+      padding: 2px 3px
+      background: #0a263c
+    .details
+      padding: 0 10px
+    li.item
+      margin: 0 0 7px
+      &.last
+        margin: 0
+    .tags
+      strong
+        display: inline
+      ul
+        display: inline
+        li
+          display: inline
+
+/* Block: Recent Orders
+
+/* Block: Account Information
+
+/* Block: Reviews
+
+/* Block: Tags
+
+/********** Dashboard >
+
+/* Address Book
+
+.addresses-list
+  h2
+    background: #f1f1f1
+    padding: 2px 10px
+    margin: 0 0 12px
+    font-size: 13px
+    font-weight: bold
+    line-height: 1.25
+  h3
+    font-weight: bold
+    font-size: 12px
+  address
+    margin: 0 0 3px
+  p
+    margin: 0
+  a
+    font-weight: bold
+  .link-remove
+  .separator
+    margin: 0 3px
+  li
+    &.item
+      padding: 0 10px
+      margin: 0 0 12px
+    &.empty p
+      font-weight: bold
+  .addresses-additional li.item
+
+/* Order View
+
+.order-info
+  dt
+    display: none
+  ul
+    margin-bottom: 15px
+    border-bottom: 1px solid #666
+    background: #f2f2f2 url(/assets/bkg_tabs.gif) 0 100% repeat-x
+  li
+    float: left
+    border-right: 1px solid #a4a4a4
+    border-left: 1px solid #fff
+    font-size: 1.1em
+    line-height: 1em
+    &.first
+      border-left: 0
+    &.last
+      border-right: 0
+    a
+      display: block
+      padding: 6px 15px
+      color: #444
+      &:hover
+        background-color: #ddd
+        text-decoration: none
+        color: #444
+    &.current
+      background-color: #666
+      font-weight: bold
+      padding: 6px 15px
+      color: #fff
+
+.order-date
+  margin: 10px 0
+
+.order-info-box
+  margin: 0 0 15px
+  h2
+    font-size: 13px
+    font-weight: bold
+    border-bottom: 1px solid #ddd
+    margin: 0 0 8px
+  .box-payment
+    p
+      margin: 0 0 3px
+    th
+      font-weight: bold
+      padding-right: 7px
+
+.order-items
+  width: 100%
+  overflow-x: auto
+  h2
+    clear: none
+    font-weight: bold
+    font-size: 13px
+    padding: 0
+    margin: 0 0 .45em
+  h3
+    clear: none
+    font-weight: bold
+    font-size: 13px
+    padding: 0
+    margin: 0 0 .45em
+    font-size: 12px
+  .product-name
+    font-weight: bold !important
+  .link-print
+    font-size: 10px
+    text-transform: uppercase
+  .order-links
+    text-align: right
+    .link-print
+      font-weight: bold
+      font-size: 11px
+      text-transform: none
+
+.order-additional
+  margin: 15px 0
+
+/* Order Gift Message
+
+.gift-message
+  dt strong
+    color: #555
+  dd
+    font-size: 13px
+    margin: 5px 0 0
+
+/* Order Comments
+
+.order-about
+  dt
+    font-weight: bold
+  dd
+    font-size: 13px
+    margin: 0 0 7px
+
+.tracking-table
+  margin: 0 0 15px
+  th
+    font-weight: bold
+    white-space: nowrap
+
+.tracking-table-popup
+  width: 100%
+  th
+    font-weight: bold
+    white-space: nowrap
+    padding: 1px 8px
+  td
+    padding: 1px 8px
+
+/* Order Print Pages
+
+.page-print
+  .print-head
+    margin: 0 0 15px
+    .logo
+      float: left
+    address
+      float: left
+      margin-left: 15px
+  h1
+    font-size: 15px
+    font-weight: bold
+  h2, h3
+    font-size: 12px
+    font-weight: bold
+  h2.h2
+    font-size: 15px
+    font-weight: bold
+    text-align: right
+  .order-date
+    border-bottom: 1px solid #ccc
+    padding: 0 0 10px
+    margin: 0 0 10px
+  .col2-set
+    margin: 0 0 10px
+  .gift-message-link
+    display: none
+  .price-excl-tax, .price-incl-tax
+    display: block
+    white-space: nowrap
+  .cart-price, .price-excl-tax .label, .price-incl-tax .label, .price-excl-tax .price, .price-incl-tax .price
+    display: inline
+
+/* Price Rewrites
+
+/* Saved Programs
+
+.my-wishlist
+  .data-table td
+    padding: 10px
+  .product-image
+    display: block
+    width: 113px
+    height: 113px
+    margin: 0 0 5px
+  textarea
+    display: block
+    width: 97%
+    height: 109px
+  .buttons-set
+    border: 0
+    padding: 0
+    margin: 0 0 -3em
+    button.button
+      float: none
+    .btn-add span, .btn-share span
+
+#wishlist-table .add-to-links
+  white-space: nowrap
+
+/* My Tags
+
+.my-tag-edit
+  float: left
+  margin: 0 0 10px
+  .btn-remove
+    float: right
+    margin: 4px 0 0 5px
+
+#my-tags-table
+  clear: both
+  td
+    padding: 10px
+  .add-to-links
+    white-space: nowrap
+
+/* My Reviews
+
+#my-reviews-table
+  td
+    padding: 10px
+  .rating-box
+    margin: 3px 0 0
+
+.product-review
+  .product-img-box
+    float: left
+    width: 140px
+    .product-image
+      display: block
+      width: 125px
+      height: 125px
+    .label
+      font-size: 11px
+      margin: 0 0 3px
+    .ratings .rating-box
+      float: none
+      display: block
+      margin: 0 0 3px
+  .product-details
+    margin-left: 150px
+  .product-name
+    font-size: 16px
+    font-weight: bold
+    margin: 0 0 10px
+  h3
+    font-size: 12px
+    margin: 0 0 3px
+    color: #2f2f2f
+  .ratings-table
+    margin: 0 0 10px
+  dt
+    font-weight: bold
+  dd
+    font-size: 13px
+    margin: 5px 0 0
+
+/* Billing Agreements
+
+.billing-agreements
+  .info-box
+    margin: 15px 0
+    p
+      margin: 0 0 5px
+  .form-list li select
+    float: left
+    margin: 3px 10px 0 0
+  .table-caption
+    font-weight: bold
+    font-size: 13px
+
+/* =======================================================================================
+
+/* Footer ================================================================================
+
+.footer-container
+  background: url(/assets/footer-bg.png)
+  height: 137px
+  position: relative
+  bottom: 0
+  left: 0
+  width: 100%
+
+.footer
+  width: 980px
+  margin: 0 auto
+  text-align: left
+  padding-top: 15px
+  .hills
+    position: absolute
+    bottom: 136px
+    right: 50px
+    height: 77px
+    width: 192px
+    background-image: url(/assets/hills.png)
+  a
+    color: #444
+  .f-left
+    width: 800px
+  .f-right
+    width: 100px
+    text-align: right
+  .copycredit
+    clear: both
+    width: 100%
+    padding: 10px 0
+  ul
+    display: inline
+  li
+    display: inline
+    background: url(/assets/bkg_pipe1.gif) 100% 50% no-repeat
+    padding: 0 5px 0 0
+    margin: 0 3px 0 0
+  .links li.last
+    background: none !important
+    padding-right: 0 !important
+  .bugs
+    margin: 0
+    color: #666
+    a
+      font-weight: bold
+      color: #444
+  address
+    color: #666
+    font-style: italic
+    font-weight: normal
+    font-size: 0.9em
+    line-height: 1em
+    padding-top: 5px
+    a
+      color: #444
+  .form-subscribe
+    margin: 8px 0
+    label, .input-box, button.button
+      float: left
+    label
+      padding-top: 2px
+      font-weight: bold
+      color: #555
+    .input-box
+      width: 186px
+      margin: 0 5px
+    input.input-text
+      width: 180px
+    button.button span
+      height: 23px
+      background-image: url(/assets/bkg_btn-small.png)
+      line-height: 20px
+  .footer-callout
+    display: block
+    margin: -10px 0 10px
+    position: relative
+  .store-switcher
+    color: #555
+    text-align: right
+    label
+      font-weight: bold
+      vertical-align: middle
+    select
+      padding: 0
+      vertical-align: middle
+
+.footer-container .bottom-container
+  margin: 0 0 8px
+  text-align: right
+
+/* =======================================================================================
+
+/* Sample Data============================================================================
+
+.home-callout
+  margin-bottom: 12px
+  img
+    display: block
+
+/*.home-spot { float:left; width:470px; margin-left:20px; }
+
+.best-selling
+  h3
+    margin: 12px 0 6px 0
+    color: #e25203
+    font-size: 1.2em
+  table
+    border-top: 1px solid #ccc
+  tr
+    &.odd
+      background: #eeeeee url(/assets/best_selling_tr_odd_bg.gif) 0 100% repeat-x
+    &.even
+      background: white url(/assets/best_selling_tr_even_bg.gif) 0 100% repeat-x
+  td
+    width: 50%
+    border-bottom: 1px solid #ccc
+    padding: 8px 10px 8px 8px
+    font-size: 11px
+  .product-img
+    float: left
+    border: 2px solid #dcdcdc
+  .product-description
+    margin-left: 107px
+    line-height: 1.3em
+  a.product-name
+    color: #203548
+
+.home-spot .best-selling a.product-name:hover
+  color: #203548
+
+/* =======================================================================================
+
+/* Clears ================================================================================
+
+.clearer:after
+  display: block
+  content: "."
+  clear: both
+  font-size: 0
+  line-height: 0
+  height: 0
+  overflow: hidden
+
+.header-container
+  &:after, .top-container:after
+    display: block
+    content: "."
+    clear: both
+    font-size: 0
+    line-height: 0
+    height: 0
+    overflow: hidden
+
+.header:after, .top-bar:after, .quick-access:after, .form-search:after, #nav:after, .main:after
+  display: block
+  content: "."
+  clear: both
+  font-size: 0
+  line-height: 0
+  height: 0
+  overflow: hidden
+
+.footer
+  &:after, .form-subscribe:after
+    display: block
+    content: "."
+    clear: both
+    font-size: 0
+    line-height: 0
+    height: 0
+    overflow: hidden
+
+.footer-container .bottom-container:after, .col-main:after, .col2-set:after, .col3-set:after, .col4-set:after, .search-autocomplete li:after
+  display: block
+  content: "."
+  clear: both
+  font-size: 0
+  line-height: 0
+  height: 0
+  overflow: hidden
+
+.block
+  .block-content:after, .actions:after, li.item:after
+    display: block
+    content: "."
+    clear: both
+    font-size: 0
+    line-height: 0
+    height: 0
+    overflow: hidden
+
+.block-poll li:after, .block-layered-nav .currently li:after, .page-title:after, .products-grid:after, .products-list li.item:after, .box-account .box-head:after, .dashboard .box .box-title:after, .order-info ul:after, .box-reviews li.item:after, .box-tags li.item:after, .pager:after, .sorter:after, .ratings:after, .add-to-box:after, .add-to-cart:after, .product-essential:after, .product-collateral:after, .product-tabs:after
+  display: block
+  content: "."
+  clear: both
+  font-size: 0
+  line-height: 0
+  height: 0
+  overflow: hidden
+
+.product-view
+  .product-img-box .more-views ul:after, .box-tags .form-add:after, .product-shop .short-description:after, .box-description:after
+    display: block
+    content: "."
+    clear: both
+    font-size: 0
+    line-height: 0
+    height: 0
+    overflow: hidden
+
+.product-options .options-list li:after, .product-options-bottom:after, .product-review:after, .cart:after, .cart-collaterals:after, .cart .crosssell li.item:after, .opc .step-title:after, .checkout-progress:after, .multiple-checkout .place-order:after, .group-select li:after
+  display: block
+  content: "."
+  clear: both
+  font-size: 0
+  line-height: 0
+  height: 0
+  overflow: hidden
+
+.form-list
+  li:after, .field:after
+    display: block
+    content: "."
+    clear: both
+    font-size: 0
+    line-height: 0
+    height: 0
+    overflow: hidden
+
+.buttons-set:after, .page-print .print-head:after, .advanced-search-summary:after, .gift-messages-form .item:after, .send-friend .form-list li p:after
+  display: block
+  content: "."
+  clear: both
+  font-size: 0
+  line-height: 0
+  height: 0
+  overflow: hidden
+
+/* =======================================================================================
+
+.gmap3, #product_tabs_map_contents
+  margin: 0
+  width: 940px
+  height: 350px
+
+.hide
+  display: block !important
+  position: absolute
+  left: -10000px
+  top: -10000px
+  width: 940px
+  height: 350px
+
+#gmap div div div div div div div
+  overflow: hidden !important
+
+.form-add
+  border: 1px solid #eee
+  background-color: #FFF
+  padding: 20px
+  border-radius: 5px
+  -moz-border-radius: 5px
+  -webkit-border-radius: 5px
+
+span.blue
+  color: #2BA2BD
+  cursor: default
+
+.colorTip
+  /* This class is assigned to the color tip span by jQuery
+  display: none
+  position: absolute
+  left: 50%
+  bottom: 20px
+  padding: 10px
+  background-color: white
+  line-height: 1.3
+  text-decoration: none
+  text-align: center
+  text-shadow: 0 0 1px white
+  white-space: nowrap
+  -moz-border-radius: 4px
+  -webkit-border-radius: 4px
+  border-radius: 4px
+
+.pointyTip
+  /* Setting a thick transparent border on a 0x0 div to create a triangle
+  border: 6px solid transparent
+  bottom: -12px
+  height: 0
+  left: 50%
+  margin-left: -6px
+  position: absolute
+  width: 0
+
+.pointyTipShadow
+  /* Setting a thick transparent border on a 0x0 div to create a triangle
+  border: 6px solid transparent
+  bottom: -12px
+  height: 0
+  left: 50%
+  margin-left: -6px
+  position: absolute
+  width: 0
+  /* The shadow tip is 1px larger, so it acts as a border to the tip
+  border-width: 7px
+  bottom: -14px
+  margin-left: -7px
+
+.colorTipContainer
+  position: relative
+  text-decoration: none !important
+
+/* 6 Available Color Themes
+
+.white
+  .pointyTip
+    border-top-color: white
+  .pointyTipShadow
+    border-top-color: #ddd
+  .colorTip
+    background-color: white
+    border: 1px solid #DDDDDD
+    color: #555555
+
+.yellow
+  .pointyTip
+    border-top-color: #f9f2ba
+  .pointyTipShadow
+    border-top-color: #e9d315
+  .colorTip
+    background-color: #f9f2ba
+    border: 1px solid #e9d315
+    color: #5b5316
+
+.blue
+  .pointyTip
+    border-top-color: #d9f1fb
+  .pointyTipShadow
+    border-top-color: #7fcdee
+  .colorTip
+    background-color: #d9f1fb
+    border: 1px solid #7fcdee
+    color: #1b475a
+    width: 350px
+    white-space: normal
+
+span.green
+  color: #9C3
+  cursor: default
+
+.green
+  .pointyTip
+    border-top-color: #f2fdf1
+  .pointyTipShadow
+    border-top-color: #b6e184
+  .colorTip
+    background-color: #f2fdf1
+    border: 1px solid #b6e184
+    color: #558221
+
+.red
+  .pointyTip
+    border-top-color: #bb3b1d
+  .pointyTipShadow
+    border-top-color: #8f2a0f
+  .colorTip
+    background-color: #bb3b1d
+    border: 1px solid #8f2a0f
+    color: #fcfcfc
+    text-shadow: none
+
+.black
+  .pointyTip, .pointyTipShadow
+    border-top-color: #304c57
+  .colorTip
+    background-color: #304c57
+    border: 1px solid #304c57
+    color: #fcfcfc
+    text-shadow: none
+    width: 110px
+    bottom: 25px
+    padding: 5px
+    white-space: normal
+
+#notfoundblock
+  padding: 10px
+  background: white url(/assets/kidglass.jpg) bottom right no-repeat
+
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     default_modern
+ * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+
+/* Widgets ===============================================================================
+
+.widget
+  display: inline
+  .widget-title
+    clear: both
+    padding: 15px 0 0
+    margin: 0 0 7px
+    h2
+      font-size: 15px
+      font-weight: bold
+      color: #e25203
+  .mini-products-images-list
+    .product-image
+      display: block
+      width: 76px
+      height: 76px
+      border: 1px solid #a9a9a9
+      margin: 0 auto
+    li.item
+      float: left
+      width: 77px
+      height: 77px
+      border: 0 !important
+      padding: 5px 9px !important
+
+/* Widget: Catalog New Proructs List
+
+.widget-new-products
+  display: block
+
+.col-main .widget-new-products
+  margin: 7px 0
+
+.widget-new-products
+  .products-grid .product-image
+    width: 85px
+    height: 85px
+  .products-list
+    .product-image
+      width: 85px
+      height: 85px
+    .product-shop
+      margin-left: 100px
+
+/* Widget: Recently Viewed Proructs
+
+.widget-viewed
+  display: block
+
+.col-main .widget-viewed
+  margin: 7px 0
+
+.widget-viewed
+  .products-grid .product-image
+    width: 85px
+    height: 85px
+  .products-list
+    .product-image
+      width: 85px
+      height: 85px
+    .product-shop
+      margin-left: 100px
+
+/* Widget: Recently Compared Proructs
+
+.widget-compared
+  display: block
+
+.col-main .widget-compared
+  margin: 7px 0
+
+.widget-compared
+  .products-grid .product-image
+    width: 85px
+    height: 85px
+  .products-list
+    .product-image
+      width: 85px
+      height: 85px
+    .product-shop
+      margin-left: 100px
+
+/* Widget: CMS Static Block
+
+.widget-static-block
+
+.sidebar .widget-static-block
+  display: block
+  margin: 0 0 15px
+
+/* Widgets: Links Common Styles
+
+.top-container .widget a
+  padding: 0 0 0 7px
+
+.bottom-container .widget a
+  padding: 0 3px
+
+/* Widget: Catalog Product Link
+
+.widget-product-link-inline
+  display: inline
+
+.col-main .widget-product-link
+  display: block
+  font-size: 12px
+  text-align: right
+  margin: 7px 0
+  a
+    background: url(/assets/i_widget-link.gif) 100% 3px no-repeat
+    padding-right: 15px
+
+.sidebar .widget-product-link
+  display: block
+  margin: 0 0 15px
+  padding: 0 10px
+  a
+    background: url(/assets/i_widget-link.gif) 100% 3px no-repeat
+    padding: 0 15px 0 0
+
+/* Widget: Catalog Category Link
+
+.widget-category-link-inline
+  display: inline
+
+.col-main .widget-category-link
+  display: block
+  font-size: 12px
+  text-align: right
+  margin: 7px 0
+  a
+    background: url(/assets/i_widget-link.gif) 100% 3px no-repeat
+    padding-right: 15px
+
+.sidebar .widget-category-link
+  display: block
+  margin: 0 0 15px
+  padding: 0 10px
+  a
+    background: url(/assets/i_widget-link.gif) 100% 3px no-repeat
+    padding: 0 15px 0 0
+
+/* Widget: CMS Page Link
+
+.widget-cms-link-inline
+  display: inline
+
+.col-main .widget-cms-link
+  display: block
+  font-size: 12px
+  text-align: right
+  margin: 7px 0
+  a
+    background: url(/assets/i_widget-link.gif) 100% 3px no-repeat
+    padding-right: 15px
+
+.sidebar .widget-cms-link
+  display: block
+  margin: 0 0 15px
+  padding: 0 10px
+  a
+    background: url(/assets/i_widget-link.gif) 100% 3px no-repeat
+    padding: 0 15px 0 0
+
+/* =======================================================================================
+
+.advancedreviews-summary-block
+  clear: both
+  margin: 10px 0
+  background-color: #1c5363
+  color: #fff
+  padding: 10px 15px 20px
+  table
+    float: left
+    display: inline-block
+    td
+      padding: 0 5px
+      vertical-align: middle
+    th
+      font-weight: bold
+      text-align: left
+      padding: 0 5px
+      text-transform: uppercase
+    td
+      &.star-name
+        white-space: nowrap
+        width: 10%
+        text-align: left
+      &.star-count
+        white-space: nowrap
+        width: 10%
+        text-align: left
+        padding-right: 20px
+      &.star-line .star-bar-container
+        background: #cfdee2
+  .spacer
+    clear: both
+  .star-bar
+    background: #4a8ea4
+    height: 15px
+    line-height: 15px
+    text-align: center
+    color: #fff
+
+.advancedreviews-reviews-count
+  font-weight: bold
+  margin: 5px 0
+  text-align: right
+
+label
+  &.consFilter, &.prosFilter
+    color: #1E7EC8
+    cursor: pointer
+
+table.advancereviews-filters th
+  width: 50%
+  color: #19404b
+  padding: 0 0 3px
+  font-size: 1.25em
+  font-family: 'Museo500'
+
+#advancereviews-filters table.advancereviews-filters li, #customer-reviews #product-review-table li
+  margin-bottom: 5px
+
+ul.hiddenList
+  display: none
+
+#product-review-table td a
+  display: block
+
+#loading-mask .loader
+  background: #FFF4E9
+  border: 2px solid #F1AF73
+  color: #D85909
+  font-weight: bold
+  left: 39%
+  padding: 15px 60px
+  position: fixed
+  text-align: center
+  top: 45%
+  width: 120px
+  z-index: 1000
+
+#advancereviews-sort-reviews img
+  cursor: pointer
+
+.hidden
+  display: none
+
+.abuse-link, .helpful-link
+  cursor: pointer
+
+#lightbox
+  position: absolute
+  left: 0
+  width: 100%
+  z-index: 999
+  text-align: center
+  line-height: 0
+  img
+    width: auto
+    height: auto
+    top: 0px
+    left: 0px
+  a img
+    border: none
+
+#outerImageContainer
+  position: relative
+  background-color: #fff
+  width: 250px
+  height: 250px
+  margin: 0 auto
+
+#imageContainer
+  padding: 10px
+
+#loading
+  position: absolute
+  top: 40%
+  left: 0%
+  height: 25%
+  width: 100%
+  text-align: center
+  line-height: 0
+
+#hoverNav
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  z-index: 10
+
+#imageContainer>#hoverNav
+  left: 0
+
+#hoverNav a
+  outline: none
+
+#prevLink, #nextLink
+  width: 49%
+  height: 100%
+  background-image: url(/assets/blank.gif)
+  /* Trick IE into showing hover
+  display: block
+
+#prevLink
+  left: 0
+  float: left
+
+#nextLink
+  right: 0
+  float: right
+
+#prevLink
+  &:hover, &:visited:hover
+    background: url(/assets/prevlabel.gif) left 15% no-repeat
+
+#nextLink
+  &:hover, &:visited:hover
+    background: url(/assets/nextlabel.gif) right 15% no-repeat
+
+#imageDataContainer
+  font: 10px Verdana, Helvetica, sans-serif
+  background-color: #fff
+  margin: 0 auto
+  line-height: 1.4em
+  overflow: auto
+  width: 100%
+
+#imageData
+  padding: 0 10px
+  color: #666
+  #imageDetails
+    width: 70%
+    float: left
+    text-align: left
+  #caption
+    font-weight: bold
+  #numberDisplay
+    display: block
+    clear: left
+    padding-bottom: 1.0em
+  #bottomNavClose
+    width: 66px
+    float: right
+    padding-bottom: 0.7em
+    outline: none
+
+#overlay
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 999
+  width: 100%
+  height: 500px
+  background-color: #000
+
+/********************** Tabs
+
+.product-view .tabs
+  margin: 15px 0px
+  overflow: hidden
+  border-bottom: 1px solid #496778
+  /*zoom: 1;
+  li
+    float: left
+    border-right: 1px solid #ffffff
+    border-left: 1px solid #fff
+    font-size: 0.9em
+    line-height: 1em
+    background: #f2f2f2
+    &.first
+      border-left: 0
+    &.last
+      border-right: 0
+  a
+    display: block
+    padding: 6px 10px
+    color: #444
+    text-decoration: none
+    &:hover
+      background-color: #ddd
+      text-decoration: none
+      color: #444
+      text-decoration: none
+  li.active a
+    background: #496778
+    font-weight: bold
+    color: #fff
+    &:hover
+      background: #496778
+      font-weight: bold
+      color: #fff
+
+#product_tabs_tags_tabbed_contents
+  &.input-box input
+    width: 300px
+  .input-box
+    width: 300px
+    float: left
+    margin-right: 10px
+
+#product_tabs_related_tabbed_contents
+  li
+    float: left
+    margin-right: 10px
+  ol
+    clear: both
+
+.product-collateral:after
+  content: "."
+  display: block
+  clear: both
+  font-size: 0
+  line-height: 0
+  height: 0
+  overflow: hidden
+  /*zoom: 1

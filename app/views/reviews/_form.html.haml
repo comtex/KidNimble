@@ -1,0 +1,33 @@
+#reviewContainer.logbox.aboutCamp 
+  %h2 Complete your Review
+  = form_for(@review, :format => :js, :remote => true, :html => {:onSubmit => "$('#loading').show();"}) do |f|
+    -if !@review.errors.blank?
+      #error_explanation
+        - @review.errors.full_messages.each do |msg|
+          %span.help-inline= msg
+          %br
+      #sucess.message
+    = f.hidden_field :camp_id, :value => @camp_id
+    = f.hidden_field :url, :value => @url
+    = f.hidden_field :commit_button, :value => ""
+    .field.ratinglabel
+      = f.label :'Rating:'
+    .field.ratingvalue
+      = radio_button("review", "rating", 1, :class => "star")
+      = radio_button("review", "rating", 2, :class => "star")
+      = radio_button("review", "rating", 3, :class => "star")
+      = radio_button("review", "rating", 4, :class => "star")
+      = radio_button("review", "rating", 5, :class => "star")
+      //= f.text_field :rating
+    .field
+      = f.label :'Review'
+      = f.text_area :note, :class => 'reviewtext'
+    .actions.field
+      -if !current_user.blank?
+        = f.submit 'Post your review'
+      -else
+        /= button_tag(:type => 'button', :onClick => "createTempReview($('#new_review'));") do 'New user? Sign up' end
+        = f.submit 'New user? Sign up', :onclick => "$('#review_commit_button').val(this.value);"
+        = f.submit 'Already a User? Log-in', :style => "margin-left:25px;", :onclick => "$('#review_commit_button').val(this.value);"
+    :javascript
+      $(function(){$('input[type=radio].star').rating();});

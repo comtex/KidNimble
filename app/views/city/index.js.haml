@@ -1,0 +1,7 @@
+= @cities = []            |
+  if @zips                |
+  	@zips.each do |zip|    |
+  		@cities.push zip.city |
+  	end                    |
+  end                     |
+  raw @cities.to_json     |

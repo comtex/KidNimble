@@ -1,0 +1,317 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* -------------About------------- */
+.aboutCamp p{
+	font-family:Calibri,helvatica;
+	font-size:16px;
+	width:545px;
+	line-height:18px;
+	color:#272727
+}
+.aboutCamp p a{
+	font-weight:bold;
+	text-decoration:underline;
+	color:#06a7d5;
+}
+.aboutCamp h2{
+	font-family: 'Museo700';
+	font-size:20px;
+	color:#4a859b;
+	margin:20px 0;
+}
+.AboutBanner h4{
+	padding:15px 0 0 15px;
+	font-size:18px;
+	line-height:24px;
+	color:#36b7d1;
+}
+.sideAbout{
+	background:url(/assets/template/bg_banner.png) no-repeat;
+	position:relative;
+	margin-bottom:10px;
+	width:350px;
+	height:79px;
+}
+.learnMore{
+	position:absolute;
+	bottom:12px;
+	right:42px;
+}
+img.find{margin:30px 0 30px 60px}
+
+/* ----------------HOME---------------- */
+.mainHome{
+	background:url(/assets/template/bg_Home.jpg) top center no-repeat;
+	position:relative;
+	min-height:452px;
+}
+.findKind h3{
+	background:url(/assets/template/search.png) left center no-repeat;
+	font-family: 'Museo700';
+	font-weight:normal;
+	padding:2px 0 2px 30px;
+	font-size:22px;
+	color:#FFF;
+}
+.singUp h3{
+	background:url(/assets/template/singUp.png) left center no-repeat;
+	font-family: 'Museo700';
+	font-weight:normal;
+	padding:2px 0 2px 30px;
+	font-size:22px;
+	color:#FFF;
+}
+.sharePlan h3{
+	background:url(/assets/template/plan.png) left center no-repeat;
+	font-family: 'Museo700';
+	font-weight:normal;
+	padding:2px 0 2px 30px;
+	font-size:22px;
+	color:#FFF;
+}
+h1.camphelp{
+	 font-family: 'Museo700';
+	margin:40px 0 0;
+	font-size:41px;
+	color:#FFF
+}
+.camphelp span{color:#f3d50a}
+.findKind{margin:125px 0 0 20px}
+.singUp{margin:20px 0 22px 20px}
+.sharePlan{margin:0 0 0 20px}
+.Place{
+	position:relative;
+	background:#FFF;
+	width:190px;
+	border-radius:5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	height:30px;
+	padding:10px 0;
+	margin:-50px 0 0 45px;
+}
+.Place p{
+	margin-left:20px;
+	font-size:14px;
+	color:#464e51
+}
+.categories{margin:55px 0 25px 100px;width:33% !important;}
+dl.categorie{
+	border:none;
+	margin:0px 0 0 15px;
+}
+dl.categorie dd a{
+	background:url(/assets/template/categorieInc.png) top left repeat;
+	border-radius:6px 6px 0 0;
+	-webkit-border-radius: 6px 6px 0 0;
+	-moz-border-radius: 6px 6px 0 0;
+	font-size:14px;
+	color:#494949;
+	padding-bottom:2px;
+	margin:0 10px 0 0;
+	border:none
+}
+dl.categorie dd a.active{
+	background:url(/assets/template/categorie.png) top left repeat;
+	border-left:solid 1px #c2d3d7;
+	border-top:solid 1px #c2d3d7;
+	border-right:solid 1px #c2d3d7;
+	padding-bottom:0px;
+	font-weight:bold
+}
+ul.tabs-categorie{
+	background:url(/assets/template/categorie.png) top left repeat;
+	border:solid 1px #c2d3d7;
+	border-radius:7px;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	width:300px;
+	float:left;
+	margin:0px;
+	padding:0px 0 0 15px;
+}
+ul.tabs-categorie img{margin:15px 0 0 0}
+ul.tabs-categorie img.searchlogo{margin:0 15px 0px 0}
+
+ul.tabs-categorie a.logo{
+  float:right;
+  clear:both;
+}
+ul.tabs-categorie h3{
+  clear:both;
+}
+ul.tabs-categorie li.active{
+	margin:0px;
+	padding:0px;
+}
+input.categ{
+	background:url(/assets/template/bgInput_2.png) repeat-x;
+	height:30px;
+	color:#798e94;
+	font-size:16px;
+	width:281px;
+	margin:5px 0;
+	border:solid 1px #c2d3d7;
+	padding:6px 10px;
+}
+.categshort{
+  width:140px !important;
+}
+
+.programs {
+	padding: 0px;
+	/*height: 320px;*/	
+}
+.nice.red.button {
+	border: 1px solid #EDB14A;	
+}
+.red.button {
+	background-color: #FEC658;
+}
+.red.button:hover, .red.button:focus {
+	background-color: #FEC658;
+}
+.progrLeft select,select{
+	background:url(/assets/template/bgInput_2.png) repeat-x;
+	color:#798e94;
+	font-size:16px;
+	width:282px;
+	border:solid 1px #c2d3d7;
+	padding:6px 0 6px 10px;
+}
+input.search{
+	background:url(/assets/template/Btn_search.png) no-repeat;
+	margin:0 3px 10px 0;
+	border:none;
+	width:112px;
+	height:32px;
+	float:right;
+	cursor:pointer;
+}
+.progr{
+  float:left;
+	width:40%;
+	/*
+	background:#addde4;
+	height:320px
+	*/
+}
+.CampDirctor{
+	background:#FFF url(/assets/template/bg_campDirector.png) top left repeat-x;
+	float:left;
+	width:60%;
+	height:320px
+}
+.progrLeft{
+	float:right;
+	width:400px;
+}
+.progrLeft h3{
+	width:240px;
+	font-size:18px;
+	color:#525252
+}
+.progrLeft h3 span{
+	font-size:16px;
+	color:#525252
+}
+.Progbotton{
+	margin:115px 0 0 0;
+}
+.Progbotton p a{
+	color:#996633}
+.Progbotton p{
+	margin:0px 0 5px 20px;
+	padding:0px;
+}
+.CampDirctorRight{
+	margin:50px 0 0 60px;
+	float:left;
+	width:540px
+}
+.Camp-dir{
+	float:left;
+}
+.Camp-dir h3{
+	font-size:19px;
+	margin:0px;
+	padding:0px;
+	color:#525252
+}
+.Camp-dir span{
+	margin:10px 0;
+	font-size:16px;
+	color:#36b7d1
+}
+.Camp-dir p{
+	font-size:15px;
+	width:260px;
+	color:#272727
+}
+.Camp-dir3{
+	float:right;
+}
+.Camp-dir3 h3{
+	font-size:19px;
+	margin:0px;
+	padding:0px;
+	color:#525252
+}
+.Camp-dir3 span{
+	margin:10px 0;
+	width:100px;
+	font-size:16px;
+	color:#36b7d1
+}
+/* STYLE RADIO BUTTON */	
+.checkbox{position:relative;float:right;margin-top:-10px}	
+ .button-style label {
+			    border:solid 1px #d1c090;
+				padding:4px 10px 4px 10px;
+				background: #fffaec;
+				cursor: pointer}
+			.button-style label.ui-radio-checked{
+				background: #1a9b00}
+			.ui-helper-hidden-accessible {
+				position: absolute;
+				left: -999em}	
+.homeloginrow{
+  margin:210px 0 0 0;
+}
+.homeloginrow .row{
+  float:left;
+  margin-bottom:10px;
+}
+.homeloginrow a, .homeloginrow h5{
+  float:left;
+  margin-right:10px;
+  font-weight:bold;
+}
+
+.homeloginrow .row a.createaccount h5{
+  color: #2A85E8;
+  line-height: inherit;
+  text-decoration: underline;
+}
+.homeloginrow .row a.createaccount h5:hover{
+  text-decoration: none;
+  color: #3CB9D8;
+}
+
+
+div.remember label a{
+  color:#272727;
+}
+
+div.remember label a.createAccount
+{
+  background: url("/assets/template/homeCreateAccount.png") no-repeat scroll 0 0 transparent;
+  border: medium none;
+  cursor: pointer;
+  float: right;
+  height: 27px;
+  margin: -3px 8px 0 0;
+  width: 124px;
+}

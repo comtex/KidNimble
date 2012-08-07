@@ -1,0 +1,8 @@
+- if @post && @post.errors.any?
+  $('#dialog-form').html('#{escape_javascript(render('form'))}');
+- else
+  getPostData(#{@group_id});
+  $('#dialog-form').dialog('close');
+  $('#dialog-form').fadeOut().remove();
+  showPostSavedMsg();
+$('#loading').hide();

@@ -1,0 +1,16 @@
+// Active Admin CSS Styles
+@import "active_admin/mixins";
+@import "active_admin/base";
+@import "active_admin_jquery_ui";
+
+#ui-datepicker-div {
+  background-color: #eee;
+}
+.ui-datepicker-header {
+  background-color: #bbb;
+}
+.ui-datepicker {
+  background-color: #bbb;
+}
+// To customize the Active Admin interfaces, add your
+// styles here:

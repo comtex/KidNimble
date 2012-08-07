@@ -1,0 +1,11 @@
+#counselors
+
+
+:javascript
+  $(function(){
+    $.getJSON('/counselors', function (data) {
+      console.log("Here 2!");
+      window.router = new Guru.Routers.CounselorsRouter({counselors: data});
+      Backbone.history.start();
+    });
+  });

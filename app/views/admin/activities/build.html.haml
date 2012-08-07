@@ -1,0 +1,16 @@
+%table
+  %thead
+    %tr
+      %th Kind
+  %tbody
+    - @activitys.each do |e|
+      %tr
+        %td #{e.kind}
+%br
+%br
+= form_for @activity, :controller => 'admin/activities', :action => :update do |f|
+  = f.hidden_field :camp_id 
+  %label{:for => :kind} Kind
+  = f.text_field :kind 
+  %br
+  = submit_tag

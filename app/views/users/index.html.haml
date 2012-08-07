@@ -1,0 +1,119 @@
+.container.main
+  .row.busy-mom{:style => "height:115px;"}
+    .five.columns.description
+      .user-pic
+        %img{:alt => "", :height => "69", :src => "/assets/template/girl.png", :width => "70"}
+      .user-content.title
+        %b
+          = current_user.name
+          's CG Dashboard:
+        %br
+          %span.colorgry1 username:
+          %b= current_user.email
+          %br
+            %b= link_to "Edit Profile ", edit_user_registration_path
+    .four2.description-content.title
+      %span.colorgry1{:style => "float:left;"} Kids:
+      #kidsdesc
+        -@kids.each_with_index do |kid, i|
+          %span.kidsrow
+            -if kid.sex == 'girl'
+              %img{:alt => "", :src => "/assets/template/girl.png"}
+            -else
+              %img{:alt => "", :src => "/assets/template/campgurus25_18.png"}
+            %span
+              %b= link_to kid.name, "/kids#/#{kid.id}"
+              \-- (
+              =kid.sex
+              , age 
+              =age(kid.born_at)
+              )
+
+  .row.searchview
+    .columns.searchbox.title
+      %h4 Groups:
+      -@groups.each_with_index do |group, i|
+        %b= link_to group.name, "/groups/#{group.id}"
+        %br>/
+      = link_to "Create a group", "#", :onClick =>'openPopup("/groups/new.html");', :class => "create_group"
+    .columns
+      %h4 Find A Program
+      %dl.tabs.categorie
+        %dd
+          %a.active.button{:href => "#Location"} Location
+        %dd
+          %a.button{:href => "#Name"} Name
+        %dd
+          %a.button{:href => "#Activity"} Activity
+        %dd
+          %a.button{:href => "#Dates"} Dates
+      %ul.tabs-content.tabs-categorie
+        %li#LocationTab.active
+          = form_tag '/camps', :method => 'GET' do
+            %img{:alt => "#", :src => "/assets/template/findKids.png"}/
+            = text_field_tag :zip, '', :class => 'categ', :placeholder => 'Zip Code'
+            .styleSelect
+              = select_tag :state, options_for_select(Carmen::states('US'), 'NY'), :class => 'stateOption'
+            = text_field_tag :city, '', :class => 'categ', :placeholder => 'City'
+            = submit_tag '', :value => '', :class => 'search'
+        %li#NameTab
+          = form_tag '/camps', :method => 'GET' do
+            %img{:alt => "#", :src => "/assets/template/findKids.png"}/
+            = text_field_tag :name, '', :class => 'categ', :placeholder => 'Name'
+            = hidden_field_tag :longitude, '0.0'
+            = hidden_field_tag :latitude, '0.0'
+            = submit_tag '', :value => '', :class => 'search'
+        %li#ActivityTab
+          = form_tag '/camps', :method => 'GET' do
+            %img{:alt => "#", :src => "/assets/template/findKids.png"}/
+            #categorySelect.styleSelect
+              = select_tag :category, options_for_select(@categories.map { |k| ["#{k.name}",k.id] }.sort), :class => 'categoryOption', :prompt => 'Select Activity...'
+            #subCategorySelect.styleSelect
+              = select_tag :subs, options_for_select(@subcategory.map { |k| ["#{k.name}",k.id] }.sort), :class => 'subcategoryOption', :prompt => 'Select Subactivity...'
+            = hidden_field_tag :longitude, '0.0'
+            = hidden_field_tag :latitude, '0.0'
+            = submit_tag '', :value => '', :class => 'search'
+        %li#DatesTab
+          = form_tag '/camps', :method => 'GET' do
+            %img{:alt => "#", :src => "/assets/template/findKids.png"}/
+            %b Start Date is between:
+            = text_field_tag :start, '', :class => 'categ', :placeholder => "Start Date (YYYY-MM-DD Format)"
+            = text_field_tag :end, '', :class => 'categ', :placeholder => "End Date (YYYY-MM-DD Format)"
+            = hidden_field_tag :longitude, '0.0'
+            = hidden_field_tag :latitude, '0.0'
+            = submit_tag '', :value => '', :class => 'search'
+            
+  .row.feedsview
+    .row.ten.columns.title
+      %h4 Your News Feed:
+    %ul#camps-table
+              
+  .row.bookmarkedactivityview
+    /= debug @bookmarked_camps
+    -if !@bookmarked_camps.blank?
+      .row.ten.columns.title
+        %h4 Bookmarked Activities:
+      -@bookmarked_camps.each_with_index do |camp, i|
+        .row
+          .columns.title
+            %img{:alt => "", :height => "58", :src => "/assets/template/campgurus25_18.png", :width => "55"}
+              %span.colorgry1 
+                = link_to camp.title, "#"
+              %br>/
+              %span
+                =camp.description
+
+:javascript
+  getPostData();
+  $('#start').datepicker({dateFormat: 'yy-mm-dd'});
+  $('#end').datepicker({dateFormat: 'yy-mm-dd'});
+  window.latitude  = geoip_latitude();
+  window.longitude = geoip_longitude();
+  $(function() {
+    if(window.latitude != '' && window.longitude != ''){
+      $('input[name^="latitude"]').val(window.latitude);
+      $('input[name^="longitude"]').val(window.longitude);
+    }
+    window.page   = 0;
+  });
+  

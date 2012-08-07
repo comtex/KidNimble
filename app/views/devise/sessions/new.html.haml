@@ -1,0 +1,26 @@
+.container.wonderLAnd_camp.loginpageheight
+  .row
+    .five.singinbox.columns.equal
+      %div#reviewContainer.row.logbox.aboutCamp        
+        %h2 Sign in
+        %p Please enter your email address and password to log in.
+        = semantic_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+          = devise_error_messages!
+          = f.semantic_errors
+          = f.inputs do
+            = f.input :email, :wrapper_html => { :class => "wrapper" }, :input_html => { :class => 'categ' }, label: 'Email Address'
+            = f.input :password, :wrapper_html => { :class => "wrapper" }, :input_html => { :class => 'categ' }, label: 'Password'
+            %span.forgotpad.help-inline
+              = flash[:alert]
+            = link_to "Forgot your password?", new_password_path(resource_name), :class => 'forgotpad'
+          = f.buttons do
+            = f.commit_button :button_html => {:class => "primary loginbtn"}, label: 'Log in'
+        
+    .seven.singupbox.columns.equal
+      .row.aboutCamp
+        %h2 No Account Yet?
+        %p{:style => 'width:100%;'} That's okay, we still love you.
+        %a{:href => new_registration_path(resource_name)}
+          %img{:alt => "Create Account", :src => "/assets/template/createaccount.png", :title => "Create Account", :class => 'signupimg'}/
+        %p.eight.textsingup
+          %span KidNimble is the fun and easy way to find, review and talk about what's great - and not so great - in your local area.

@@ -1,0 +1,82 @@
+// Place all the styles related to the errors controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.main_error_404{
+	border-top:1px solid #6e7384;
+	background:url(/assets/template/bg_error_404.png) top left repeat;
+	height:337px;
+}
+
+.main_error_500{
+  border-top:1px solid #6e7384;
+  background:url(/assets/template/bg_error_500.png) top left repeat;
+  height:337px;
+}
+
+#menuRight{
+	padding:15px 0 0 0}
+.blog{
+	margin-top:5px;
+	text-align:center}
+a.menu{
+	background:#ebebeb;
+	border-radius:20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	font-size:13px;
+	color:#666666;
+	margin:10px 10px 0 0; 
+	padding:4px 15px}
+.signIn p{
+	text-align:center;
+	margin-top:5px;
+	margin-left:15px;
+	font-size:13px;
+	color:#666
+}	
+.rabbit{
+	background:url(/assets/template/rabbit.png) 97px bottom no-repeat;
+	height:337px
+}
+.cow{
+  background:url(/assets/template/cow.png) 97px bottom no-repeat;
+  height:337px
+}
+.error_404 h1{
+	text-align:right;
+	margin:97px 50px 0 0;
+	font-size:70px;
+	color:#e9da24
+}
+.error_500 h1{
+  text-align:right;
+  margin:155px 30px 0 0;
+  font-size:40px;
+  color:#91b9ba
+}
+.error_txt h2{
+	font-family: 'Museo700';
+	text-align:left;
+	margin:107px 0px 0 70px;
+	font-size:30px;
+	color:#FFF
+}
+.error_500_desc{margin-left:4% !important;}
+.error_500_desc h1{
+  font-family: 'Museo700';
+  text-align:center;
+  margin:90px 0 0 0;
+  font-size:45px;
+  float:left;
+  color:#FFF
+}
+
+.error_500_desc span{
+  font-family: 'Calibri';
+  text-align:center;
+  margin:0px 0 0 4px;
+  font-size:15px;
+  float:left;
+  color:#000
+}

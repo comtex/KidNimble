@@ -1,0 +1,15 @@
+%p Hi #{@postowner.first_name} #{@postowner.last_name},
+%br
+%p #{@user.first_name} #{@user.last_name} (#{@group.name}) posted an item.
+%p #{@user.first_name} #{@user.last_name} wrote: "#{@content}"
+%p Reply to this email to post as well.
+/%p= url_for(:host => @host, :controller => "groups", :action => "show", :id => @group.id)
+%p #{@url}/#{@group.id}
+  
+%p 
+  Darius
+  %br
+  CEO, KidNimble, Inc.
+  %br
+  darius@kidnimble.com
+

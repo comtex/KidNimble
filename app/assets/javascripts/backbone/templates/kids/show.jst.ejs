@@ -1,0 +1,19 @@
+<table id="kids-table">
+  <tr>
+    <th width="50%">Name</th>
+    <th width="20%">Sex</th>
+    <th width="20%">Born At</th>
+    <th width="10%" style="text-align:center;" colspan="2">Actions</th>
+  </tr>
+  <tr>
+  	<td><%= name %></td>
+	<td><%= sex %></td>
+	<td><%= born_at %></td>
+	
+	<td><a href="#/<%= id %>/edit">Edit</td>
+	<td><a href="#/<%= id %>/destroy" class="destroy">Destroy</a></td>
+  </tr>
+</table>
+
+<br />
+<a href="#/index" class="btn"><h4 class="back">Back</h4></a>

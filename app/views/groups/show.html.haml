@@ -1,0 +1,109 @@
+:javascript
+  jQuery(document).ready(function ($) {
+      // page is now ready, initialize the calendar...
+      $('#calendar').fullCalendar({
+          editable: true,
+          header: {
+              left: 'prev,next today',
+              center: 'title',
+              right: 'month,agendaWeek,agendaDay'
+          },
+          defaultView: 'month',
+          height: 450,
+          slotMinutes: 15,
+          loading: function(bool){
+              if (bool) 
+                  $('#loading').show();
+              else 
+                  $('#loading').hide();
+          },
+          events: "/events/get_events?group_id=#{@group.id}",
+          timeFormat: 'h:mm t{ - h:mm t} ',
+          dragOpacity: "0.5",
+          eventDrop: function(event, dayDelta, minuteDelta, allDay, revertFunc){
+      //  if (confirm("Are you sure about this change?")) {
+          moveEvent(event, dayDelta, minuteDelta, allDay);
+      //  }
+      //  else {
+      //    revertFunc();
+      //  }
+          },
+          eventResize: function(event, dayDelta, minuteDelta, revertFunc){
+            //    if (confirm("Are you sure about this change?")) {
+                  resizeEvent(event, dayDelta, minuteDelta);
+            //    }
+            //    else {
+            //        revertFunc();
+            //    }
+          },
+          eventClick: function(event, jsEvent, view){
+              showEventDetails(event);
+          },
+      });
+    });
+    
+.container.main
+  .row.busy-mom.pad15
+    .grouphead
+      %h5
+        %span.groupheadcol 
+          =@group.name
+          Group:
+      %span.colorgry Founder:
+      %b #{@group.first_name} #{@group.last_name}
+  .row.searchview
+    .ten.columns
+      .member.three.columns.results.title
+        %h3 Member
+        %b= link_to "Invite a New Member", "javascript:void(0);", :onClick =>"openPopup('/members/new.html?group_id=#{@group.id}');"
+        .member-group.seven
+          -@members.each_with_index do |member, i|
+            %p
+              %img{:alt => "", :height => "52", :src => "/assets/template/campgurus25_18.png", :width => "49"}
+                %span.right{:style => "padding-top: 16px;"} #{member.first_name} #{member.last_name[0,1]}
+        = link_to 'Add Event', "javascript:void(0);", :onClick =>"newEvent('#{@group.id}');", :class => "create_post", :style => "float:left;padding:2px 30px 4px;"
+      .nine.columns.results
+        #dialog
+          %h3 
+            =@group.name
+            's Joint Calendar:
+        #camps
+          #calendar{:style => "float:left;width:100%;"}
+        #desc_dialog{:style =>"display:none;"}
+          #event_desc
+          #event_actions
+            %span#edit_event
+            %span#delete_event
+        #create_event_dialog{:style => "display:none;"}
+          #create_event
+      .clear
+      #camps.twelve.results.title
+        %h3 
+          =@group.name
+          Group News:
+          = link_to "Post to the group", "javascript:void(0);", :onClick =>"openPopup('/posts/new.html?group_id=#{@group.id}');", :class => "create_post"
+        %ul#camps-table
+              
+        = link_to "Post to the group", "javascript:void(0);", :onClick =>"openPopup('/posts/new.html?group_id=#{@group.id}');", :class => "create_post create_post_left"
+    .two.columns.results
+      %h3 Kids:
+      %dl
+        -@kids.each_with_index do |kid, i|
+          %dd
+            %input{:height => "30", :type => "checkbox", :width => "30"}
+              =kid.name
+      .camp.twelve.right.othercamps{:style => "margin-top: 25px;"}
+        %a{:href => "http://www.dickssportinggoods.com", :target => "_blank"}
+          %img{:src => '/assets/sponsors/Dicks Logo.jpg', :alt => 'Dicks', :title => 'Dicks'}
+        %a{:href => "http://espn.go.com", :target => "_blank"}
+          %img{:src => '/assets/sponsors/ESPN Logo.jpg', :alt => 'ESPN', :title => 'ESPN'}
+        %a{:href => "http://www.nike.com", :target => "_blank"}
+          %img{:src => '/assets/sponsors/Nike Logo.jpg', :alt => 'Nike', :title => 'Nike'}
+        %a{:href => "http://www.sportsauthority.com", :target => "_blank"}
+          %img{:src => '/assets/sponsors/Sports Authority Logo.gif', :alt => 'Sports Authority', :title => 'Sports Authority'}
+        %a{:href => "http://www.target.com", :target => "_blank"}
+          %img{:src => '/assets/sponsors/Target Logo.jpg', :alt => 'Target', :title => 'Target'}
+
+    / row
+:javascript
+  getPostData(#{@group.id});

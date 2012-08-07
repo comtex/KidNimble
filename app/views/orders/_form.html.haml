@@ -1,0 +1,89 @@
+%h3 Ordering
+
+%table{:class => 'bordered-table'}
+  %tr
+    %th Item
+    %th Price
+  %tr
+    %td= @event.camp.title
+    %td= @event.price.format
+
+= form_for @order do |f|
+  -if @order.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@order.errors.count, "error")} prohibited this order from being processed:"
+      %ul
+        - @order.errors.full_messages.each do |msg|
+          %li= msg
+  - if @user.kids.count > 0
+    .clearfix
+      %label{:for => 'kid'} Kid
+      .input
+        = select_tag :kid_id, options_for_select(@user.kids.map { |k| ["#{k.name} - #{distance_of_time_in_words_to_now(k.born_at)}",k.id] })
+  - else
+    .clearfix
+      %label{:for => 'kid_name'} Participant Name
+      .input
+        = text_field_tag :kid_name
+    .clearfix
+      %label{:for => 'born_at'} Born At
+      .input
+        = text_field_tag :born_at
+  - if @user.vault_id
+    %p You have a saved card.
+    %p Card Type: #{@user.card_type}
+    %p Last 4 Digits: #{@user.card_shem}
+    .clearfix
+      %label{:for => 'use_saved'} Use Saved Card
+      .input
+        = check_box_tag :use_saved, 1, true
+    :javascript
+      $(document).ready(function() {
+        $('.hidable').hide();
+      });
+  .hidable
+    .clearfix
+      %label{:for => 'card_type'} Card Type
+      .input
+        = select_tag :card_type, options_for_select([['Visa', 'visa'], ['MasterCard', 'master'], ['Discover', 'discover'], ['American Express', 'american_express'], ['JCB','jcb']])
+    .clearfix
+      %label{:for => 'first_name'} First Name
+      .input
+        = text_field_tag :first_name, params[:first_name] || @user.first_name
+    .clearfix
+      %label{:for => 'last_name'} Last Name
+      .input
+        = text_field_tag :last_name, params[:last_name] || @user.last_name
+    .clearfix
+      %label{:for => 'card_number'} Credit Card
+      .input
+        = text_field_tag :card_number, params[:card_number]
+    .clearfix
+      %label{:for => 'verification_value'} CVV
+      .input
+        = text_field_tag :verification_value, params[:verification_value]
+    .clearfix
+      %label{:for => 'expiration_month'} Month
+      .input
+        = select_tag :expiration_month, options_for_select(1.upto(12).map {|d| d })
+    .clearfix
+      %label{:for => 'expiration_year'} Year
+      .input
+        = select_tag :expiration_year, options_for_select(0.upto(12).map {|d| Time.now.years_since(d).to_date.year })
+  .actions
+    = hidden_field_tag :event_id, @event.id
+    = f.submit 'Purchase', :class => 'btn primary xlarge'
+    %br
+    %br
+    %a{:href => "https://www.braintreegateway.com/merchants/#{APP.braintree.merchant_id}/verified", :target => "_blank"}
+      = image_tag 'https://braintree-badges.s3.amazonaws.com/05.png'
+:javascript
+  $(document).ready(function() {
+    $('#use_saved').change(function(e) {
+      if ($('#use_saved:checked').val() !== undefined) {
+        $('.hidable').hide();
+      } else {
+        $('.hidable').show();
+      }
+    });
+  });

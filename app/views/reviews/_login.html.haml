@@ -1,0 +1,17 @@
+#loginContainer.logbox.aboutCamp        
+  %h2 Sign in
+  %p Please enter your email address and password to log in.
+  = semantic_form_for(resource, :format => :json, :as => resource_name, :url => session_path(resource_name), :remote => true) do |f|
+    = f.semantic_errors
+    = f.inputs do
+      = f.input :email, :wrapper_html => { :class => "wrapper" }, :input_html => { :class => 'categ' }, label: 'Email Address'
+      = f.input :password, :wrapper_html => { :class => "wrapper" }, :input_html => { :class => 'categ' }, label: 'Password'
+      %span#loginError.forgotpad.help-inline
+        = flash[:alert]
+      = link_to "Forgot your password?", new_password_path(resource_name), :class => 'forgotpad'
+    = f.buttons do
+      %b Login with
+      =link_to image_tag("/assets/template/facebook.png", :border=>0, :alt => 'facebook', :title => 'facebook'), user_omniauth_authorize_path(:facebook), :remote => false
+      %b OR
+      = f.commit_button :button_html => {:class => "primary loginbtn", :onClick => "login(#{@camp_id});return false;"}, label: 'Log in'
+      

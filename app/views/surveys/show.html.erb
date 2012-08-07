@@ -1,0 +1,51 @@
+<!-- <p id="notice"><%= notice %></p>
+ -->
+
+ <meta http-equiv="refresh" content="2; url=http://kidnimble.com"> 
+
+
+<div align="Center">
+<h3>Thank you very much for your feedback!</h3>
+
+<p>
+  <b>Camp ID:<b>
+    <%= @survey.camp_id %>
+</p>
+
+<p>
+  <b>Camp:<b>
+  <%= @survey.camp %>
+<p>
+
+<p>
+  <b>Email:</b>
+  <%= @survey.email %>
+</p>
+
+<p>
+  <b>Like:</b>
+  <%= @survey.like %>
+</p>
+
+<p>
+  <b>Improve:</b>
+  <%= @survey.improve %>
+</p>
+
+<p>
+  <b>Rating:</b>
+  <%= @survey.rating %>
+</p>
+
+<p>This survey was powered by KidNimble.com</p>
+<div><a href="http://www.kidnimble.com">
+ <img src="/images/camp_gurus_logo.jpg" />
+</a></div>
+
+
+
+</div>
+
+<%= link_to 'Back', surveys_path %>
+
+

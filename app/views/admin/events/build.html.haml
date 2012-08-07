@@ -1,0 +1,45 @@
+%table
+  %thead
+    %tr
+      %th Name
+      %th Ages
+      %th Gender
+      %th Price
+      %th Starts At
+      %th Ends At
+  %tbody
+    - @events.each do |e|
+      %tr
+        %td #{e.name}
+        %td #{e.ages}
+        %td #{e.gender}
+        %td #{e.price}
+        %td #{e.start_at}
+        %td #{e.end_at}
+%br
+%br
+= form_for @event, :controller => 'admin/events/', :action => :update do |f|
+  = f.hidden_field :camp_id 
+  %label{:for => :name} Name
+  = f.text_field :name 
+  %br
+  %label{:for => :ages} Ages
+  = f.text_field :ages 
+  %br
+  %label{:for => :gender} Gender
+  = f.text_field :gender
+  %br
+  %label{:for => :price} Price
+  = f.text_field :price
+  %br
+  %label{:for => :start_at} Starts At
+  = f.text_field :start_at
+  %br
+  %label{:for => :end_at} Ends At
+  = f.text_field :end_at
+  %br
+  = submit_tag
+
+:javascript
+  $('#event_start_at').datetimepicker();
+  $('#event_end_at').datetimepicker();

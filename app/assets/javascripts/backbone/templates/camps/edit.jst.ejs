@@ -1,0 +1,86 @@
+<h3>Editing Camp</h3>
+
+<div class="row">
+	<div class="span6">
+		<form id="edit-camp" name="camp" remote="true" method="POST"><fieldset>
+			<legend><%= title %></legend>
+			<div class="clearfix">
+				<label for="title">Title</label>
+				<div class="input">
+					<input class="xlarge" name="title" id="title" size="30" type="text" value="<%= title %>"/>
+				</div>
+			</div>
+			<div class="clearfix">
+				<label for="description">Description</label>
+				<div class="input">
+					<textarea class="xxlarge" name="description" id="description"><%= description %></textarea>
+				</div>
+			</div>
+			<div class="clearfix">
+				<label for="URL">URL</label>
+				<div class="input">
+					<input class="xlarge" name="url" id="url" size="30" type="text" value="<%= url %>"/>
+				</div>
+			</div>
+			<div class="clearfix">
+				<label for="phone">Phone</label>
+				<div class="input">
+					<input class="xlarge" name="phone" id="phone" size="30" type="text" value="<%= phone %>"/>
+				</div>
+			</div>
+			<div class="clearfix">
+				<label for="fax">Fax</label>
+				<div class="input">
+					<input class="xlarge" name="fax" id="fax" size="30" type="text" value="<%= fax %>"/>
+				</div>
+			</div>
+			<div class="clearfix">
+				<label for="address">Address</label>
+				<div class="input">
+					<input class="xlarge" name="address" id="address" size="30" type="text" value="<%= address %>"/>
+				</div>
+			</div>
+			<div class="clearfix">
+				<label for="started_at">Started At</label>
+				<div class="input">
+					<input class="xlarge" name="started_at" id="started_at" size="30" type="text" value="<%= started_at %>"/>
+				</div>
+			</div>
+			<div class="clearfix">
+				<label for="gender">Gender</label>
+				<div class="input">
+					<input class="xlarge" name="gender" id="gender" size="30" type="text" value="<%= gender %>"/>
+				</div>
+			</div>
+			<div class="clearfix">
+				<label for="age">Age</label>
+				<div class="input">
+					<input class="xlarge" name="age" id="age" size="30" type="text" value="<%= age %>"/>
+				</div>
+			</div>
+			<div class="clearfix">
+				<label for="city">City</label>
+				<div class="input">
+					<input class="xlarge" name="city" id="city" size="30" type="text" value="<%= city %>"/>
+				</div>
+			</div>
+			<div class="clearfix">
+				<label for="state">State</label>
+				<div class="input">
+					<input class="xlarge" name="state" id="state" size="30" type="text" value="<%= state %>"/>
+				</div>
+			</div>
+			<div class="clearfix">
+				<label for="zip">Zip</label>
+				<div class="input">
+					<input class="xlarge" name="zip" id="zip" size="30" type="text" value="<%= zip %>"/>
+				</div>
+			</div>
+			<div class="actions">
+				<input class="btn primary xlarge" type="submit" value="Update Camp" />
+			</div>
+		</fieldset></form>
+	</div>
+</div>
+
+<a href="#/index">Back</a>

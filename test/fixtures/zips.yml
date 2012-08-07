@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  zip: MyString
+  city: MyString
+  state: MyString
+  country: MyString
+  latitude: MyString
+  longitude: MyString
+  metaphone: MyString
+
+two:
+  zip: MyString
+  city: MyString
+  state: MyString
+  country: MyString
+  latitude: MyString
+  longitude: MyString
+  metaphone: MyString

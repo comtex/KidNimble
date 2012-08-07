@@ -1,0 +1,22 @@
+.twelve.review
+  - unless @errors
+    .one.columns
+      %img.startCommets{:alt => "#", :src => "/assets/template/startCommets.png"}
+    .eleven.columns
+      .row.comments.reviews_comment
+        %p= @review.note
+        %h4
+          = @review.title
+          %h4
+            %ul#rater
+              - (1..@review.rating).each do |i|
+                %li
+                  %img{:alt => "star", :src => "/assets/template/star.png", :title => ""}/
+    .clear
+  - else
+    .one.columns
+    .eleven.columns
+      %h5
+        = @errors.to_s
+        = link_to "Sign in", new_user_session_path
+        %h5/

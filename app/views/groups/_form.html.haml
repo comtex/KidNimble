@@ -1,0 +1,15 @@
+#reviewContainer.logbox.aboutCamp 
+  %h2 Create New Group
+
+  = form_for(@group, :format => :js, :remote => true, :html => {:onSubmit => "$('#loading').show();"}) do |f|
+    -if @group && @group.errors.any?
+      #error_explanation
+        - @group.errors.full_messages.each do |msg|
+          %span.help-inline= msg
+          %br
+      #sucess.message
+    .field
+      = f.label :name
+      = f.text_field :name
+    .actions.field
+      = f.submit 'Save'

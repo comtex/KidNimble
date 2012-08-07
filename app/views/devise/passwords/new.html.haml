@@ -1,0 +1,12 @@
+.container.wonderLAnd_camp.loginpageheight
+  .row
+    .five.columns
+      .row.aboutCamp        
+        %h2 Forgot your password?          
+        = semantic_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
+          = f.semantic_errors
+          = f.inputs do
+            = f.input :email, :wrapper_html => { :class => "wrapper" }, :input_html => { :class => 'categ' }, label: 'Email Address'
+          = f.buttons do
+            = f.commit_button :button_html => {:class => "primary", :value => "Reset Password"}
+            = link_to "Sign in", new_session_path(resource_name)

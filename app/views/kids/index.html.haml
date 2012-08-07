@@ -1,0 +1,11 @@
+.main
+  .row.searchview
+    #kids
+
+:javascript
+  $(function() {
+    $.getJSON('/kids', '', function (data) {
+      window.router = new Guru.Routers.KidsRouter({kids: data});
+      Backbone.history.start();
+    });
+  });

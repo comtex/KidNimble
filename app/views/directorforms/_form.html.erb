@@ -1,0 +1,470 @@
+<%= stylesheet_link_tag "directorform" %>
+
+<div align = center>
+<text-align: left;>
+<%= form_for(@directorform) do |f| %>
+  <% if @directorform.errors.any? %>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="error_explanation">
+      <h2><font color = '404040'>Aw shucks! <%= pluralize(@directorform.errors.count, "error") %> need to be fixed.</font></h2>
+
+      <ul>
+      <% @directorform.errors.full_messages.each do |msg| %>
+        <i><li><%= msg %></li></i>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+
+
+<%# Form One %>
+<br>
+<br>
+<br>
+<br>
+  <i>Fields marked with <font color=red>(*)</font> are mandatory!</i>
+  <div class="name">
+    <%= f.label :session_title, "Camp Name*" %><br />
+    <%= f.text_field :session_title, :class => "CampName" %>
+  </div>
+  <div class="field">
+    <%= f.label :subcategory, "Subcategory*" %><br />
+    <%= f.collection_select :subcategory, Subs.all, :id, :name, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :residency, "Day or Overnight*" %><br />
+    <%= f.select :residency, [['Day'],['Overnight']], {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :date_start, "Date Start*" %><br />
+    <%= f.date_select :date_start, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :date_end, "Date End*" %><br />
+    <%= f.date_select :date_end, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :time_start, "Time Start (Only for Day Camps)" %><br />
+    <%= f.time_select :time_start, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :time_end, "Time End (Only for Day Camps)" %><br />
+    <%= f.time_select :time_end, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :youngest, "Youngest Age*" %><br />
+    <%= f.number_field :youngest %>
+  </div>
+    <div class="field">
+    <%= f.label :oldest, "Oldest Age*" %><br />
+    <%= f.number_field :oldest %>
+  </div>
+  <div class="field">
+    <%= f.label :location_address, "Address (Street, State, Zipcode)*" %><br />
+      <%= f.text_field :location_address, :class => "Street" %>
+      <%= f.select :location_address, [['Select a State', 'None'],['Alabama', 'AL'],['Alaska', 'AK'],['Arizona', 'AZ'],['Arkansas', 'AR'],['California', 'CA'],['Colorado', 'CO'],['Connecticut', 'CT'],['Delaware', 'DE'],['District Of Columbia', 'DC'],['Florida', 'FL'],['Georgia', 'GA'],['Hawaii', 'HI'],['Idaho', 'ID'],['Illinois', 'IL'],['Indiana', 'IN'],['Iowa', 'IA'],['Kansas', 'KS'],['Kentucky', 'KY'],['Louisiana', 'LA'],['Maine', 'ME'],['Maryland', 'MD'],['Massachusetts', 'MA'],['Michigan', 'MI'],['Minnesota', 'MN'],['Mississippi', 'MS'],['Missouri', 'MO'],['Montana', 'MT'],['Nebraska', 'NE'],['Nevada', 'NV'],['New Hampshire', 'NH'],['New Jersey', 'NJ'],['New Mexico', 'NM'],['New York', 'NY'],['North Carolina', 'NC'],['North Dakota', 'ND'],['Ohio', 'OH'],['Oklahoma', 'OK'],['Oregon', 'OR'],['Pennsylvania', 'PA'],['Rhode Island', 'RI'],['South Carolina', 'SC'],['South Dakota', 'SD'],['Tennessee', 'TN'],['Texas', 'TX'],['Utah', 'UT'],['Vermont', 'VT'],['Virginia', 'VA'],['Washington', 'WA'],['West Virginia', 'WV'],['Wisconsin', 'WI'],['Wyoming', 'WY']] %>
+      <%= f.text_field :location_address, :class => "Zip" %>
+  </div>
+  <div class="field">
+    <%= f.label :session_description, "Add a description of your camp!*" %><br />
+    <%= f.text_area :session_description, :class => "Description" %>
+  </div>
+<br>
+
+
+
+
+
+
+
+<%# Form Two %>
+<html>
+<head>
+  <style>
+  span { background:transparent; padding:3px; float:center; }
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+  <button id="show2" input type="button">Add/Remove 2nd Program</button>
+<div>
+<span2><i>Fields marked with <font color=red>(*)</font> are mandatory!</i>
+  <div class="name">
+    <%= f.label :session_title2, "Camp Name*" %><br />
+    <%= f.text_field :session_title2, :class => "CampName" %>
+  </div>
+  <div class="field">
+    <%= f.label :subcategory2, "Subcategory*" %><br />
+    <%= f.collection_select :subcategory2, Subs.all, :id, :name, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :residency2, "Day or Overnight*" %><br />
+    <%= f.select :residency2, [['Day'],['Overnight']], {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :date_start2, "Date Start*" %><br />
+    <%= f.date_select :date_start2, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :date_end2, "Date End*" %><br />
+    <%= f.date_select :date_end2, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :time_start2, "Time Start (Only for Day Camps)" %><br />
+    <%= f.time_select :time_start2, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :time_end2, "Time End (Only for Day Camps)" %><br />
+    <%= f.time_select :time_end2, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :youngest2, "Youngest Age*" %><br />
+    <%= f.number_field :youngest2 %>
+  </div>
+    <div class="field">
+    <%= f.label :oldest2, "Oldest Age*" %><br />
+    <%= f.number_field :oldest2 %>
+  </div>
+  <div class="field">
+    <%= f.label :location_address2, "Address (Street, State, Zipcode)*" %><br />
+      <%= f.text_field :location_address2, :class => "Street" %>
+      <%= f.select :location_address2, [['Select a State', 'None'],['Alabama', 'AL'],['Alaska', 'AK'],['Arizona', 'AZ'],['Arkansas', 'AR'],['California', 'CA'],['Colorado', 'CO'],['Connecticut', 'CT'],['Delaware', 'DE'],['District Of Columbia', 'DC'],['Florida', 'FL'],['Georgia', 'GA'],['Hawaii', 'HI'],['Idaho', 'ID'],['Illinois', 'IL'],['Indiana', 'IN'],['Iowa', 'IA'],['Kansas', 'KS'],['Kentucky', 'KY'],['Louisiana', 'LA'],['Maine', 'ME'],['Maryland', 'MD'],['Massachusetts', 'MA'],['Michigan', 'MI'],['Minnesota', 'MN'],['Mississippi', 'MS'],['Missouri', 'MO'],['Montana', 'MT'],['Nebraska', 'NE'],['Nevada', 'NV'],['New Hampshire', 'NH'],['New Jersey', 'NJ'],['New Mexico', 'NM'],['New York', 'NY'],['North Carolina', 'NC'],['North Dakota', 'ND'],['Ohio', 'OH'],['Oklahoma', 'OK'],['Oregon', 'OR'],['Pennsylvania', 'PA'],['Rhode Island', 'RI'],['South Carolina', 'SC'],['South Dakota', 'SD'],['Tennessee', 'TN'],['Texas', 'TX'],['Utah', 'UT'],['Vermont', 'VT'],['Virginia', 'VA'],['Washington', 'WA'],['West Virginia', 'WV'],['Wisconsin', 'WI'],['Wyoming', 'WY']] %>
+      <%= f.text_field :location_address2, :class => "Zip" %>
+  </div>
+  <div class="field">
+    <%= f.label :session_description2, "Add a description of your camp!*" %><br />
+    <%= f.text_area :session_description2, :class => "Description" %>
+  </div></span2>
+  </div>
+<script>
+    $('span2').hide();
+    $("#show2").click(function () {
+      $("span2").slideToggle("slow");
+    });
+</script>
+</body>
+</html>
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+<%# Form Three %>
+<html>
+<head>
+  <style>
+  span { background:transparent; padding:3px; float:center; }
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+  <button id="show3" input type="button">Add/Remove 3rd Program</button>
+<div>
+<span3><i>Fields marked with <font color=red>(*)</font> are mandatory!</i>
+  <div class="name">
+    <%= f.label :session_title3, "Camp Name*" %><br />
+    <%= f.text_field :session_title3, :class => "CampName" %>
+  </div>
+  <div class="field">
+    <%= f.label :subcategory3, "Subcategory*" %><br />
+    <%= f.collection_select :subcategory3, Subs.all, :id, :name, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :residency3, "Day or Overnight*" %><br />
+    <%= f.select :residency3, [['Day'],['Overnight']], {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :date_start3, "Date Start*" %><br />
+    <%= f.date_select :date_start3, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :date_end3, "Date End*" %><br />
+    <%= f.date_select :date_end3, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :time_start3, "Time Start (Only for Day Camps)" %><br />
+    <%= f.time_select :time_start3, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :time_end3, "Time End (Only for Day Camps)" %><br />
+    <%= f.time_select :time_end3, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :youngest3, "Youngest Age*" %><br />
+    <%= f.number_field :youngest3 %>
+  </div>
+    <div class="field">
+    <%= f.label :oldest3, "Oldest Age*" %><br />
+    <%= f.number_field :oldest3 %>
+  </div>
+  <div class="field">
+    <%= f.label :location_address3, "Address (Street, State, Zipcode)*" %><br />
+      <%= f.text_field :location_address3, :class => "Street" %>
+      <%= f.select :location_address3, [['Select a State', 'None'],['Alabama', 'AL'],['Alaska', 'AK'],['Arizona', 'AZ'],['Arkansas', 'AR'],['California', 'CA'],['Colorado', 'CO'],['Connecticut', 'CT'],['Delaware', 'DE'],['District Of Columbia', 'DC'],['Florida', 'FL'],['Georgia', 'GA'],['Hawaii', 'HI'],['Idaho', 'ID'],['Illinois', 'IL'],['Indiana', 'IN'],['Iowa', 'IA'],['Kansas', 'KS'],['Kentucky', 'KY'],['Louisiana', 'LA'],['Maine', 'ME'],['Maryland', 'MD'],['Massachusetts', 'MA'],['Michigan', 'MI'],['Minnesota', 'MN'],['Mississippi', 'MS'],['Missouri', 'MO'],['Montana', 'MT'],['Nebraska', 'NE'],['Nevada', 'NV'],['New Hampshire', 'NH'],['New Jersey', 'NJ'],['New Mexico', 'NM'],['New York', 'NY'],['North Carolina', 'NC'],['North Dakota', 'ND'],['Ohio', 'OH'],['Oklahoma', 'OK'],['Oregon', 'OR'],['Pennsylvania', 'PA'],['Rhode Island', 'RI'],['South Carolina', 'SC'],['South Dakota', 'SD'],['Tennessee', 'TN'],['Texas', 'TX'],['Utah', 'UT'],['Vermont', 'VT'],['Virginia', 'VA'],['Washington', 'WA'],['West Virginia', 'WV'],['Wisconsin', 'WI'],['Wyoming', 'WY']] %>
+      <%= f.text_field :location_address3, :class => "Zip" %>
+  </div>
+  <div class="field">
+    <%= f.label :session_description3, "Add a description of your camp!*" %><br />
+    <%= f.text_area :session_description3, :class => "Description" %>
+  </div></span3>
+  </div>
+<script>
+    $('span3').hide();
+    $("#show3").click(function () {
+      $("span3").slideToggle("slow");
+    });
+</script>
+</body>
+</html>
+
+<br>
+
+
+
+
+
+
+<%# Form Four %>
+<html>
+<head>
+  <style>
+  span { background:transparent; padding:3px; float:center; }
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+  <button id="show4" input type="button">Add/Remove 4th Program</button>
+<div>
+<span4><i>Fields marked with <font color=red>(*)</font> are mandatory!</i>
+  <div class="name">
+    <%= f.label :session_title4, "Camp Name*" %><br />
+    <%= f.text_field :session_title4, :class => "CampName" %>
+  </div>
+  <div class="field">
+    <%= f.label :subcategory4, "Subcategory*" %><br />
+    <%= f.collection_select :subcategory4, Subs.all, :id, :name, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :residency4, "Day or Overnight*" %><br />
+    <%= f.select :residency4, [['Day'],['Overnight']], {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :date_start4, "Date Start*" %><br />
+    <%= f.date_select :date_start4, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :date_end4, "Date End*" %><br />
+    <%= f.date_select :date_end4, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :time_start4, "Time Start (Only for Day Camps)" %><br />
+    <%= f.time_select :time_start4, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :time_end4, "Time End (Only for Day Camps)" %><br />
+    <%= f.time_select :time_end4, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :youngest4, "Youngest Age*" %><br />
+    <%= f.number_field :youngest4 %>
+  </div>
+    <div class="field">
+    <%= f.label :oldest4, "Oldest Age*" %><br />
+    <%= f.number_field :oldest4 %>
+  </div>
+  <div class="field">
+    <%= f.label :location_address4, "Address (Street, State, Zipcode)*" %><br />
+      <%= f.text_field :location_address4, :class => "Street" %>
+      <%= f.select :location_address4, [['Select a State', 'None'],['Alabama', 'AL'],['Alaska', 'AK'],['Arizona', 'AZ'],['Arkansas', 'AR'],['California', 'CA'],['Colorado', 'CO'],['Connecticut', 'CT'],['Delaware', 'DE'],['District Of Columbia', 'DC'],['Florida', 'FL'],['Georgia', 'GA'],['Hawaii', 'HI'],['Idaho', 'ID'],['Illinois', 'IL'],['Indiana', 'IN'],['Iowa', 'IA'],['Kansas', 'KS'],['Kentucky', 'KY'],['Louisiana', 'LA'],['Maine', 'ME'],['Maryland', 'MD'],['Massachusetts', 'MA'],['Michigan', 'MI'],['Minnesota', 'MN'],['Mississippi', 'MS'],['Missouri', 'MO'],['Montana', 'MT'],['Nebraska', 'NE'],['Nevada', 'NV'],['New Hampshire', 'NH'],['New Jersey', 'NJ'],['New Mexico', 'NM'],['New York', 'NY'],['North Carolina', 'NC'],['North Dakota', 'ND'],['Ohio', 'OH'],['Oklahoma', 'OK'],['Oregon', 'OR'],['Pennsylvania', 'PA'],['Rhode Island', 'RI'],['South Carolina', 'SC'],['South Dakota', 'SD'],['Tennessee', 'TN'],['Texas', 'TX'],['Utah', 'UT'],['Vermont', 'VT'],['Virginia', 'VA'],['Washington', 'WA'],['West Virginia', 'WV'],['Wisconsin', 'WI'],['Wyoming', 'WY']] %>
+      <%= f.text_field :location_address4, :class => "Zip" %>
+  </div>
+  <div class="field">
+    <%= f.label :session_description4, "Add a description of your camp!*" %><br />
+    <%= f.text_area :session_description4, :class => "Description" %>
+  </div></span3>
+  </div>
+<script>
+    $('span4').hide();
+    $("#show4").click(function () {
+      $("span4").slideToggle("slow");
+    });
+</script>
+</body>
+</html>
+
+<br>
+
+
+
+
+
+
+
+
+
+<%# Form Five %>
+<html>
+<head>
+  <style>
+  span { background:transparent; padding:3px; float:center; }
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+  <button id="show5" input type="button">Add/Remove 5th Program</button>
+<div>
+<span5><i>Fields marked with <font color=red>(*)</font> are mandatory!</i>
+  <div class="name">
+    <%= f.label :session_title5, "Camp Name*" %><br />
+    <%= f.text_field :session_title5, :class => "CampName" %>
+  </div>
+  <div class="field">
+    <%= f.label :subcategory5, "Subcategory*" %><br />
+    <%= f.collection_select :subcategory5, Subs.all, :id, :name, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :residency5, "Day or Overnight*" %><br />
+    <%= f.select :residency5, [['Day'],['Overnight']], {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :date_start5, "Date Start*" %><br />
+    <%= f.date_select :date_start5, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :date_end5, "Date End*" %><br />
+    <%= f.date_select :date_end5, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :time_start3, "Time Start (Only for Day Camps)" %><br />
+    <%= f.time_select :time_start5, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :time_end3, "Time End (Only for Day Camps)" %><br />
+    <%= f.time_select :time_end5, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :youngest5, "Youngest Age*" %><br />
+    <%= f.number_field :youngest5 %>
+  </div>
+    <div class="field">
+    <%= f.label :oldest5, "Oldest Age*" %><br />
+    <%= f.number_field :oldest5 %>
+  </div>
+  <div class="field">
+    <%= f.label :location_address5, "Address (Street, State, Zipcode)*" %><br />
+      <%= f.text_field :location_address5, :class => "Street" %>
+      <%= f.select :location_address5, [['Select a State', 'None'],['Alabama', 'AL'],['Alaska', 'AK'],['Arizona', 'AZ'],['Arkansas', 'AR'],['California', 'CA'],['Colorado', 'CO'],['Connecticut', 'CT'],['Delaware', 'DE'],['District Of Columbia', 'DC'],['Florida', 'FL'],['Georgia', 'GA'],['Hawaii', 'HI'],['Idaho', 'ID'],['Illinois', 'IL'],['Indiana', 'IN'],['Iowa', 'IA'],['Kansas', 'KS'],['Kentucky', 'KY'],['Louisiana', 'LA'],['Maine', 'ME'],['Maryland', 'MD'],['Massachusetts', 'MA'],['Michigan', 'MI'],['Minnesota', 'MN'],['Mississippi', 'MS'],['Missouri', 'MO'],['Montana', 'MT'],['Nebraska', 'NE'],['Nevada', 'NV'],['New Hampshire', 'NH'],['New Jersey', 'NJ'],['New Mexico', 'NM'],['New York', 'NY'],['North Carolina', 'NC'],['North Dakota', 'ND'],['Ohio', 'OH'],['Oklahoma', 'OK'],['Oregon', 'OR'],['Pennsylvania', 'PA'],['Rhode Island', 'RI'],['South Carolina', 'SC'],['South Dakota', 'SD'],['Tennessee', 'TN'],['Texas', 'TX'],['Utah', 'UT'],['Vermont', 'VT'],['Virginia', 'VA'],['Washington', 'WA'],['West Virginia', 'WV'],['Wisconsin', 'WI'],['Wyoming', 'WY']] %>
+      <%= f.text_field :location_address5, :class => "Zip" %>
+  </div>
+  <div class="field">
+    <%= f.label :session_description5, "Add a description of your camp!*" %><br />
+    <%= f.text_area :session_description5, :class => "Description" %>
+  </div></span5>
+  </div>
+<script>
+    $('span5').hide();
+    $("#show5").click(function () {
+      $("span5").slideToggle("slow");
+    });
+</script>
+</body>
+</html>
+
+<br>
+
+
+
+
+
+
+
+<%# Form Six %>
+<html>
+<head>
+  <style>
+  span { background:transparent; padding:3px; float:center; }
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+  <button id="show6" input type="button">Add/Remove 6th Program</button>
+<div>
+<span6><i>Fields marked with <font color=red>(*)</font> are mandatory!</i>
+  <div class="name">
+    <%= f.label :session_title6, "Camp Name*" %><br />
+    <%= f.text_field :session_title6, :class => "CampName" %>
+  </div>
+  <div class="field">
+    <%= f.label :subcategory6, "Subcategory*" %><br />
+    <%= f.collection_select :subcategory6, Subs.all, :id, :name, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :residency6, "Day or Overnight*" %><br />
+    <%= f.select :residency6, [['Day'],['Overnight']], {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :date_start6, "Date Start*" %><br />
+    <%= f.date_select :date_start6, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :date_end6, "Date End*" %><br />
+    <%= f.date_select :date_end6, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :time_start6, "Time Start (Only for Day Camps)" %><br />
+    <%= f.time_select :time_start6, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :time_end6, "Time End (Only for Day Camps)" %><br />
+    <%= f.time_select :time_end6, {:include_blank => true, :default => nil} %>
+  </div>
+  <div class="field">
+    <%= f.label :youngest6, "Youngest Age*" %><br />
+    <%= f.number_field :youngest6 %>
+  </div>
+    <div class="field">
+    <%= f.label :oldest6, "Oldest Age*" %><br />
+    <%= f.number_field :oldest6 %>
+  </div>
+  <div class="field">
+    <%= f.label :location_address6, "Address (Street, State, Zipcode)*" %><br />
+      <%= f.text_field :location_address6, :class => "Street" %>
+      <%= f.select :location_address6, [['Select a State', 'None'],['Alabama', 'AL'],['Alaska', 'AK'],['Arizona', 'AZ'],['Arkansas', 'AR'],['California', 'CA'],['Colorado', 'CO'],['Connecticut', 'CT'],['Delaware', 'DE'],['District Of Columbia', 'DC'],['Florida', 'FL'],['Georgia', 'GA'],['Hawaii', 'HI'],['Idaho', 'ID'],['Illinois', 'IL'],['Indiana', 'IN'],['Iowa', 'IA'],['Kansas', 'KS'],['Kentucky', 'KY'],['Louisiana', 'LA'],['Maine', 'ME'],['Maryland', 'MD'],['Massachusetts', 'MA'],['Michigan', 'MI'],['Minnesota', 'MN'],['Mississippi', 'MS'],['Missouri', 'MO'],['Montana', 'MT'],['Nebraska', 'NE'],['Nevada', 'NV'],['New Hampshire', 'NH'],['New Jersey', 'NJ'],['New Mexico', 'NM'],['New York', 'NY'],['North Carolina', 'NC'],['North Dakota', 'ND'],['Ohio', 'OH'],['Oklahoma', 'OK'],['Oregon', 'OR'],['Pennsylvania', 'PA'],['Rhode Island', 'RI'],['South Carolina', 'SC'],['South Dakota', 'SD'],['Tennessee', 'TN'],['Texas', 'TX'],['Utah', 'UT'],['Vermont', 'VT'],['Virginia', 'VA'],['Washington', 'WA'],['West Virginia', 'WV'],['Wisconsin', 'WI'],['Wyoming', 'WY']] %>
+      <%= f.text_field :location_address6, :class => "Zip" %>
+  </div>
+  <div class="field">
+    <%= f.label :session_description6, "Add a description of your camp!*" %><br />
+    <%= f.text_area :session_description6, :class => "Description" %>
+  </div></span6>
+  </div>
+<script>
+    $('span6').hide();
+    $("#show6").click(function () {
+      $("span6").slideToggle("slow");
+    });
+</script>
+</body>
+</html>
+
+<br>
+
+
+  <div class="actions">
+    <%= f.submit ("Submit!"), :class => "button" %>
+  </div>
+
+<% end %>

@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Camp:
+  = @deal.camp_id
+%p
+  %b Title:
+  = @deal.title
+%p
+  %b Description:
+  = @deal.description
+
+= link_to 'Edit', edit_deal_path(@deal)
+\|
+= link_to 'Back', deals_path

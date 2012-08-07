@@ -1,0 +1,58 @@
+// Place all the styles related to the Kids controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#kids{
+  padding-bottom:15px;
+  min-height:380px;
+}
+#kids, #edit-kid, #new-kid, #kids div{
+  width:100%;
+  float:left;
+}
+
+#kids-table{
+  width:100%;
+}
+#kids-table th{
+  text-align:left;
+  padding: 9px 10px;
+  font-weight:bold;
+  font-size:15px;
+}
+#kids_header{
+  float:left;
+  width:100%;
+  padding-bottom:15px;
+}
+
+#kids_header h4{
+  float:left;
+}
+#kids_header a{
+  float:right;
+  margin-right:5px;
+}
+
+.kids_back{
+  float:left;
+  width:100%;
+}
+.styleSubmit{
+    border:1px solid #C2D3D7;
+    margin:5px 0;
+    height:27px;
+    font-weight:bold;
+    cursor:hand;
+}
+
+
+input.kidcateg {
+    background: url("/assets/template/bgInput_2.png") repeat-x scroll 0 0 transparent;
+    border: 1px solid #C2D3D7;
+    color: #798E94;
+    font-size: 16px;
+    height: 27px;
+    margin: 5px 0;
+    padding: 5px 0 6px 10px;
+    width: 261px;
+}

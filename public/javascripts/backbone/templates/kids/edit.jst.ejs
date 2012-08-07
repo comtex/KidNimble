@@ -1,0 +1,34 @@
+<div id="kids_header">
+	<h4>Edit Child</h4>
+</div>
+<br/>
+
+<form action="#/<%= id %>/update" data-remote=true id="edit-kid" name="kid">
+	<table id="kids-table">
+	  <tr>
+	    <th width="50%">Name</th>
+	    <th width="20%">Sex</th>
+	    <th width="20%">Born At</th>
+	    <th></th>
+	  </tr>
+	  <tr>
+	  	<td><input class="kidcateg" type="text" name="name" id="name" value="<%= name %>" ></td>
+		<td>
+			<div class="styleSelect">
+			<select class="styled" id="sex" name="sex" >
+				<option value="">Select</option>
+				<option value="boy" <% if(sex == "boy"){ %> selected='selected' <% } %>>boy</option>
+				<option value="girl" <% if(sex == "girl"){ %> selected='selected' <% } %>>girl</option>
+				<option value="other" <% if(sex == "other"){ %> selected='selected' <% } %>>other</option>
+			</select>
+			</div>
+		</td>
+		<td><input class="kidcateg" type="text" name="born_at" id="born_at" value="<%= born_at %>" >
+			<span class="help-block" id="mf44">(YYYY-MM-DD Format)</span></td>
+		<td><input class="styleSubmit" type="submit" value="Update Child" /></td>
+	  </tr>
+	</table>
+</form>
+
+<div class="kids_back"><a href="#/index"><h4 class="back">Back</h4></a></div>
+<br />

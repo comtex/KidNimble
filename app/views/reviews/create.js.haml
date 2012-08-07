@@ -1,0 +1,17 @@
+- if @review && @review.errors.any?
+  $('#dialog-form').html('#{escape_javascript(render('form'))}');
+  $(function(){
+  $('input[type=radio].star').rating();
+  });
+- else
+  - if !@commitbutton.blank?
+    - if @commitbutton == "New user? Sign up"
+      window.location = '#{escape_javascript(new_user_registration_path)}';
+    - else @commitbutton == "Already a User? Log-in"
+      $('#dialog-form').html('#{escape_javascript(render('login'))}');
+  - else
+    getReviewData(#{@camp_id});
+    $('#dialog-form').dialog('close');
+    $('#dialog-form').fadeOut().remove();
+    showReviewSavedMsg();
+$('#loading').hide();

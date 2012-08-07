@@ -1,0 +1,31 @@
+-if user_signed_in?
+  .loginarea.after
+    = link_to "My Account", { :controller => 'users', :action => 'index' }, :class => 'menu'
+    = link_to "How it Works", { :controller => 'home', :action => 'comingsoon' }, :class => 'menu'
+    = link_to "Blog", { :controller => 'home', :action => 'comingsoon' }, :class => 'menu'
+    = link_to "Help", { :controller => 'home', :action => 'comingsoon' }, :class => 'menu'
+    = link_to 'Logout', destroy_user_session_path, :method => :delete, :class => 'menu'
+    .remember
+      = "You are logged in as #{current_user.email}"
+
+-else
+  .programprovier
+    %a{:href => "/home/comingsoon"}
+      %img{:alt => "Program Provider", :src => "/assets/template/programProvider.png", :title => "Program Provider"}/
+  .facebook
+    %h6 Login with
+    %a{:href => "/users/auth/facebook"}
+      %img{:alt => "facebook", :src => "/assets/template/facebook.png", :title => "facebook"}/
+  .loginarea
+    = form_tag user_session_path, :method => :post, :class=>'login_form' do
+      %input{:id=>'user_email', :name => "user[email]", :type => "text", :placeholder => "Email", :class=>'text'}
+      %input{:id =>'user_password', :name => "user[password]", :type => "password", :placeholder => "Password", :class=>'text'}
+      %input{:id=>'user_submit',:name=>'commit',:value=>'',:type => "submit", :class=>'submit'}
+      %br
+      .remember
+        %label{:for=>'user_remember_me'}
+          %input{:name => "user[remember_me]", :type => "hidden", :value => '0'}
+          %input{:id=>'user_remember_me',:name => "user[remember_me]", :type => "checkbox", :value => "1"}
+          Remember me   &nbsp;&nbsp;&nbsp;
+          %a{:href=> new_password_path(resource_name)} forgot your password?
+          %a.createAccount{:href => new_user_registration_path}

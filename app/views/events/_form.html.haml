@@ -1,0 +1,40 @@
+#reviewContainer.logbox.aboutCamp
+  = form_for(@event, :method => "POST", :format => :js, :remote => true, :html => {:id => "reviewForm", :onSubmit => "$('#loading').show();"}) do |f|
+    -if !@errors.blank?
+      #error_explanation
+        - @errors.full_messages.each do |msg|
+          %span.help-inline= msg
+          %br
+      #sucess.message
+    = f.hidden_field :user_id
+    = f.hidden_field :group_id
+    .field
+      = f.label :title, :style => "float:left;width:75px;"
+      = f.text_field :title
+    .field
+      = f.label :description
+      = f.text_area :description, :rows => 4, :cols => 30, :style => "float:left;width:270px;"
+    .field
+      = f.label :starttime, 'Start Time' , :style => "float:left;width:75px;"
+      = f.datetime_picker :starttime, :dateFormat => "yy-mm-dd" 
+    .field
+      = f.label :endtime, 'End Time', :style => "float:left;width:75px;"
+      = f.datetime_picker :endtime, :dateFormat => "yy-mm-dd"
+    .field
+      = f.label :all_day, 'All day', :style => "float:left;"
+      = f.check_box :all_day
+    %p.field
+      = f.label :period, "Repeats"
+      = f.select :period, Event::REPEATS,{}, :onchange => "showPeriodAndFrequency(this.value);", :class => "styled"
+    %p#frequency.field{:style => "display:none;"}
+      = f.label :frequency, "Repeat every"
+      = f.select :frequency, (1..30).to_a,{}, :class => "styled"
+      = f.label :endtil, "Until"
+      = f.select :endtil, (1..30).to_a,{}, :class => "styled"
+      %span#period
+    = f.hidden_field :id, :value => @event.id
+    .actions.field
+      = f.submit 'Create'
+    %span#creating_events{:style => "display:none;"} Creating, Please wait...
+:javascript
+  $('select.styled').customStyle();

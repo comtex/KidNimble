@@ -1,0 +1,7 @@
+- if @member && @member.errors.any?
+  $('#dialog-form').html('#{escape_javascript(render('form'))}');
+- else
+  $('#dialog-form').dialog('close');
+  $('#dialog-form').fadeOut().remove();
+  showMemberSavedMsg();
+$('#loading').hide();

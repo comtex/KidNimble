@@ -1,0 +1,204 @@
+/* css for timepicker */
+.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+.ui-timepicker-div dl { text-align: left; }
+.ui-timepicker-div dl dt { height: 25px; margin-bottom: -25px; }
+.ui-timepicker-div dl dd { margin: 0 10px 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+
+/*-------------UI Loader----------*/
+#loading{
+  position: absolute; 
+  right: 0px; 
+  top: 0px; 
+  background-color: #dd0000; 
+  font-weight:bold;
+  color: white; 
+  margin: 5px; 
+  padding: 3px;
+}
+
+span > div#loading {
+  position: fixed;
+}
+
+
+/*-------------Header----------*/
+.header{
+	background:url(/assets/template/bg_header.png) center bottom repeat-x;
+	border-bottom:solid 1px #e0e0e0;
+	padding-top:20px !important;
+	height:71px;
+}
+/*----- field ----*/
+.loginarea{
+	float:left;
+	margin-left:25%;
+	width:350px
+}
+.loginarea.after{
+  border-right:none;
+  width:410px
+}
+
+
+.login_form{
+  border-right:solid 1px #D9D7D7;
+}
+
+input.text{
+	background:url('/assets/template/bg_field.png') no-repeat;
+	border:none;
+	padding:2px 0 2px 5px;
+	margin:5px 3px 0 0;
+	color:#aeaeae;
+	width:125px;
+	height:25px;
+}
+.submit{
+	background:url(/assets/template/login.png) no-repeat;
+	border:none;
+	float:right;
+	margin:5px 8px 0 0;
+	width:70px;
+	height:27px;
+	cursor:pointer
+}
+.remember{
+	margin-top:10px
+}
+.remember label{
+	font-size:14px;
+	color:#272727
+}
+.remember b{
+	font-size:14px;
+	margin-left:10px;
+	color:#679bac
+}
+.facebook{
+	float:right;
+	text-align:center;
+	width:80px
+}
+.facebook b{
+	font-size:15px;
+	padding:6px 0 4px 0;
+	color:#272727
+}
+.facebook img{margin:5px 0 0 0}
+
+#menuRight{
+	padding:15px 0 0 0}
+
+.blog{
+	margin-top:5px;
+	text-align:center}
+
+a.menu{
+	background:#ebebeb;
+	border-radius:20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	font-size:13px;
+	color:#666666;
+	margin:10px 10px 0 0; 
+	padding:4px 15px}
+
+.signIn p{
+	text-align:center;
+	margin-top:5px;
+	margin-left:15px;
+	font-size:13px;
+	color:#666
+}	
+/*----------------- Menu header  -------------------*/
+
+/*-----------------------FOOTER---------------------*/
+.footer{
+	background:url(/assets/template/bg_footer.png) repeat-x top left;
+	padding-top:25px !important;
+	height:151px
+}
+.logo_footer{
+	float:left;
+	text-align:left
+}
+.logo_footer img {margin:0 10px 0 0}
+.social,.company,.customer{
+	background:url(/assets/template/Dropleft.png) top left no-repeat;
+	text-align:center;
+	height:125px;
+	float:left
+}
+.social ul li,.customer ul li,.company ul li{
+	line-height:20px;
+	text-align:left;
+	margin:0 0 0 15px;
+	padding:0px
+}
+.social ul li a,.customer ul li a,.company ul li a{
+	color:#ececec;
+	font-weight:bold;
+	font-size:13px
+}
+.social ul li.active a,.customer ul li.active a,.company ul li.active a{
+	color:#3cb9d8
+}
+.social ul li a:hover,.customer ul li a:hover,.company ul li a:hover{
+	color:#3cb9d8
+}
+.customer{
+	width:17%
+}
+.copyright{
+	background:url(/assets/template/Dropleft.png) top left no-repeat;
+	height:125px;
+	text-align:center;
+	width:35%;
+	float:right
+}
+.copyright p{
+	margin-left:10px;
+	color:#ececec;
+	font-size:14px;
+}
+/*-----------------------FOOTER---------------------*/
+
+/*-----------------------STYLE SELECT---------------------*/
+span.customStyleSelectBox {font-size:14px;color:#7c7c7c}
+.customStyleSelectBoxInner { 
+	background:#FFF url(/assets/template/btn_select.png) no-repeat center right;
+	padding:4px 0 3px 10px
+}
+.styleSelect{
+	width:280px;
+	margin:5px 0;
+	border:solid 1px #c2d3d7;
+}
+
+select.stateOption,select.cityOption,select.stateOption2,select.cityOption2,select.categoryOption,select.subcategoryOption{
+	width:273px;
+	padding:3px 0;
+}
+/*-----------------------STYLE SELECT-----------------------*/
+
+/*-----------------------Common Styles----------------------*/
+div.pagination > ul > li{
+		display: inline;
+		padding: 2px;
+		margin: 2px;
+		border: none;
+}
+
+div.pagination > ul {
+	li.next_page, li.last, li.first, li.prev {
+		border: 1px solid #D6D9DC;
+	}
+}
+
+.form_field_help{
+  float:left !important;
+  margin-left:0px !important;
+}
+/*-----------------------Common Styles----------------------*/

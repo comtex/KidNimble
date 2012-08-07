@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Buyable:
+  = @wish.buyable_id
+%p
+  %b Buyable type:
+  = @wish.buyable_type
+%p
+  %b User:
+  = @wish.user_id
+
+= link_to 'Edit', edit_wish_path(@wish)
+\|
+= link_to 'Back', wishes_path

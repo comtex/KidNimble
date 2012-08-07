@@ -1,0 +1,23 @@
+#reviewContainer.logbox.aboutCamp 
+  %h2 Invite a New Group Member
+  = form_for(@member, :format => :js, :remote => true, :html => {:id => "inviteForm", :onSubmit => "$('#loading').show();"}) do |f|
+    -if !@member.errors.blank?
+      #error_explanation
+        - @member.errors.full_messages.each do |msg|
+          %span.help-inline= msg
+          %br
+      #sucess.message
+    = f.hidden_field :user_id
+    = f.hidden_field :group_id
+    = f.hidden_field :status
+    .field
+      = f.label :first_name
+      = f.text_field :first_name
+    .field
+      = f.label :last_name
+      = f.text_field :last_name
+    .field
+      = f.label :email
+      = f.email_field :email
+    .actions.field
+      = f.button 'Send invite'
