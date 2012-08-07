@@ -12,11 +12,11 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: staging_camp_pro
+  database: staging.camp_pro
   pool: 5
   username: developer
   password: meta1234#
-  host: godiva.kidnimble.com
+  host: godiva.campgurus.com
 
 
 production:
@@ -27,7 +27,7 @@ production:
   pool: 5
   username: developer
   password: meta1234#
-  host: godiva.kidnimble.com
+  host: godiva.campgurus.com
 
 
 # Warning: The database defined as "test" will be erased and
@@ -41,4 +41,4 @@ test:
   pool: 5
   username: developer
   password: meta1234#
-  host: godiva.kidnimble.com
+  host: godiva.campgurus.com
