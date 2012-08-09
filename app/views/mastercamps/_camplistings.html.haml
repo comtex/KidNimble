@@ -1,0 +1,34 @@
+%h3#searchtitle 
+  - if !@camps.blank? and @camps.total_count > 0
+    = "Results: Your search returned #{@camps.total_count} items."
+  - else
+    = "No Record Found"
+%ul#camps-table
+  - if @camps && !@camps.blank?
+    - @camps.each do |camp|
+      %li
+        .row.title
+          .ten.columns
+            .row
+              %img.camp_avatar{:alt => camp.category_name, :src => "#{get_asset(camp.id, camp.category_name, :thumb)}", :title => camp.category_name}/
+              %h3
+                %a{:href => "/mastercamps/#{camp.id}"}
+                  %b= camp.camp_name
+          .two.columns.rating.distance
+            / ratings need to be dynamic
+            %ul#rater
+              - (1..5).each do |rate|
+                - if !camp.rating.blank? and !camp.raters.blank? and camp.raters != 0 and rate <= (camp.rating/camp.raters)
+                  %li
+                    %img{:alt => "star", :src => "/assets/template/star.png", :title => ""}/
+                - else
+                  %li
+                    %img{:alt => "star", :src => "/assets/template/star-empty.png", :title => ""}/
+            %h4
+              = (!camp.distance.blank?) ? camp.distance.to_i : 0
+              miles
+        .row.title
+          %p#description
+            = sanitize truncate(camp.description, :length => 200)
+            %a{:href => "/mastercamps/#{camp.id}"} &nbsp;MORE&nbsp;
+            %a#write_review.listReview{:href => "javascript:void(0);", :onClick => "openPopup('/reviews/new.html?camp_id=#{camp.id}&url='+escape('http://#{request.host_with_port}/camps/#{camp.id}'));"} REVIEW

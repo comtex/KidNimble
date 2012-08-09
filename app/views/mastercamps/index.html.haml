@@ -1,0 +1,99 @@
+.container.main
+  .row.searchview
+    .four.columns.searchbox
+      .refinesearch
+        %h2 Refine Your Search Results
+        = form_tag '/mastercamps', :method => 'GET', :html => {:class => 'form-stacked', :id => "search"} do
+          %ul
+            %li{:style => "height:30px;"}
+              %div.shortZip
+                = text_field_tag :zip, params[:zip], :class => 'categ', :placeholder => 'Zip Code'
+              %div.shortSlider
+                %div#sliderheader
+                  %div#slidermin 1 mi
+                  %div#slidermax 100 mi
+                %div#slider-horizontal.sliders
+              = hidden_field_tag :distance, params[:distance]
+            %li
+              = text_field_tag :name, params[:name], :class => 'categ', :placeholder => 'Name'
+            %li
+              = select_tag :category, display_categories(), :class => 'search' ,:prompt => 'Select...'
+            %li
+              #subCategorySelect
+                = select_tag :subs, display_activities(), :class => 'search' ,:prompt => 'Select...'
+            %li
+              = text_field_tag :start, params[:start], :placeholder => "Start Date"
+            %li
+              = text_field_tag :end, params[:end], :placeholder => "End Date"
+            %li
+              /= hidden_field_tag :cityzipadd, params[:cityzipadd]
+              = hidden_field_tag :longitude, params[:longitude] || 0.0
+              = hidden_field_tag :latitude, params[:latitude] || 0.0
+              = submit_tag '', :value => '', :id => 'search-button', :class => 'Btn_search'
+      .othercamps
+        %a{:href => "http://www.dickssportinggoods.com", :target => "_blank"}
+          %img{:src => '/assets/sponsors/Dicks Logo.jpg', :alt => 'Dicks', :title => 'Dicks'}
+        %a{:href => "http://espn.go.com", :target => "_blank"}
+          %img{:src => '/assets/sponsors/ESPN Logo.jpg', :alt => 'ESPN', :title => 'ESPN'}
+        %a{:href => "http://www.nike.com", :target => "_blank"}
+          %img{:src => '/assets/sponsors/Nike Logo.jpg', :alt => 'Nike', :title => 'Nike'}
+        %a{:href => "http://www.sportsauthority.com", :target => "_blank"}
+          %img{:src => '/assets/sponsors/Sports Authority Logo.gif', :alt => 'Sports Authority', :title => 'Sports Authority'}
+        %a{:href => "http://www.target.com", :target => "_blank"}
+          %img{:src => '/assets/sponsors/Target Logo.jpg', :alt => 'Target', :title => 'Target'}
+    .five.columns.results
+      #dialog
+      #camps
+        = render 'camplistings'
+      #links
+        - if @camps && !@camps.blank?
+          = paginate(@camps)
+    %div#mapplaces.three.columns.results
+      - if @camps && !@camps.blank?
+        = render 'places'
+      
+:javascript
+  window.latitude  = geoip_latitude();
+  window.longitude = geoip_longitude();
+  
+  jQuery(document).ready(function ($) {
+    $( "#slider-horizontal" ).slider({
+        orientation: "horizontal",
+        range: "min",
+        min: 1,
+        max: 250,
+        value: "#{params[:distance] ||= 20}" ,
+        slide: function(event, ui) {
+            $("#distance" ).val(ui.value);
+            $("#slidermax" ).html(ui.value + " mi");
+        }
+    });
+    $("#distance").val($("#slider-horizontal").slider("value"));
+    $("#slidermax").html($("#slider-horizontal").slider("value") + " mi");
+    
+    $('#start').datepicker({dateFormat: 'yy-mm-dd'});
+    $('#end').datepicker({dateFormat: 'yy-mm-dd'});
+    
+    if($('#latitude').val() == '' && window.latitude != ''){
+      $('#latitude').val(window.latitude);
+    }
+    if($('#longitude').val() == '' && window.longitude != ''){
+      $('#longitude').val(window.longitude);
+    }
+    window.page   = 0;
+    
+    // when the .categoryOption field changes
+    var category_id = $("#category").val();
+    if(category_id != '' && category_id != 0){
+      $.post('/subs/show_subs_for_camp/' + category_id + '.html?subs=#{params[:subs]}', function(data) {
+          $("#subCategorySelect").html(data);
+      });
+    }
+    $("#category").change(function() {
+      var category_id = $(this).val();
+      if(category_id == ''){category_id = 0;}
+      $.post('/subs/show_subs_for_camp/' + category_id + '.html', function(data) {
+        $("#subCategorySelect").html(data);
+      });
+    });
+  });

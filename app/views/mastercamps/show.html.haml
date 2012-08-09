@@ -1,0 +1,95 @@
+.container.wonderLAnd_camp
+  .row
+    .nine.columns
+      .row
+        .seven.columns
+          %h2= @camp.camp_name
+          / ratings need to be dynamic
+          %ul#rater
+            - (1..5).each do |rate|
+              - if !@camp.rating.blank? and !@camp.raters.blank? and @camp.raters != 0 and rate <= (@camp.rating/@camp.raters)
+                %li
+                  %img{:alt => "star", :src => "/assets/template/star.png", :title => ""}/
+              - else
+                %li
+                  %img{:alt => "star", :src => "/assets/template/star-empty.png", :title => ""}/
+          .contact
+            %p
+              %b Contact:
+              = @camp.contact
+              %br/
+              %b Address:
+              = @camp.address
+              %br/
+              %b Phone:
+              = @camp.phone
+              %br/
+              - if !@camp.website.blank?
+                %a.gotowebsite{:href => @camp.website, :target => "_blank"} &nbsp;
+                /  = @camp.link
+        .columns
+          .camp_image_block
+            .category_image_large
+              %img.category_image{:alt => @camp.category_name, :height => "225", :src => "#{get_asset(@camp.id, @camp.category_name, :large)}", :title => @camp.category_name, :width => "250"}
+            .category_image_thumbs
+              - get_assets(@camp.id).each do |e|
+                %a{:href => "javascript:void(0);"}
+                  = image_tag(e.asset.url(:thumb), :alt => @camp.category_name, :title => @camp.category_name, :width => "50", :height => "50", :onClick => "showCategoryImage('#{e.asset.url(:large)}')")
+      .row
+        %p.info
+          = sanitize @camp.description
+      
+      .row.reviews
+        %h3 
+          Reviews
+          %a.write_review{:href => "javascript:void(0);", :onClick => "openPopup('/reviews/new.html?camp_id=#{@camp.id}&url='+escape('http://#{request.host_with_port}/camps/#{@camp.id}'));"} &nbsp;
+        #reviews.bookmarkedactivityview
+    .three.columns
+      = gmaps("map_options" => { "auto_zoom" => false, "zoom" => 15}, "markers" => {"data" => @camp.to_gmaps4rails, "options" => {"custom_infowindow_class" => "yellow" } })
+
+:javascript
+  var camp_id = "#{@camp.id}";
+  $(document).ready(function() {
+      getReviewData(camp_id);
+      
+      $('a.reviewsubmit').live('click', function(ev){
+        ev.preventDefault();
+        submitReview(camp_id);
+      });
+      
+      $.post('/camps/isbookmarked.html', {camp_id:  camp_id }, function(data) {
+        $("a#bookmark_camp").html(data);
+      });
+      
+      Gmaps.map.infobox = function(boxText) {
+      return {
+         content: boxText
+        ,disableAutoPan: false
+        ,maxWidth: 0
+        ,pixelOffset: new google.maps.Size(-60, 0)
+        ,zIndex: 5000
+        ,boxStyle: { 
+          background: "url('http://google-maps-utility-library-v3.googlecode.com/svn/tags/infobox/1.1.5/examples/tipbox.gif') no-repeat"
+          ,opacity: 0.85
+          ,width: 115
+           }
+        ,closeBoxMargin: "10px 2px 2px 2px"
+        ,closeBoxURL: "http://www.google.com/intl/en_us/mapfiles/close.gif"
+        ,infoBoxClearance: new google.maps.Size(1, 1)
+        ,isHidden: false
+        ,pane: "floatPane"
+        ,enableEventPropagation: false
+      }};
+
+  });
+  
+  function showCategoryImage(url){
+    $(".camp_image_block .category_image").fadeOut(500).attr("src", url).fadeIn(800);
+  }
+  
+  function bookmark(){
+    $.post('/camps/togglebookmark.html', {camp_id:  camp_id }, function(data) {
+        $("a#bookmark_camp").html(data);
+    });
+  }
+  

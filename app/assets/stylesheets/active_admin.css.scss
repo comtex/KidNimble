@@ -12,5 +12,18 @@
 .ui-datepicker {
   background-color: #bbb;
 }
+
+form fieldset ol > div.has_many{
+  padding: 10px;
+}
+
+form fieldset > ol > li > a.button {
+    // margin-left: 20% !important;
+}
+
+form fieldset ol > div.has_many > a.button{
+  float:left;
+}
+
 // To customize the Active Admin interfaces, add your
 // styles here:

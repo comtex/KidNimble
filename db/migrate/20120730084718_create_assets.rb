@@ -1,9 +1,10 @@
 class CreateAssets < ActiveRecord::Migration
   def change
     create_table :assets do |t|
-      t.integer :camp_id
-      t.string :image_url
-
+      t.references :camp
+      t.references :mastercamp_detail
+      t.has_attached_file :asset
+    
       t.timestamps
     end
   end

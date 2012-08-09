@@ -1,0 +1,2 @@
+- if @camps && !@camps.blank?
+  = paginate(@camps).to_json.html_safe

@@ -39,6 +39,7 @@ Guru::Application.routes.draw do
   resources :camps do
     resources :surveys
   end
+  resources :mastercamps
   resources :categories
   resources :directorforms
   resources :assets
@@ -47,6 +48,8 @@ Guru::Application.routes.draw do
   resources :city, :only => [:index]
   
   ActiveAdmin.routes(self)
+  
+  post '/admin/mastercamps/change_subs',           :controller => 'admin/mastercamps', :action => :change_subs
   
   devise_for :users, :controllers => { 
           :sessions => 'sessions', 
