@@ -18,7 +18,7 @@ ActiveAdmin.register Mastercamp do
       f.has_many :mastercamp_details, {:label => "Camp Details"} do |d|
         d.input :camp_name, :label => "Camp Name"
         d.input :description, :label => "Description"
-        d.input :residency, :label => "Residency"
+        d.input :street, :label => "Street"
         d.input :city, :label => "City"
         d.input :state, :label => "State"
         d.input :zip, :label => "Zip Code"
@@ -89,7 +89,7 @@ ActiveAdmin.register Mastercamp do
       table_for mastercamp.mastercamp_details do |details|
         column :camp_name
         column :description
-        column :residency
+        column :street
         column :city
         column :state
         column :zip

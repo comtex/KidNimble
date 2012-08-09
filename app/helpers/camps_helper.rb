@@ -29,12 +29,12 @@ module CampsHelper
     end
   end
   
-  def get_assets(camp_id)
-    @assets = Asset.where(:camp_id => camp_id)
+  def get_assets(mastercamp_detail_id)
+    @assets = Asset.where(:mastercamp_detail_id => mastercamp_detail_id)
   end
   
-  def get_asset(camp_id, cat_name, type)
-    asset = Asset.where(:camp_id => camp_id).first
+  def get_asset(mastercamp_detail_id, cat_name, type)
+    asset = Asset.where(:mastercamp_detail_id => mastercamp_detail_id).first
     if !asset.blank?
       @url = asset.asset.url(type)
     else

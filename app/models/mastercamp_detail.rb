@@ -14,7 +14,7 @@ class MastercampDetail < ActiveRecord::Base
   end
   
   
-  validates :camp_name, :description, :city, :state, :zip,
+  validates :camp_name, :description, :street, :city, :state, :zip,
   :presence => {:message => 'is required field'}
   
   acts_as_gmappable :latitude => 'lat', :longitude => 'lng', :process_geocoding => :geocode?,
@@ -133,7 +133,7 @@ class MastercampDetail < ActiveRecord::Base
   end
   
   def address
-    [city,state,zip].join(', ')  
+    [street, city, state, zip].join(', ')  
   end
   
 end

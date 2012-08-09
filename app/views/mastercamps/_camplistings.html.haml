@@ -31,4 +31,4 @@
           %p#description
             = sanitize truncate(camp.description, :length => 200)
             %a{:href => "/mastercamps/#{camp.id}"} &nbsp;MORE&nbsp;
-            %a#write_review.listReview{:href => "javascript:void(0);", :onClick => "openPopup('/reviews/new.html?camp_id=#{camp.id}&url='+escape('http://#{request.host_with_port}/camps/#{camp.id}'));"} REVIEW
+            %a#write_review.listReview{:href => "javascript:void(0);", :onClick => "openPopup('/reviews/new.html?camp_id=#{camp.id}&url='+escape('http://#{request.host_with_port}/mastercamps/#{camp.id}'));"} REVIEW

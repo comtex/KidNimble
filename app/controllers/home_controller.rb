@@ -8,7 +8,14 @@ class HomeController < ApplicationController
       format.json { render json: @categories }
     end
 	end
-
+  
+  def refreshloginheader
+    
+    respond_to do |format|
+      format.html { render :partial => 'shared/login_header', :layout => false } # shared/login_header.erb
+    end  
+  end
+  
 	def about
 
 	end

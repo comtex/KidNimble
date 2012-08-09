@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120803085738) do
+ActiveRecord::Schema.define(:version => 20120809133109) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -55,12 +55,13 @@ ActiveRecord::Schema.define(:version => 20120803085738) do
 
   create_table "assets", :force => true do |t|
     t.integer  "camp_id"
+    t.integer  "mastercamp_detail_id"
     t.string   "asset_file_name"
     t.string   "asset_content_type"
     t.integer  "asset_file_size"
     t.datetime "asset_updated_at"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
   end
 
   create_table "bookmarks", :force => true do |t|
@@ -275,6 +276,38 @@ ActiveRecord::Schema.define(:version => 20120803085738) do
   end
 
   add_index "kids", ["user_id"], :name => "index_kids_on_user_id"
+
+  create_table "mastercamp_details", :force => true do |t|
+    t.integer  "mastercamp_id",                                  :default => 0
+    t.string   "camp_name"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.decimal  "latitude",       :precision => 15, :scale => 10
+    t.decimal  "longitude",      :precision => 15, :scale => 10
+    t.integer  "category_id",                                    :default => 0
+    t.integer  "subs_id",                                        :default => 0
+    t.string   "youngest"
+    t.string   "oldest"
+    t.datetime "datetime_start"
+    t.datetime "datetime_end"
+    t.string   "street"
+    t.text     "description"
+    t.integer  "rating"
+    t.integer  "raters"
+    t.datetime "created_at",                                                    :null => false
+    t.datetime "updated_at",                                                    :null => false
+  end
+
+  create_table "mastercamps", :force => true do |t|
+    t.string   "contact"
+    t.string   "phone"
+    t.string   "fax"
+    t.string   "email"
+    t.string   "website"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "members", :force => true do |t|
     t.integer  "group_id"

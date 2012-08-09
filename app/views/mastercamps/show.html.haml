@@ -42,7 +42,7 @@
       .row.reviews
         %h3 
           Reviews
-          %a.write_review{:href => "javascript:void(0);", :onClick => "openPopup('/reviews/new.html?camp_id=#{@camp.id}&url='+escape('http://#{request.host_with_port}/camps/#{@camp.id}'));"} &nbsp;
+          %a.write_review{:href => "javascript:void(0);", :onClick => "openPopup('/reviews/new.html?camp_id=#{@camp.id}&url='+escape('http://#{request.host_with_port}/mastercamps/#{@camp.id}'));"} &nbsp;
         #reviews.bookmarkedactivityview
     .three.columns
       = gmaps("map_options" => { "auto_zoom" => false, "zoom" => 15}, "markers" => {"data" => @camp.to_gmaps4rails, "options" => {"custom_infowindow_class" => "yellow" } })

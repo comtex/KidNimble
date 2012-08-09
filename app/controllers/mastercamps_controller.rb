@@ -67,7 +67,7 @@ class MastercampsController < ApplicationController
   # GET /camps/1
   # GET /camps/1.json
   def show
-    @camp = MastercampDetail.select("*").where(:id => params[:id]).joins(:mastercamp)
+    @camp = MastercampDetail.select("mastercamp_details.*, contact, phone, fax, email, website").where(:id => params[:id]).joins(:mastercamp)
           .joins(:category).merge(Category.select("categories.name AS category_name"))
           .first
           

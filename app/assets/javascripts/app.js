@@ -351,8 +351,12 @@ jQuery(document).ready(function ($) {
 	        default:
 	            $('#frequency').hide();
 	    }
-	    
-	    
-	    
-	    
+	}
+	
+	function refreshLoginHeader(){
+		jQuery.get('/home/refreshloginheader.html',
+				function(data) {
+					$('#top_login_header').html(data);
+				}
+		);
 	}

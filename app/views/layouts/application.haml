@@ -46,7 +46,7 @@
       .four.columns
         %a{:href => "/home"}= image_tag('template/logo.png', :alt => "KidNimble", :title => "KidNimble")
         
-      .columns
+      %div#top_login_header.columns
         = render :partial => 'shared/login_header'
   
   -if !flash[:reviewnotice].blank?
