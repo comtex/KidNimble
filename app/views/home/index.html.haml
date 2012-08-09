@@ -5,7 +5,7 @@
         %li.active
           %img{:alt => "#", :src => "/assets/template/findKids.png"}/
           /%h5 Search by:
-          = form_tag '/camps', :method => 'GET' do
+          = form_tag '/mastercamps', :method => 'GET' do
             /%h5 Near (city, zip code or address)
             = text_field_tag :cityzipadd, '', :class => 'categ', :placeholder => 'city, zip code or address'
             /%h5{:style => "margin-left:57px;"} Or:
