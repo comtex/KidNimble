@@ -25,7 +25,8 @@ class MastercampDetail < ActiveRecord::Base
   geocoded_by :address
   after_validation :geocode
   has_many :bookmarks
-  belongs_to :category, :conditions => ["categories.id > ?", 0]
+  #belongs_to :category, :conditions => ["categories.id > ?", 0]
+  belongs_to :category
   belongs_to :subs
   has_many :assets
   accepts_nested_attributes_for :assets, :allow_destroy => true
@@ -34,7 +35,7 @@ class MastercampDetail < ActiveRecord::Base
   
   def self.get_catname
     category = Category.select("categories.name AS category_name")
-    joins(:category).merge(category)  
+    joins("LEFT JOIN categories ON categories.id = mastercamp_details.category_id").merge(category)  
   end
   
   def self.events_between(dateStart, dateEnd)
@@ -79,35 +80,43 @@ class MastercampDetail < ActiveRecord::Base
     end
     
     if title and title != '' and title != 'Name'
-      res = MastercampDetail.where('camp_name LIKE ?', "%#{title}%")
+      res = self.where('camp_name LIKE ? OR description LIKE ?', "%#{title}%", "%#{title}%")
     end
     
     
     if category and category != 'Select...' and category != ''
       category_name = Category.find(category).name
-      res = MastercampDetail.where('category_id = ? OR camp_name LIKE ? OR description LIKE ?', category, "%#{category_name}%", "%#{category_name}%")
-      #res = Camp.where('category_id = ?', category)
+      if res
+        res = res.where('category_id = ? OR camp_name LIKE ? OR description LIKE ?', category, "%#{category_name}%", "%#{category_name}%")
+        #res = Camp.where('category_id = ?', category)
+      else
+        res = self.where('category_id = ? OR camp_name LIKE ? OR description LIKE ?', category, "%#{category_name}%", "%#{category_name}%")
+      end
     end
    
     if subs and subs != 'Select...' and subs != ''
       if res
-        res = MastercampDetail.where('(category_id = ? AND subs_id = ?) OR camp_name LIKE ? OR description LIKE ?', category, subs, "%#{category_name}%", "%#{category_name}%")
+        res = res.where(:subs_id => subs)
         #res = Camp.where('category_id = ? OR subs_id = ?', category, subs)
       else
-        res = MastercampDetail.where(:subs_id => subs)
+        res = self.where(:subs_id => subs)
       end
     end
     
     if dateStart and dateStart =~ /^\d\d\d\d-\d\d-\d\d$/ and
        dateEnd   and dateEnd =~ /^\d\d\d\d-\d\d-\d\d$/
-      res = MastercampDetail.events_between(dateStart,dateEnd)
+       if res
+         res = res.where(:datetime_start => dateStart.to_date.beginning_of_day..dateEnd.to_date.end_of_day)
+       else
+         res = self.where(:datetime_start => dateStart.to_date.beginning_of_day..dateEnd.to_date.end_of_day)
+       end
     end
     
     if(latitude && longitude)
       if res
         res = res.near([latitude,longitude], distance)
       else
-        res = MastercampDetail.near([latitude,longitude], distance)
+        res = self.near([latitude,longitude], distance)
       end 
     end
     
