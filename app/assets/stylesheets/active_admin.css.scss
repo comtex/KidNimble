@@ -2,27 +2,41 @@
 @import "active_admin/_mixins";
 @import "active_admin/_base";
 @import "active_admin_jquery_ui";
+@import "jquery-ui";
 
-#ui-datepicker-div {
-  background-color: #eee;
+/* css for timepicker */
+#ui-datepicker-div{display:none;}
+.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+.ui-timepicker-div dl { text-align: left; }
+.ui-timepicker-div dl dt { height: 25px; margin-bottom: -25px; }
+.ui-timepicker-div dl dd { margin: 0 10px 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+.ui-datepicker table.ui-datepicker-calendar{
+  width:213px !important;
 }
-.ui-datepicker-header {
-  background-color: #bbb;
-}
-.ui-datepicker {
-  background-color: #bbb;
+.ui-datepicker .ui-datepicker-header {
+    background: url("/assets/ui-bg_gloss-wave_35_f6a828_500x100.png") repeat-x scroll 50% 50% #F6A828;
+    border: 1px solid #E78F08;
+    color: #FFFFFF;
+    font-weight: bold;
+    height:16px;
 }
 
 form fieldset ol > div.has_many{
   padding: 10px;
+  margin:0;
 }
 
-form fieldset > ol > li > a.button {
-    // margin-left: 20% !important;
+label.error {
+    width:77%;
+    font: normal 10px;
+    padding: 3px;
+    margin: 3px 3px 10px 20%;
 }
-
-form fieldset ol > div.has_many > a.button{
-  float:left;
+.error {
+    background-color: #ffc;
+    border: 1px solid #c00;
 }
 
 // To customize the Active Admin interfaces, add your

@@ -162,6 +162,7 @@ jQuery(document).ready(function ($) {
 	    	getReviewData(camp_id);
 			$('#dialog-form').dialog('close');
 			$('#dialog-form').fadeOut().remove();
+			refreshLoginHeader()
 			showReviewSavedMsg();
 	    } else {
 			$('#loginError').html(resp.errors[0]);

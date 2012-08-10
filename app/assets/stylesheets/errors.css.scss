@@ -19,6 +19,7 @@
 .blog{
 	margin-top:5px;
 	text-align:center}
+
 a.menu{
 	background:#ebebeb;
 	border-radius:20px;
@@ -26,8 +27,11 @@ a.menu{
 	-moz-border-radius: 20px;
 	font-size:13px;
 	color:#666666;
-	margin:10px 10px 0 0; 
+	margin:0px 0px 0 10px; 
 	padding:4px 15px}
+.loginarea a.menu:first-child{
+  margin-left:0px;
+}
 .signIn p{
 	text-align:center;
 	margin-top:5px;

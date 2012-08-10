@@ -10,29 +10,28 @@ ActiveAdmin.register Mastercamp do
   form :html => { :multipart => true } do |f|
     f.inputs do
       f.input :contact, :label => "Contact"
-      f.input :phone,   :label => "Phone"
-      f.input :fax,     :label => "Fax"
-      f.input :email,   :label => "E-Mail"
-      f.input :website, :label => "Website"
+      f.input :phone, :as => :phone,  :label => "Phone", :input_html => {:class => 'phone'}
+      f.input :fax, :as => :phone,     :label => "Fax", :input_html => {:class => 'fax'}
+      f.input :email, :as => :email,   :label => "E-Mail", :input_html => {:class => 'email'}
+      f.input :website, :as => :url, :label => "Website", :placeholder => "http://www.example.com", :input_html => {:class => 'optional defaultInvalid url'}
       #f.inputs "Camp Details" do
-      f.has_many :mastercamp_details, {:label => "Camp Details"} do |d|
-        d.input :camp_name, :label => "Camp Name"
-        d.input :description, :label => "Description"
-        d.input :street, :label => "Street"
-        d.input :city, :label => "City"
-        d.input :state, :label => "State"
-        d.input :zip, :label => "Zip Code"
-        d.input :latitude, :label => "Latitude"
-        d.input :longitude, :label => "Longitude"
-        d.input :category, :input_html => {
+      f.has_many :mastercamp_details, :class => "CampDetails" do |d|
+        d.input :camp_name, :label => "Camp Name", :input_html => {:class => 'required'}
+        d.input :description, :label => "Description", :input_html => {:class => 'required'}
+        d.input :street, :label => "Street", :input_html => {:class => 'required'}
+        d.input :city, :label => "City", :input_html => {:class => 'required'}
+        d.input :state, :label => "State", :input_html => {:class => 'required'}
+        d.input :zip, :as => :number, :label => "Zip Code", :input_html => {:class => 'required number'}
+        d.input :latitude, :label => "Latitude", :input_html => {:class => 'required decimal'}
+        d.input :longitude, :label => "Longitude", :input_html => {:class => 'required decimal'}
+        d.input :category,  :label => "Category", :input_html => {
           :onchange => remote_request(:post, '/admin/mastercamps/change_subs', {:id=>"$(this).val()"}, "#{d.object.id.nil? ? 'NEW_RECORD' : d.object.id}_subs_id")
         }
-        d.input :subs, :input_html => {:id => "#{d.object.id.nil? ? 'NEW_RECORD' : d.object.id}_subs_id"}
+        d.input :subs,  :label => "Sub Category", :input_html => {:id => "#{d.object.id.nil? ? 'NEW_RECORD' : d.object.id}_subs_id"}
         d.input :youngest, :label => "Youngest"
         d.input :oldest, :label => "Oldest"
-        d.input :datetime_start, :label => "Start Datetime"
-        d.input :datetime_end, :label => "End Datetime"
-        
+        d.input :datetime_start, :as => :string, :label => "Start Datetime", :input_html =>{:class => "hasDateTimePicker"}
+        d.input :datetime_end, :as => :string, :label => "End Datetime", :input_html =>{:class => "hasDateTimePicker"}
         #d.inputs "Assets" do
         d.has_many :assets do |a|
           a.input :asset, :as => :file, :label => "Asset",:hint => a.object.asset.nil? ? a.template.content_tag(:span, "No Asset Yet") : a.template.image_tag(a.object.asset.url(:thumb))
@@ -78,7 +77,7 @@ ActiveAdmin.register Mastercamp do
   end
   
   show do
-    panel("Camp") do
+    panel "Camp" do
       attributes_table_for mastercamp do
         [:contact, :phone, :fax, :email, :website].each do |column|
           row column
