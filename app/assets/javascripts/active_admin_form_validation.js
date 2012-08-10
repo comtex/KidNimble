@@ -30,9 +30,9 @@ jQuery(document).ready(function ($) {
 	});
 
 	$('form .has_many a.button').live('click', function(e){
-		$("input.hasDateTimePicker").datetimepicker({dateFormat: 'mm-dd-yy'});
+		$("input.hasDateTimePicker").datetimepicker({dateFormat: 'yy-mm-dd', timeFormat: 'hh:mm:ss'});
 	});
-	$("input.hasDateTimePicker").datetimepicker({dateFormat: 'mm-dd-yy'});
+	$("input.hasDateTimePicker").datetimepicker({dateFormat: 'yy-mm-dd', timeFormat: 'hh:mm:ss'});
 	$("#active_admin_content .mastercamp").validate();
 });
 
