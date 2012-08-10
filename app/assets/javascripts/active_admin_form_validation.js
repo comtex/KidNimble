@@ -33,6 +33,8 @@ jQuery(document).ready(function ($) {
 		$("input.hasDateTimePicker").datetimepicker({dateFormat: 'yy-mm-dd', timeFormat: 'hh:mm:ss'});
 	});
 	$("input.hasDateTimePicker").datetimepicker({dateFormat: 'yy-mm-dd', timeFormat: 'hh:mm:ss'});
+	
+	$("#active_admin_content .mastercamp_detail").validate();
 	$("#active_admin_content .mastercamp").validate();
 });
 
