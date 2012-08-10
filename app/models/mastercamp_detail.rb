@@ -14,8 +14,7 @@ class MastercampDetail < ActiveRecord::Base
   end
   
   
-  validates :camp_name, :description, :street, :city, :state, :zip,
-  :presence => {:message => 'is required field'}
+  #validates :camp_name, :description, :street, :city, :state, :zip,:presence => {:message => 'is required field'}
   
   acts_as_gmappable :latitude => 'lat', :longitude => 'lng', :process_geocoding => :geocode?,
                   :address => "address", :normalized_address => "address",

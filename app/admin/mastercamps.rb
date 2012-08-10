@@ -16,14 +16,14 @@ ActiveAdmin.register Mastercamp do
       f.input :website, :as => :url, :label => "Website", :placeholder => "http://www.example.com", :input_html => {:class => 'optional defaultInvalid url'}
       #f.inputs "Camp Details" do
       f.has_many :mastercamp_details, :class => "CampDetails" do |d|
-        d.input :camp_name, :label => "Camp Name", :input_html => {:class => 'required'}
-        d.input :description, :label => "Description", :input_html => {:class => 'required'}
-        d.input :street, :label => "Street", :input_html => {:class => 'required'}
-        d.input :city, :label => "City", :input_html => {:class => 'required'}
-        d.input :state, :label => "State", :input_html => {:class => 'required'}
-        d.input :zip, :as => :number, :label => "Zip Code", :input_html => {:class => 'required number'}
-        d.input :latitude, :label => "Latitude", :input_html => {:class => 'required decimal'}
-        d.input :longitude, :label => "Longitude", :input_html => {:class => 'required decimal'}
+        d.input :camp_name, :label => "Camp Name", :input_html => {:class => ''}
+        d.input :description, :label => "Description", :input_html => {:class => ''}
+        d.input :street, :label => "Street", :input_html => {:class => ''}
+        d.input :city, :label => "City", :input_html => {:class => ''}
+        d.input :state, :label => "State", :input_html => {:class => ''}
+        d.input :zip, :as => :number, :label => "Zip Code", :input_html => {:class => ' number'}
+        d.input :latitude, :label => "Latitude", :input_html => {:class => ' decimal'}
+        d.input :longitude, :label => "Longitude", :input_html => {:class => ' decimal'}
         d.input :category,  :label => "Category", :input_html => {
           :onchange => remote_request(:post, '/admin/mastercamps/change_subs', {:id=>"$(this).val()"}, "#{d.object.id.nil? ? 'NEW_RECORD' : d.object.id}_subs_id")
         }
